@@ -1,2 +1,0 @@
-# bgweber.github.io
-GitPages
