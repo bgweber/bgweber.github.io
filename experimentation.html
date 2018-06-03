@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Data Science for Startups</title>
+  <meta name="description" content="Data Science for Startups">
+  <meta name="generator" content="bookdown 0.7.8 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Data Science for Startups" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Data Science for Startups" />
+  <meta name="github-repo" content="bgweber/StartupDataScience" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data Science for Startups" />
+  
+  <meta name="twitter:description" content="Data Science for Startups" />
+  
+
+<meta name="author" content="Ben G Weber">
+
+
+<meta name="date" content="2018-05-29">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="productizing-models.html">
+<link rel="next" href="recommendation-systems.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Data Science for Startups</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#why-data-science"><i class="fa fa-check"></i><b>1.1</b> Why Data Science?</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#book-overview"><i class="fa fa-check"></i><b>1.2</b> Book Overview</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#tooling"><i class="fa fa-check"></i><b>1.3</b> Tooling</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="tracking-data.html"><a href="tracking-data.html"><i class="fa fa-check"></i><b>2</b> Tracking Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="tracking-data.html"><a href="tracking-data.html#what-to-record"><i class="fa fa-check"></i><b>2.1</b> What to Record?</a></li>
+<li class="chapter" data-level="2.2" data-path="tracking-data.html"><a href="tracking-data.html#tracking-specs"><i class="fa fa-check"></i><b>2.2</b> Tracking Specs</a></li>
+<li class="chapter" data-level="2.3" data-path="tracking-data.html"><a href="tracking-data.html#client-vs-server-tracking"><i class="fa fa-check"></i><b>2.3</b> Client vs Server Tracking</a></li>
+<li class="chapter" data-level="2.4" data-path="tracking-data.html"><a href="tracking-data.html#sending-tracking-events"><i class="fa fa-check"></i><b>2.4</b> Sending Tracking Events</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="tracking-data.html"><a href="tracking-data.html#web-call"><i class="fa fa-check"></i><b>2.4.1</b> Web Call</a></li>
+<li class="chapter" data-level="2.4.2" data-path="tracking-data.html"><a href="tracking-data.html#web-server"><i class="fa fa-check"></i><b>2.4.2</b> Web Server</a></li>
+<li class="chapter" data-level="2.4.3" data-path="tracking-data.html"><a href="tracking-data.html#subscription-service"><i class="fa fa-check"></i><b>2.4.3</b> Subscription Service</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="tracking-data.html"><a href="tracking-data.html#message-encoding"><i class="fa fa-check"></i><b>2.5</b> Message Encoding</a></li>
+<li class="chapter" data-level="2.6" data-path="tracking-data.html"><a href="tracking-data.html#building-a-tracking-api"><i class="fa fa-check"></i><b>2.6</b> Building a Tracking API</a></li>
+<li class="chapter" data-level="2.7" data-path="tracking-data.html"><a href="tracking-data.html#privacy"><i class="fa fa-check"></i><b>2.7</b> Privacy</a></li>
+<li class="chapter" data-level="2.8" data-path="tracking-data.html"><a href="tracking-data.html#conclusion"><i class="fa fa-check"></i><b>2.8</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-pipelines.html"><a href="data-pipelines.html"><i class="fa fa-check"></i><b>3</b> Data Pipelines</a><ul>
+<li class="chapter" data-level="3.1" data-path="data-pipelines.html"><a href="data-pipelines.html#types-of-data"><i class="fa fa-check"></i><b>3.1</b> Types of Data</a></li>
+<li class="chapter" data-level="3.2" data-path="data-pipelines.html"><a href="data-pipelines.html#the-evolution-of-data-pipelines"><i class="fa fa-check"></i><b>3.2</b> The Evolution of Data Pipelines</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="data-pipelines.html"><a href="data-pipelines.html#flat-file-era"><i class="fa fa-check"></i><b>3.2.1</b> Flat File Era</a></li>
+<li class="chapter" data-level="3.2.2" data-path="data-pipelines.html"><a href="data-pipelines.html#database-era"><i class="fa fa-check"></i><b>3.2.2</b> Database Era</a></li>
+<li class="chapter" data-level="3.2.3" data-path="data-pipelines.html"><a href="data-pipelines.html#data-lake-era"><i class="fa fa-check"></i><b>3.2.3</b> Data Lake Era</a></li>
+<li class="chapter" data-level="3.2.4" data-path="data-pipelines.html"><a href="data-pipelines.html#serverless-era"><i class="fa fa-check"></i><b>3.2.4</b> Serverless Era</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="data-pipelines.html"><a href="data-pipelines.html#a-scalable-pipeline"><i class="fa fa-check"></i><b>3.3</b> A Scalable Pipeline</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="data-pipelines.html"><a href="data-pipelines.html#setting-up-the-environment"><i class="fa fa-check"></i><b>3.3.1</b> Setting up the Environment</a></li>
+<li class="chapter" data-level="3.3.2" data-path="data-pipelines.html"><a href="data-pipelines.html#publishing-events"><i class="fa fa-check"></i><b>3.3.2</b> Publishing Events</a></li>
+<li class="chapter" data-level="3.3.3" data-path="data-pipelines.html"><a href="data-pipelines.html#storing-events"><i class="fa fa-check"></i><b>3.3.3</b> Storing Events</a></li>
+<li class="chapter" data-level="3.3.4" data-path="data-pipelines.html"><a href="data-pipelines.html#deploying-and-auto-scaling"><i class="fa fa-check"></i><b>3.3.4</b> Deploying and Auto Scaling</a></li>
+<li class="chapter" data-level="3.3.5" data-path="data-pipelines.html"><a href="data-pipelines.html#raw-to-processed-events"><i class="fa fa-check"></i><b>3.3.5</b> Raw to Processed Events</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="data-pipelines.html"><a href="data-pipelines.html#conclusion-1"><i class="fa fa-check"></i><b>3.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="business-intelligence.html"><a href="business-intelligence.html"><i class="fa fa-check"></i><b>4</b> Business Intelligence</a><ul>
+<li class="chapter" data-level="4.1" data-path="business-intelligence.html"><a href="business-intelligence.html#kpis"><i class="fa fa-check"></i><b>4.1</b> KPIs</a></li>
+<li class="chapter" data-level="4.2" data-path="business-intelligence.html"><a href="business-intelligence.html#reporting-with-r"><i class="fa fa-check"></i><b>4.2</b> Reporting with R</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="business-intelligence.html"><a href="business-intelligence.html#base-r"><i class="fa fa-check"></i><b>4.2.1</b> Base R</a></li>
+<li class="chapter" data-level="4.2.2" data-path="business-intelligence.html"><a href="business-intelligence.html#r-markdown"><i class="fa fa-check"></i><b>4.2.2</b> R Markdown</a></li>
+<li class="chapter" data-level="4.2.3" data-path="business-intelligence.html"><a href="business-intelligence.html#r-shiny"><i class="fa fa-check"></i><b>4.2.3</b> R Shiny</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="business-intelligence.html"><a href="business-intelligence.html#etls"><i class="fa fa-check"></i><b>4.3</b> ETLs</a></li>
+<li class="chapter" data-level="4.4" data-path="business-intelligence.html"><a href="business-intelligence.html#reporting-tools"><i class="fa fa-check"></i><b>4.4</b> Reporting Tools</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="business-intelligence.html"><a href="business-intelligence.html#google-data-studio"><i class="fa fa-check"></i><b>4.4.1</b> Google Data Studio</a></li>
+<li class="chapter" data-level="4.4.2" data-path="business-intelligence.html"><a href="business-intelligence.html#tableau"><i class="fa fa-check"></i><b>4.4.2</b> Tableau</a></li>
+<li class="chapter" data-level="4.4.3" data-path="business-intelligence.html"><a href="business-intelligence.html#mode"><i class="fa fa-check"></i><b>4.4.3</b> Mode</a></li>
+<li class="chapter" data-level="4.4.4" data-path="business-intelligence.html"><a href="business-intelligence.html#custom-tooling"><i class="fa fa-check"></i><b>4.4.4</b> Custom Tooling</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="business-intelligence.html"><a href="business-intelligence.html#conclusion-2"><i class="fa fa-check"></i><b>4.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>5</b> Exploratory Data Analysis</a><ul>
+<li class="chapter" data-level="5.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#summary-statistics"><i class="fa fa-check"></i><b>5.1</b> Summary Statistics</a></li>
+<li class="chapter" data-level="5.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plotting"><i class="fa fa-check"></i><b>5.2</b> Plotting</a></li>
+<li class="chapter" data-level="5.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#correlation-analysis"><i class="fa fa-check"></i><b>5.3</b> Correlation Analysis</a></li>
+<li class="chapter" data-level="5.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#feature-importance"><i class="fa fa-check"></i><b>5.4</b> Feature Importance</a></li>
+<li class="chapter" data-level="5.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#conclusion-3"><i class="fa fa-check"></i><b>5.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="predictive-modeling.html"><a href="predictive-modeling.html"><i class="fa fa-check"></i><b>6</b> Predictive Modeling</a><ul>
+<li class="chapter" data-level="6.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#types-of-predictive-models"><i class="fa fa-check"></i><b>6.1</b> Types of Predictive Models</a></li>
+<li class="chapter" data-level="6.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#training-a-classification-model"><i class="fa fa-check"></i><b>6.2</b> Training a Classification Model</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#weka"><i class="fa fa-check"></i><b>6.2.1</b> Weka</a></li>
+<li class="chapter" data-level="6.2.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#bigml"><i class="fa fa-check"></i><b>6.2.2</b> BigML</a></li>
+<li class="chapter" data-level="6.2.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#r-glmnet"><i class="fa fa-check"></i><b>6.2.3</b> R — Glmnet</a></li>
+<li class="chapter" data-level="6.2.4" data-path="predictive-modeling.html"><a href="predictive-modeling.html#python-scikit-learn"><i class="fa fa-check"></i><b>6.2.4</b> Python — scikit-learn</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#clustering"><i class="fa fa-check"></i><b>6.3</b> Clustering</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#how-many-clusters-to-use"><i class="fa fa-check"></i><b>6.3.1</b> How many clusters to use?</a></li>
+<li class="chapter" data-level="6.3.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#cluster-descriptions"><i class="fa fa-check"></i><b>6.3.2</b> Cluster Descriptions</a></li>
+<li class="chapter" data-level="6.3.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#cluster-populations-by-net-worth"><i class="fa fa-check"></i><b>6.3.3</b> Cluster Populations by Net Worth</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="predictive-modeling.html"><a href="predictive-modeling.html#conclusion-4"><i class="fa fa-check"></i><b>6.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="productizing-models.html"><a href="productizing-models.html"><i class="fa fa-check"></i><b>7</b> Productizing Models</a><ul>
+<li class="chapter" data-level="7.1" data-path="productizing-models.html"><a href="productizing-models.html#building-a-model-specification"><i class="fa fa-check"></i><b>7.1</b> Building a Model Specification</a></li>
+<li class="chapter" data-level="7.2" data-path="productizing-models.html"><a href="productizing-models.html#batch-deployments"><i class="fa fa-check"></i><b>7.2</b> Batch Deployments</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="productizing-models.html"><a href="productizing-models.html#sql-query"><i class="fa fa-check"></i><b>7.2.1</b> SQL Query</a></li>
+<li class="chapter" data-level="7.2.2" data-path="productizing-models.html"><a href="productizing-models.html#dataflow-bigquery"><i class="fa fa-check"></i><b>7.2.2</b> DataFlow — BigQuery</a></li>
+<li class="chapter" data-level="7.2.3" data-path="productizing-models.html"><a href="productizing-models.html#dataflow-datastore"><i class="fa fa-check"></i><b>7.2.3</b> DataFlow — DataStore</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="productizing-models.html"><a href="productizing-models.html#live-deployments"><i class="fa fa-check"></i><b>7.3</b> Live Deployments</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="productizing-models.html"><a href="productizing-models.html#web-service"><i class="fa fa-check"></i><b>7.3.1</b> Web Service</a></li>
+<li class="chapter" data-level="7.3.2" data-path="productizing-models.html"><a href="productizing-models.html#dataflow---pubsub"><i class="fa fa-check"></i><b>7.3.2</b> DataFlow - PubSub</a></li>
+<li class="chapter" data-level="7.3.3" data-path="productizing-models.html"><a href="productizing-models.html#custom-engineering"><i class="fa fa-check"></i><b>7.3.3</b> Custom Engineering</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="productizing-models.html"><a href="productizing-models.html#conclusion-5"><i class="fa fa-check"></i><b>7.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="experimentation.html"><a href="experimentation.html"><i class="fa fa-check"></i><b>8</b> Experimentation</a><ul>
+<li class="chapter" data-level="8.1" data-path="experimentation.html"><a href="experimentation.html#staged-rollouts"><i class="fa fa-check"></i><b>8.1</b> Staged Rollouts</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="experimentation.html"><a href="experimentation.html#staged-rollout-biases"><i class="fa fa-check"></i><b>8.1.1</b> Staged Rollout Biases</a></li>
+<li class="chapter" data-level="8.1.2" data-path="experimentation.html"><a href="experimentation.html#time-series-analysis"><i class="fa fa-check"></i><b>8.1.2</b> Time Series Analysis</a></li>
+<li class="chapter" data-level="8.1.3" data-path="experimentation.html"><a href="experimentation.html#difference-in-differences-estimation"><i class="fa fa-check"></i><b>8.1.3</b> Difference-in-Differences Estimation</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="experimentation.html"><a href="experimentation.html#conclusion-6"><i class="fa fa-check"></i><b>8.2</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="recommendation-systems.html"><a href="recommendation-systems.html"><i class="fa fa-check"></i><b>9</b> Recommendation Systems</a><ul>
+<li class="chapter" data-level="9.1" data-path="recommendation-systems.html"><a href="recommendation-systems.html#r---recommender-lab"><i class="fa fa-check"></i><b>9.1</b> R - Recommender Lab</a></li>
+<li class="chapter" data-level="9.2" data-path="recommendation-systems.html"><a href="recommendation-systems.html#java---apache-mahout"><i class="fa fa-check"></i><b>9.2</b> Java - Apache Mahout</a></li>
+<li class="chapter" data-level="9.3" data-path="recommendation-systems.html"><a href="recommendation-systems.html#scala---mllib"><i class="fa fa-check"></i><b>9.3</b> Scala - MLlib</a></li>
+<li class="chapter" data-level="9.4" data-path="recommendation-systems.html"><a href="recommendation-systems.html#sql---spark-sql"><i class="fa fa-check"></i><b>9.4</b> SQL - Spark SQL</a></li>
+<li class="chapter" data-level="9.5" data-path="recommendation-systems.html"><a href="recommendation-systems.html#conclusion-7"><i class="fa fa-check"></i><b>9.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="deep-learning.html"><a href="deep-learning.html"><i class="fa fa-check"></i><b>10</b> Deep Learning</a><ul>
+<li class="chapter" data-level="10.1" data-path="deep-learning.html"><a href="deep-learning.html#improving-shallow-problems"><i class="fa fa-check"></i><b>10.1</b> Improving Shallow Problems</a></li>
+<li class="chapter" data-level="10.2" data-path="deep-learning.html"><a href="deep-learning.html#loss-functions-in-keras"><i class="fa fa-check"></i><b>10.2</b> Loss Functions in Keras</a></li>
+<li class="chapter" data-level="10.3" data-path="deep-learning.html"><a href="deep-learning.html#evaluating-loss-functions"><i class="fa fa-check"></i><b>10.3</b> Evaluating Loss Functions</a></li>
+<li class="chapter" data-level="10.4" data-path="deep-learning.html"><a href="deep-learning.html#conclusion-8"><i class="fa fa-check"></i><b>10.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science for Startups</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="experimentation" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Experimentation</h1>
+<p>It’s important to be able to determine if changes made to a product are beneficial. Experimentation is one of the methods that can be used to perform this type of analysis. Ideally, you want to set up experiments across randomized groups that are identical except for a single change being made. This is the process used for A/B testing, which can be used to draw strong statistical conclusions. However, it’s not always possible to use this methodology, since it may not be possible to control which users are part of a treatment group for an experiment.</p>
+<p>This was the case when I was part of the mobile team at Twitch and we deployed a product update using the staged rollout feature of Google Play. This chapter provides an overview of this case study, and discusses two different approaches for drawing conclusions when you do not have direct control of assigning experiment groups. The second approach presented in this chapter, bootstrapping, can be applied directly when performing A/B testing. Additional details on A/B testing at Twitch are available online<a href="#fn22" class="footnoteRef" id="fnref22"><sup>22</sup></a>.</p>
+<div id="staged-rollouts" class="section level2">
+<h2><span class="header-section-number">8.1</span> Staged Rollouts</h2>
+<p>Experimentation is one of the core functions of data science at startups, and you should be able to work closely with product managers to test out new ideas and features. In the past, I’ve used in-house tools to perform A/B experiments on the web and in mobile applications. However, I used a new approach for performing experiments when using Google Play’s staged rollout feature.</p>
+<p>Staged rollouts enable developers to release a new build to a subset of the user base. Rather than implementing A/B logic within the application itself, by writing ‘if’ blocks that maintain separate treatment and control code paths, developers can build two separate versions and deploy them simultaneously. This feature is useful when making major changes to an application, such as redesigning the UI. A drawback of staged rollouts is that we no longer control the A/B splits for experiments. Common use cases for staged rollouts include:</p>
+<ol style="list-style-type: decimal">
+<li>Testing the stability of a new release.</li>
+<li>Measuring the usage of new features.</li>
+<li>Measuring the impact of a new release on metrics.</li>
+</ol>
+<p>Since only a subset of users get the new app version, this feature is a great way to try out new ideas and rollback if any problems occur. It also enables developers to measure the adoption of new features in an Android application. Most companies do not use staged rollouts for the third usee case, which is running experiments. .</p>
+<p>We’d like to use staged rollouts to measure the impact of new releases on an existing set of metrics, such as daily active users. This feature is most useful when making major changes to an application, where embedding the A/B logic for multiple application versions within a single binary is complex.</p>
+<p>Our initial approach was to use A/B testing with the staged rollout feature. In this approach, the Google Play store selects a subset of the users as eligible for the test app version. Users that are eligible and update to the new version, whether automatic or manual, are labeled as the test group. Users that do not update to the new version are labeled as the control group, which may include eligible users that did not install the update. Users that updated to the new version after a fixed period of time, 1 week for our experiment, were not included in the experiment because they overlapped.</p>
+<p>Google Play uses a randomized approach to select the different experiment groups, and we can measure key metrics across these groups. However, we found biases in the data which prevented us from using our standard approaches for A/B testing.</p>
+<div class="figure" style="text-align: center"><span id="fig:8-1"></span>
+<img src="images/8-1.png" alt="Daily Sessions for the different groups." width="100%" />
+<p class="caption">
+Figure 8.1: Daily Sessions for the different groups.
+</p>
+</div>
+<p>The chart above shows the mean daily sessions per active user for our test and control groups from a staged rollout. We found that users with the new app version were more active than other users prior to the experiment, meaning that a key assumption of A/B testing did not hold: randomized sampling should minimize bias by equalizing all other factors.</p>
+<p>Since this assumption did not hold true, we needed to use new techniques in order to measure the performance of our experiments and communicate results to our product managers. We want to be able to answer the following questions:</p>
+<ol style="list-style-type: decimal">
+<li>Did the new release have a positive impact on our metrics?</li>
+<li>Is the change significant?</li>
+<li>How big is the change?</li>
+</ol>
+<p>Typically, we compare the difference between the test and control groups for a time period following the release of the experiment version. To account for the biases in user groups with staged rollouts, we measured key metrics for the experiment groups before and after the new release, and compared the pre-experiment differences between these groups. We use two approaches for this analysis:</p>
+<ul>
+<li>Time-Series Analysis</li>
+<li>Difference-in-Differences Estimation</li>
+</ul>
+<p>We use the first approach to estimate absolute changes in key metrics using aggregate-level data and the second approach to perform significance testing on a collection of metrics using user-level data. Both approaches are used to account for biases in the way that staged rollouts sample users.</p>
+<div id="staged-rollout-biases" class="section level3">
+<h3><span class="header-section-number">8.1.1</span> Staged Rollout Biases</h3>
+<p>One of the issues to be aware of when using staged rollouts on Google Play is that it may take several days for users to update to the new binary release (APK). We used a 10% sample rate for our test build, and it took about 2 weeks for users to converge to this value. The chart above shows the adoption rate of the new APK, where adoption rate is defined as the number of users that updated over the total number of active users.</p>
+<div class="figure" style="text-align: center"><span id="fig:8-2"></span>
+<img src="images/8-2.png" alt="Adoption rate of APKs in the experiment." width="90%" />
+<p class="caption">
+Figure 8.2: Adoption rate of APKs in the experiment.
+</p>
+</div>
+<p>We found that including new users results in a faster adoption rate, but excluded new users in our analysis. The time-series and difference-in-differences methods both rely on data being collected for each user prior to the launch of the experiment, and new users have no prior data. For the experiment detailed later in this chapter, we only included users that updated within 1 week which resulted in an adoption rate of 8.3%.</p>
+<p>In order to try to explain the biases in the data, we explored a variety of variables that may be responsible. The following variables where not significant in determining which groups users were assigned to: country and device model.</p>
+<p>The variables that did show biases in the groups were the starting month for the user, and the number of prior updates. A bias towards users that have upgraded more in the past was not surprising, because users need to update in order to be included in the test group.</p>
+<div class="figure" style="text-align: center"><span id="fig:8-3"></span>
+<img src="images/8-3.png" alt="Prior updates for the experiment groups." width="100%" />
+<p class="caption">
+Figure 8.3: Prior updates for the experiment groups.
+</p>
+</div>
+</div>
+<div id="time-series-analysis" class="section level3">
+<h3><span class="header-section-number">8.1.2</span> Time Series Analysis</h3>
+<p>One of the metrics we measured for our staged rollout experiment was the average number of sessions per active user. To estimate the absolute change in this metric between the test and control group we used the CausalImpact R package, which performs Bayesian time-series modeling. This approach estimates the value of the test group’s time series if no intervention occurred, and uses this estimation to provide a prediction of the relative and absolute changes in metrics. A key assumption of this approach is that the control group is not impacted by any changes made.</p>
+<div class="figure" style="text-align: center"><span id="fig:8-4"></span>
+<img src="images/8-4.png" alt="Daily Sessions for the experiment groups." width="100%" />
+<p class="caption">
+Figure 8.4: Daily Sessions for the experiment groups.
+</p>
+</div>
+<p>The chart below shows the time series for our test and control groups. The solid line is the average sessions metric for the test group, which was larger than the control group prior to the experiment. We used a two-week period before and after the release date for measuring key metrics.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(CausalImpact) 
+data &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="dt">file =</span> <span class="st">&quot;DailySessions.csv&quot;</span>)
+
+<span class="co"># Create a DataFrame and plot the input data </span>
+ts &lt;-<span class="st"> </span><span class="kw">cbind</span>(data<span class="op">$</span>test, data<span class="op">$</span>control)
+<span class="kw">matplot</span>(ts, <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>)
+
+<span class="co"># Use two week prior and post periods and plot results  </span>
+pre.period &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">14</span>)
+post.period &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">15</span>, <span class="dv">30</span>) 
+impact &lt;-<span class="st"> </span><span class="kw">CausalImpact</span>(ts, pre.period, post.period)
+
+<span class="co"># Plot the results and explain the outcome </span>
+<span class="kw">plot</span>(impact, <span class="kw">c</span>(<span class="st">&quot;original&quot;</span>, <span class="st">&quot;pointwise&quot;</span>)) 
+<span class="kw">summary</span>(impact, <span class="st">&quot;report&quot;</span>)</code></pre></div>
+<p>We used the CausalImpact R package to estimate the impact of the new app version on our session metric. The code snippet above shows how to use this package to build an estimate for the test group. For this experiment, the relative increase was +4% daily sessions per active user, with a 95% confidence interval of [+2%, +5%].</p>
+<div class="figure" style="text-align: center"><span id="fig:8-5"></span>
+<img src="images/8-5.png" alt="Generating visualizations with CausalImpact." width="100%" />
+<p class="caption">
+Figure 8.5: Generating visualizations with CausalImpact.
+</p>
+</div>
+<p>This approach is useful when only aggregate data is available. To test multiple variables independent of a time component, we use bootstrapping.</p>
+</div>
+<div id="difference-in-differences-estimation" class="section level3">
+<h3><span class="header-section-number">8.1.3</span> Difference-in-Differences Estimation</h3>
+<p>We usually tracked a collection of metrics when performing experiments at Twitch. Bootstrapping is a robust resampling process that enables our teams to measure changes in metrics with confidence intervals. For our staged rollout experiment, we used bootstrapping to measure the difference-in-differences between our test and control groups.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(boot)
+data &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;UserSessions.csv&quot;</span>)
+
+<span class="co"># Function for computing the difference of differences </span>
+run_DiD &lt;-<span class="st"> </span><span class="cf">function</span>(data, indices){
+  d &lt;-<span class="st"> </span>data[indices,]
+  new &lt;-<span class="st"> </span><span class="kw">mean</span>(d<span class="op">$</span>postval[d<span class="op">$</span>group<span class="op">==</span><span class="st">&#39;Test&#39;</span>])<span class="op">/</span>
+<span class="st">             </span><span class="kw">mean</span>(d<span class="op">$</span>priorval[d<span class="op">$</span>group<span class="op">==</span><span class="st">&#39;Test&#39;</span>])
+  old &lt;-<span class="kw">mean</span>(d<span class="op">$</span>postval[d<span class="op">$</span>expgroup<span class="op">==</span><span class="st">&#39;Control&#39;</span>])<span class="op">/</span>
+<span class="st">             </span><span class="kw">mean</span>(d<span class="op">$</span>priorval[d<span class="op">$</span>expgroup<span class="op">==</span><span class="st">&#39;Control&#39;</span>])
+  <span class="kw">return</span>((new <span class="op">-</span><span class="st"> </span>old)<span class="op">/</span>old <span class="op">*</span><span class="st"> </span><span class="fl">100.0</span>) 
+}
+
+<span class="co"># perform the bootstrapping and output the results </span>
+boot_est &lt;-<span class="st"> </span><span class="kw">boot</span>(data, run_DiD, <span class="dt">R=</span><span class="dv">1000</span>, 
+                   <span class="dt">parallel=</span><span class="st">&quot;multicore&quot;</span>, <span class="dt">ncpus =</span> <span class="dv">8</span>)  
+<span class="kw">quantile</span>(boot_est<span class="op">$</span>t, <span class="kw">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>)) 
+<span class="kw">plot</span>(<span class="kw">density</span>(boot_est<span class="op">$</span>t),<span class="dt">xlab=</span><span class="st">&quot;% Increase vs. Control&quot;</span>)</code></pre></div>
+<p>For each user, we measured the total number of sessions for the 14 days prior to the test version release and the 14 days following the release date. We then performed thousands of iterations, where we computed the sampled mean values for the differences between prior and post values and computed the percent increase between the test and control means. We used the boot R package to perform these calculations, as shown above. The model estimated a +5.4% increase in total sessions per user, with a 95% confidence interval of [+3.9%, +6.9%].</p>
+<div class="figure" style="text-align: center"><span id="fig:8-6"></span>
+<img src="images/8-6.png" alt="Bootstrapping results for session counts." width="100%" />
+<p class="caption">
+Figure 8.6: Bootstrapping results for session counts.
+</p>
+</div>
+</div>
+</div>
+<div id="conclusion-6" class="section level2">
+<h2><span class="header-section-number">8.2</span> Conclusion</h2>
+<p>We found biases in the data when using Google’s staged rollout feature and applied new methods for running experiments with this feature. Both of the approaches used found that the new app release resulted in a significant increase in sessions per user. The time-series method is useful for cases where only aggregate-level data is available, and the bootstrapping approach is useful for testing multiple values independent of a time component. The rollout feature provides a mechanism for testing new builds, but doesn’t work with standard A/B testing approaches. For further reading, explore the following papers on Causal Impact<a href="#fn23" class="footnoteRef" id="fnref23"><sup>23</sup></a> and A/B Testing at Facebook<a href="#fn24" class="footnoteRef" id="fnref24"><sup>24</sup></a>.</p>
+<p>The case study presented in this chapter shows the importance of moving beyond standardized tools for performing experiments. While using vendor solutions is a great way to get started with running experiments, it’s useful to be able to manually perform the experimentation analysis if a situation arises that the tool does not cover. It’s important to question your assumptions when running experiments and to not draw too strong of conclusions from a single test.</p>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="22">
+<li id="fn22"><p><a href="https://towardsdatascience.com/the-three-types-of-a-b-tests-ac544a5783f8" class="uri">https://towardsdatascience.com/the-three-types-of-a-b-tests-ac544a5783f8</a><a href="experimentation.html#fnref22">↩</a></p></li>
+<li id="fn23"><p><a href="https://ai.google/research/pubs/pub41854" class="uri">https://ai.google/research/pubs/pub41854</a><a href="experimentation.html#fnref23">↩</a></p></li>
+<li id="fn24"><p><a href="https://www.kellogg.northwestern.edu/faculty/gordon_b/files/kellogg_fb_whitepaper.pdf" class="uri">https://www.kellogg.northwestern.edu/faculty/gordon_b/files/kellogg_fb_whitepaper.pdf</a><a href="experimentation.html#fnref24">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="productizing-models.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="recommendation-systems.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/08-exp.Rmd",
+"text": "Edit"
+},
+"download": ["startup-data-science.pdf", "startup-data-science.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Data Science for Startups</title>
+  <meta name="description" content="Data Science for Startups">
+  <meta name="generator" content="bookdown 0.7.8 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Data Science for Startups" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Data Science for Startups" />
+  <meta name="github-repo" content="bgweber/StartupDataScience" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data Science for Startups" />
+  
+  <meta name="twitter:description" content="Data Science for Startups" />
+  
+
+<meta name="author" content="Ben G Weber">
+
+
+<meta name="date" content="2018-05-29">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="tracking-data.html">
+<link rel="next" href="business-intelligence.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Data Science for Startups</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#why-data-science"><i class="fa fa-check"></i><b>1.1</b> Why Data Science?</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#book-overview"><i class="fa fa-check"></i><b>1.2</b> Book Overview</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#tooling"><i class="fa fa-check"></i><b>1.3</b> Tooling</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="tracking-data.html"><a href="tracking-data.html"><i class="fa fa-check"></i><b>2</b> Tracking Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="tracking-data.html"><a href="tracking-data.html#what-to-record"><i class="fa fa-check"></i><b>2.1</b> What to Record?</a></li>
+<li class="chapter" data-level="2.2" data-path="tracking-data.html"><a href="tracking-data.html#tracking-specs"><i class="fa fa-check"></i><b>2.2</b> Tracking Specs</a></li>
+<li class="chapter" data-level="2.3" data-path="tracking-data.html"><a href="tracking-data.html#client-vs-server-tracking"><i class="fa fa-check"></i><b>2.3</b> Client vs Server Tracking</a></li>
+<li class="chapter" data-level="2.4" data-path="tracking-data.html"><a href="tracking-data.html#sending-tracking-events"><i class="fa fa-check"></i><b>2.4</b> Sending Tracking Events</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="tracking-data.html"><a href="tracking-data.html#web-call"><i class="fa fa-check"></i><b>2.4.1</b> Web Call</a></li>
+<li class="chapter" data-level="2.4.2" data-path="tracking-data.html"><a href="tracking-data.html#web-server"><i class="fa fa-check"></i><b>2.4.2</b> Web Server</a></li>
+<li class="chapter" data-level="2.4.3" data-path="tracking-data.html"><a href="tracking-data.html#subscription-service"><i class="fa fa-check"></i><b>2.4.3</b> Subscription Service</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="tracking-data.html"><a href="tracking-data.html#message-encoding"><i class="fa fa-check"></i><b>2.5</b> Message Encoding</a></li>
+<li class="chapter" data-level="2.6" data-path="tracking-data.html"><a href="tracking-data.html#building-a-tracking-api"><i class="fa fa-check"></i><b>2.6</b> Building a Tracking API</a></li>
+<li class="chapter" data-level="2.7" data-path="tracking-data.html"><a href="tracking-data.html#privacy"><i class="fa fa-check"></i><b>2.7</b> Privacy</a></li>
+<li class="chapter" data-level="2.8" data-path="tracking-data.html"><a href="tracking-data.html#conclusion"><i class="fa fa-check"></i><b>2.8</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-pipelines.html"><a href="data-pipelines.html"><i class="fa fa-check"></i><b>3</b> Data Pipelines</a><ul>
+<li class="chapter" data-level="3.1" data-path="data-pipelines.html"><a href="data-pipelines.html#types-of-data"><i class="fa fa-check"></i><b>3.1</b> Types of Data</a></li>
+<li class="chapter" data-level="3.2" data-path="data-pipelines.html"><a href="data-pipelines.html#the-evolution-of-data-pipelines"><i class="fa fa-check"></i><b>3.2</b> The Evolution of Data Pipelines</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="data-pipelines.html"><a href="data-pipelines.html#flat-file-era"><i class="fa fa-check"></i><b>3.2.1</b> Flat File Era</a></li>
+<li class="chapter" data-level="3.2.2" data-path="data-pipelines.html"><a href="data-pipelines.html#database-era"><i class="fa fa-check"></i><b>3.2.2</b> Database Era</a></li>
+<li class="chapter" data-level="3.2.3" data-path="data-pipelines.html"><a href="data-pipelines.html#data-lake-era"><i class="fa fa-check"></i><b>3.2.3</b> Data Lake Era</a></li>
+<li class="chapter" data-level="3.2.4" data-path="data-pipelines.html"><a href="data-pipelines.html#serverless-era"><i class="fa fa-check"></i><b>3.2.4</b> Serverless Era</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="data-pipelines.html"><a href="data-pipelines.html#a-scalable-pipeline"><i class="fa fa-check"></i><b>3.3</b> A Scalable Pipeline</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="data-pipelines.html"><a href="data-pipelines.html#setting-up-the-environment"><i class="fa fa-check"></i><b>3.3.1</b> Setting up the Environment</a></li>
+<li class="chapter" data-level="3.3.2" data-path="data-pipelines.html"><a href="data-pipelines.html#publishing-events"><i class="fa fa-check"></i><b>3.3.2</b> Publishing Events</a></li>
+<li class="chapter" data-level="3.3.3" data-path="data-pipelines.html"><a href="data-pipelines.html#storing-events"><i class="fa fa-check"></i><b>3.3.3</b> Storing Events</a></li>
+<li class="chapter" data-level="3.3.4" data-path="data-pipelines.html"><a href="data-pipelines.html#deploying-and-auto-scaling"><i class="fa fa-check"></i><b>3.3.4</b> Deploying and Auto Scaling</a></li>
+<li class="chapter" data-level="3.3.5" data-path="data-pipelines.html"><a href="data-pipelines.html#raw-to-processed-events"><i class="fa fa-check"></i><b>3.3.5</b> Raw to Processed Events</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="data-pipelines.html"><a href="data-pipelines.html#conclusion-1"><i class="fa fa-check"></i><b>3.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="business-intelligence.html"><a href="business-intelligence.html"><i class="fa fa-check"></i><b>4</b> Business Intelligence</a><ul>
+<li class="chapter" data-level="4.1" data-path="business-intelligence.html"><a href="business-intelligence.html#kpis"><i class="fa fa-check"></i><b>4.1</b> KPIs</a></li>
+<li class="chapter" data-level="4.2" data-path="business-intelligence.html"><a href="business-intelligence.html#reporting-with-r"><i class="fa fa-check"></i><b>4.2</b> Reporting with R</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="business-intelligence.html"><a href="business-intelligence.html#base-r"><i class="fa fa-check"></i><b>4.2.1</b> Base R</a></li>
+<li class="chapter" data-level="4.2.2" data-path="business-intelligence.html"><a href="business-intelligence.html#r-markdown"><i class="fa fa-check"></i><b>4.2.2</b> R Markdown</a></li>
+<li class="chapter" data-level="4.2.3" data-path="business-intelligence.html"><a href="business-intelligence.html#r-shiny"><i class="fa fa-check"></i><b>4.2.3</b> R Shiny</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="business-intelligence.html"><a href="business-intelligence.html#etls"><i class="fa fa-check"></i><b>4.3</b> ETLs</a></li>
+<li class="chapter" data-level="4.4" data-path="business-intelligence.html"><a href="business-intelligence.html#reporting-tools"><i class="fa fa-check"></i><b>4.4</b> Reporting Tools</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="business-intelligence.html"><a href="business-intelligence.html#google-data-studio"><i class="fa fa-check"></i><b>4.4.1</b> Google Data Studio</a></li>
+<li class="chapter" data-level="4.4.2" data-path="business-intelligence.html"><a href="business-intelligence.html#tableau"><i class="fa fa-check"></i><b>4.4.2</b> Tableau</a></li>
+<li class="chapter" data-level="4.4.3" data-path="business-intelligence.html"><a href="business-intelligence.html#mode"><i class="fa fa-check"></i><b>4.4.3</b> Mode</a></li>
+<li class="chapter" data-level="4.4.4" data-path="business-intelligence.html"><a href="business-intelligence.html#custom-tooling"><i class="fa fa-check"></i><b>4.4.4</b> Custom Tooling</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="business-intelligence.html"><a href="business-intelligence.html#conclusion-2"><i class="fa fa-check"></i><b>4.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>5</b> Exploratory Data Analysis</a><ul>
+<li class="chapter" data-level="5.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#summary-statistics"><i class="fa fa-check"></i><b>5.1</b> Summary Statistics</a></li>
+<li class="chapter" data-level="5.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plotting"><i class="fa fa-check"></i><b>5.2</b> Plotting</a></li>
+<li class="chapter" data-level="5.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#correlation-analysis"><i class="fa fa-check"></i><b>5.3</b> Correlation Analysis</a></li>
+<li class="chapter" data-level="5.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#feature-importance"><i class="fa fa-check"></i><b>5.4</b> Feature Importance</a></li>
+<li class="chapter" data-level="5.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#conclusion-3"><i class="fa fa-check"></i><b>5.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="predictive-modeling.html"><a href="predictive-modeling.html"><i class="fa fa-check"></i><b>6</b> Predictive Modeling</a><ul>
+<li class="chapter" data-level="6.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#types-of-predictive-models"><i class="fa fa-check"></i><b>6.1</b> Types of Predictive Models</a></li>
+<li class="chapter" data-level="6.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#training-a-classification-model"><i class="fa fa-check"></i><b>6.2</b> Training a Classification Model</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#weka"><i class="fa fa-check"></i><b>6.2.1</b> Weka</a></li>
+<li class="chapter" data-level="6.2.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#bigml"><i class="fa fa-check"></i><b>6.2.2</b> BigML</a></li>
+<li class="chapter" data-level="6.2.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#r-glmnet"><i class="fa fa-check"></i><b>6.2.3</b> R — Glmnet</a></li>
+<li class="chapter" data-level="6.2.4" data-path="predictive-modeling.html"><a href="predictive-modeling.html#python-scikit-learn"><i class="fa fa-check"></i><b>6.2.4</b> Python — scikit-learn</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#clustering"><i class="fa fa-check"></i><b>6.3</b> Clustering</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#how-many-clusters-to-use"><i class="fa fa-check"></i><b>6.3.1</b> How many clusters to use?</a></li>
+<li class="chapter" data-level="6.3.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#cluster-descriptions"><i class="fa fa-check"></i><b>6.3.2</b> Cluster Descriptions</a></li>
+<li class="chapter" data-level="6.3.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#cluster-populations-by-net-worth"><i class="fa fa-check"></i><b>6.3.3</b> Cluster Populations by Net Worth</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="predictive-modeling.html"><a href="predictive-modeling.html#conclusion-4"><i class="fa fa-check"></i><b>6.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="productizing-models.html"><a href="productizing-models.html"><i class="fa fa-check"></i><b>7</b> Productizing Models</a><ul>
+<li class="chapter" data-level="7.1" data-path="productizing-models.html"><a href="productizing-models.html#building-a-model-specification"><i class="fa fa-check"></i><b>7.1</b> Building a Model Specification</a></li>
+<li class="chapter" data-level="7.2" data-path="productizing-models.html"><a href="productizing-models.html#batch-deployments"><i class="fa fa-check"></i><b>7.2</b> Batch Deployments</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="productizing-models.html"><a href="productizing-models.html#sql-query"><i class="fa fa-check"></i><b>7.2.1</b> SQL Query</a></li>
+<li class="chapter" data-level="7.2.2" data-path="productizing-models.html"><a href="productizing-models.html#dataflow-bigquery"><i class="fa fa-check"></i><b>7.2.2</b> DataFlow — BigQuery</a></li>
+<li class="chapter" data-level="7.2.3" data-path="productizing-models.html"><a href="productizing-models.html#dataflow-datastore"><i class="fa fa-check"></i><b>7.2.3</b> DataFlow — DataStore</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="productizing-models.html"><a href="productizing-models.html#live-deployments"><i class="fa fa-check"></i><b>7.3</b> Live Deployments</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="productizing-models.html"><a href="productizing-models.html#web-service"><i class="fa fa-check"></i><b>7.3.1</b> Web Service</a></li>
+<li class="chapter" data-level="7.3.2" data-path="productizing-models.html"><a href="productizing-models.html#dataflow---pubsub"><i class="fa fa-check"></i><b>7.3.2</b> DataFlow - PubSub</a></li>
+<li class="chapter" data-level="7.3.3" data-path="productizing-models.html"><a href="productizing-models.html#custom-engineering"><i class="fa fa-check"></i><b>7.3.3</b> Custom Engineering</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="productizing-models.html"><a href="productizing-models.html#conclusion-5"><i class="fa fa-check"></i><b>7.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="experimentation.html"><a href="experimentation.html"><i class="fa fa-check"></i><b>8</b> Experimentation</a><ul>
+<li class="chapter" data-level="8.1" data-path="experimentation.html"><a href="experimentation.html#staged-rollouts"><i class="fa fa-check"></i><b>8.1</b> Staged Rollouts</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="experimentation.html"><a href="experimentation.html#staged-rollout-biases"><i class="fa fa-check"></i><b>8.1.1</b> Staged Rollout Biases</a></li>
+<li class="chapter" data-level="8.1.2" data-path="experimentation.html"><a href="experimentation.html#time-series-analysis"><i class="fa fa-check"></i><b>8.1.2</b> Time Series Analysis</a></li>
+<li class="chapter" data-level="8.1.3" data-path="experimentation.html"><a href="experimentation.html#difference-in-differences-estimation"><i class="fa fa-check"></i><b>8.1.3</b> Difference-in-Differences Estimation</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="experimentation.html"><a href="experimentation.html#conclusion-6"><i class="fa fa-check"></i><b>8.2</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="recommendation-systems.html"><a href="recommendation-systems.html"><i class="fa fa-check"></i><b>9</b> Recommendation Systems</a><ul>
+<li class="chapter" data-level="9.1" data-path="recommendation-systems.html"><a href="recommendation-systems.html#r---recommender-lab"><i class="fa fa-check"></i><b>9.1</b> R - Recommender Lab</a></li>
+<li class="chapter" data-level="9.2" data-path="recommendation-systems.html"><a href="recommendation-systems.html#java---apache-mahout"><i class="fa fa-check"></i><b>9.2</b> Java - Apache Mahout</a></li>
+<li class="chapter" data-level="9.3" data-path="recommendation-systems.html"><a href="recommendation-systems.html#scala---mllib"><i class="fa fa-check"></i><b>9.3</b> Scala - MLlib</a></li>
+<li class="chapter" data-level="9.4" data-path="recommendation-systems.html"><a href="recommendation-systems.html#sql---spark-sql"><i class="fa fa-check"></i><b>9.4</b> SQL - Spark SQL</a></li>
+<li class="chapter" data-level="9.5" data-path="recommendation-systems.html"><a href="recommendation-systems.html#conclusion-7"><i class="fa fa-check"></i><b>9.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="deep-learning.html"><a href="deep-learning.html"><i class="fa fa-check"></i><b>10</b> Deep Learning</a><ul>
+<li class="chapter" data-level="10.1" data-path="deep-learning.html"><a href="deep-learning.html#improving-shallow-problems"><i class="fa fa-check"></i><b>10.1</b> Improving Shallow Problems</a></li>
+<li class="chapter" data-level="10.2" data-path="deep-learning.html"><a href="deep-learning.html#loss-functions-in-keras"><i class="fa fa-check"></i><b>10.2</b> Loss Functions in Keras</a></li>
+<li class="chapter" data-level="10.3" data-path="deep-learning.html"><a href="deep-learning.html#evaluating-loss-functions"><i class="fa fa-check"></i><b>10.3</b> Evaluating Loss Functions</a></li>
+<li class="chapter" data-level="10.4" data-path="deep-learning.html"><a href="deep-learning.html#conclusion-8"><i class="fa fa-check"></i><b>10.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science for Startups</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data-pipelines" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Data Pipelines</h1>
+<p>Building data pipelines is a core component of data science at a startup. In order to build data products, you need to be able to collect data points from millions of users and process the results in near real-time. While the previous chapter discussed what type of data to collect and how to send data to an endpoint, this chapter will discuss how to process data that has been collected, enabling data scientists to work with the data. The chapter on model production will discuss how to deploy models on this data platform.</p>
+<p>Typically, the destination for a data pipeline is a data lake, such as Hadoop or parquet files on S3, or a relational database, such as Redshift. A data pipeline should have the following properties:</p>
+<ul>
+<li><strong>Low Event Latency:</strong> Data scientists should be able to query recent event data in the pipeline, within minutes or seconds of the event being sent to the data collection endpoint. This is useful for testing purposes and for building data products that need to update in near real-time.</li>
+<li><strong>Scalability:</strong> A data pipeline should be able to scale to billions of data points, and potentially trillions as a product scales. A high performing system should not only be able to store this data, but make the complete data set available for querying.</li>
+<li><strong>Interactive Querying:</strong> A high functioning data pipeline should support both long-running batch queries and smaller interactive queries that enable data scientists to explore tables and understand the schema without having to wait minutes or hours when sampling data.</li>
+<li><strong>Versioning:</strong> You should be able to make changes to your data pipeline and event definitions without bringing down the pipeline and suffering data loss. This chapter will discuss how to build a pipeline that supports different event definitions, in the case of changing an event schema.</li>
+<li><strong>Monitoring:</strong> If an event is no longer being received, or tracking data is no longer being received for a particular region, then the data pipeline should generate alerts through tools such as PagerDuty.</li>
+<li><strong>Testing:</strong> You should be able to test your data pipeline with test events that do not end up in your data lake or database, but that do test components in the pipeline.</li>
+</ul>
+<p>There’s a number of other useful properties that a data pipeline should have, but this is a good starting point for a startup. As you start to build additional components that depend on your data pipeline, you’ll want to set up tooling for fault tolerance and automating tasks.</p>
+<p>This chapter will show how to set up a scalable data pipeline that sends tracking data to a data lake, database, and subscription service for use in data products. I’ll discuss the different types of data in a pipeline, the evolution of data pipelines, and walk through an example pipeline implemented on GCP.</p>
+<p>Before deploying a data pipeline, you’ll want to answer the following questions, which resemble our questions about tracking specs:</p>
+<ul>
+<li>Who owns the data pipeline?</li>
+<li>Which teams will be consuming data?</li>
+<li>Who will QA the pipeline?</li>
+</ul>
+<p>In a small organization, a data scientist may be responsible for the pipeline, while larger organizations usually have an infrastructure team that is responsible for keeping the pipeline operational. It’s also useful to know which teams will be consuming the data, so that you can stream data to the appropriate teams. For example, marketing may need real-time data of landing page visits to perform attribution for marketing campaigns. And finally, the data quality of events passed to the pipeline should be thoroughly inspected on a regular basis. Sometimes a product update will cause a tracking event to drop relevant data, and a process should be set up to capture these types of changes in data.</p>
+<div id="types-of-data" class="section level2">
+<h2><span class="header-section-number">3.1</span> Types of Data</h2>
+<p>Data in a pipeline is often referred to by different names based on the amount of modification that has been performed. Data is typically classified with the following labels:</p>
+<ul>
+<li><strong>Raw:</strong> Is tracking data with no processing applied. This is data stored in the message encoding format used to send tracking events, such as JSON. Raw data does not yet have a schema applied. It’s common to send all tracking events as raw events, because all events can be sent to a single endpoint and schemas can be applied later on in the pipeline.</li>
+<li><strong>Processed:</strong> Processed data is raw data that has been decoded into event specific formats, with a schema applied. For example, JSON tracking events that have been translated into session start events with a fixed schema are considered processed data. Processed events are usually stored in different event tables/destinations in a data pipeline.</li>
+<li><strong>Cooked:</strong> Processed data that has been aggregated or summarized is referred to as cooked data. For example, processed data could include session start and session end events, and be used as input to cooked data that summarizes daily activity for a user, such as number of sessions and total time on site for a web page.</li>
+</ul>
+<p>Data scientists will typically work with processed data, and use tools to create cooked data for other teams. This chapter discusses how to build a data pipeline that outputs processed data, while the Business Intelligence chapter will discuss how to add cooked data to your pipeline.</p>
+</div>
+<div id="the-evolution-of-data-pipelines" class="section level2">
+<h2><span class="header-section-number">3.2</span> The Evolution of Data Pipelines</h2>
+<p>Over the past two decades the landscape for collecting and analyzing data has changed significantly. Rather than storing data locally via log files, modern systems can track activity and apply machine learning in near real-time. Startups might want to use one of the earlier approaches for initial testing, but should really look to more recent approaches for building data pipelines. Based on my experience, I’ve noticed four different approaches to pipelines:</p>
+<ul>
+<li><strong>Flat File Era:</strong> Data is saved locally on game servers.</li>
+<li><strong>Database Era:</strong> Data is staged in flat files and then loaded into a database.</li>
+<li><strong>Data Lake Era:</strong> Data is stored in Hadoop/S3 and then loaded into a DB.</li>
+<li><strong>Serverless Era:</strong> Managed services are used for storage and querying.</li>
+</ul>
+<p>Each of the steps in this evolution support the collection of larger data sets, but may introduce additional operational complexity. For a startup, the goal is to be able to scale data collection without scaling operational resources, and the progression to managed services provides a nice solution for growth.</p>
+<p>The data pipeline that we’ll walk through in the next section of this chapter is based on the most recent era of data pipelines, but it’s useful to walk through different approaches because the requirements for different companies may fit better with different architectures.</p>
+<div id="flat-file-era" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Flat File Era</h3>
+<p>I got started in data science at Electronic Arts in 2010, before EA had an organization built around data. While many game companies were already collecting massive amounts of data about gameplay, most telemetry was stored in the form of log files or other flat file formats that were stored locally on the game servers. Nothing could be queried directly, and calculating basic metrics such as monthly active users (MAU) took substantial effort.</p>
+<div class="figure" style="text-align: center"><span id="fig:3-1"></span>
+<img src="images/3-1.png" alt="Components in a pre-database Analytics Architecture." width="70%" />
+<p class="caption">
+Figure 3.1: Components in a pre-database Analytics Architecture.
+</p>
+</div>
+<p>At Electronic Arts, a replay feature was built into Madden NFL 11 which provided an unexpected source of game telemetry. After every game, a game summary in an XML format was sent to a game server that listed each play called, moves taken during the play, and the result of the down. This resulted in millions of files that could be analyzed to learn more about how players interacted with Madden football in the wild.</p>
+<p>Storing data locally is by far the easiest approach to take when collecting gameplay data. For example, the PHP approach presented in the last chapter is useful for setting up a lightweight analytics endpoint. But this approach does have significant drawbacks.</p>
+<p>This approach is simple and enables teams to save data in whatever format is needed, but has no fault tolerance, does not store data in a central location, has significant latency in data availability, and has no standard tooling for building an ecosystem for analysis. Flat files can work fine if you only have a few servers, but it’s not really an analytics pipeline unless you move the files to a central location. You can write scripts to pull data from log servers to a central location, but it’s not generally a scalable approach.</p>
+</div>
+<div id="database-era" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> Database Era</h3>
+<p>While I was at Sony Online Entertainment, we had game servers save event files to a central file server every couple of minutes. The file server then ran an ETL process about once an hour that fast loaded these event files into our analytics database, which was Vertica at the time. This process had a reasonable latency, about one hour from a game client sending an event to the data being queryable in our analytics database. It also scaled to a large volume of data, but required using a fixed schema for event data.</p>
+<div class="figure" style="text-align: center"><span id="fig:3-2"></span>
+<img src="images/3-2.png" alt="Components in an ETL-based Analytics Architecture." width="70%" />
+<p class="caption">
+Figure 3.2: Components in an ETL-based Analytics Architecture.
+</p>
+</div>
+<p>When I was a Twitch, we used a similar process for one of our analytics databases. The main difference from the approach at SOE was that instead of having game servers scp files to a central location, we used Amazon Kinesis to stream events from servers to a staging area on S3. We then used an ETL process to fast load data into Redshift for analysis. Since then, Twitch has shifted to a data lake approach, in order to scale to a larger volume of data and to provide more options for querying the datasets.</p>
+<p>The databases used at SOE and Twitch were immensely valuable for both of the companies, but we did run into challenges as we scaled the amount of data stored. As we collected more detailed information about gameplay, we could no longer keep complete event history in our tables and needed to truncate data older than a few months. This is fine if you can set up summary tables that maintain the most important details about these events, but it’s not an ideal situation.</p>
+<p>One of the issues with this approach is that the staging server becomes a central point of failure. It’s also possible for bottlenecks to arise where one game sends way too many events, causing events to be dropped across all of the titles. Another issue is query performance as you scale up the number of analysts working with the database. A team of a few analysts working with a few months of gameplay data may work fine, but after collecting years of data and growing the number of analysts, query performance can be a significant problem, causing some queries to take hours to complete.</p>
+<p>The main benefits of this approach are that all event data is available in a single location queryable with SQL and great tooling is available, such as Tableau and DataGrip, for working with relational databases. The drawbacks are that it’s expensive to keep all data loaded into a database like Vertica or Redshift, events needs to have a fixed schema, and truncating tables may be necessary.</p>
+<p>Another issue with using a database as the main interface for data is that machine learning tools such as Spark’s MLlib cannot be used effectively, since the relevant data needs to be unloaded from the database before it can be operated on. One of the ways of overcoming this limitation is to store gameplay data in a format and storage layer that works well with Big Data tools, such as saving events as Parquet files on S3. This type of configuration became more population in the next era, and gets around the limitations of needing to truncate tables and the reduces the cost of keeping all data.</p>
+</div>
+<div id="data-lake-era" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> Data Lake Era</h3>
+<p>The data storage pattern that was most common while I was working as a data scientist in the games industry was a data lake. The general pattern is to store semi-structured data in a distributed database, and run ETL processes to extract the most relevant data to analytics databases. A number of different tools can be used for the distributed database: at Electronic Arts we used Hadoop, at Microsoft Studios we used Cosmos, and at Twitch we used S3.</p>
+<div class="figure"><span id="fig:3-3"></span>
+<img src="images/3-3.png" alt="Components in a Data Lake Analytics Architecture." width="100%" />
+<p class="caption">
+Figure 3.3: Components in a Data Lake Analytics Architecture.
+</p>
+</div>
+<p>This approach enables teams to scale to massive volumes of data, and provides additional fault tolerance. The main downside is that it introduces additional complexity, and can result in analysts having access to less data than if a traditional database approach was used, due to lack of tooling or access policies. Most analysts will interact with data in the same way in this model, using an analytics database populated from data lake ETLs.</p>
+<p>One of the benefits of this approach is that it supports a variety of different event schemas, and you can change the attributes of an event without impacting the analytics database. Another advantage is that analytics teams can use tools such as Spark SQL to work with the data lake directly. However, most places I worked at restricted access to the data lake, eliminating many of the benefits of this model.</p>
+<p>This approach scales to a massive amount of data, supports flexible event schemas, and provides a good solution for long-running batch queries. The down sides are that it may involve significant operational overhead, may introduce large event latencies, and may lack mature tooling for the end users of the data lake. An additional drawback with this approach is that usually a whole team is needed just to keep the system operational. This makes sense for large organizations, but may be overkill for smaller companies. One of the ways of taking advantage of using a data lake without the cost of operational overhead is by using managed services.</p>
+</div>
+<div id="serverless-era" class="section level3">
+<h3><span class="header-section-number">3.2.4</span> Serverless Era</h3>
+<p>In the current era, analytics platforms incorporate a number of managed services, which enable teams to work with data in near real-time, scale up systems as necessary, and reduce the overhead of maintaining servers. I never experienced this era while I was working in the game industry, but saw signs of this transition happening. Riot Games is using Spark<a href="#fn7" class="footnoteRef" id="fnref7"><sup>7</sup></a> for ETL processes and machine learning, and needed to spin up infrastructure on demand. Some game teams are using elastic computing methods for game services, and it makes sense to utilize this approach for analytics as well.</p>
+<div class="figure"><span id="fig:3-4"></span>
+<img src="images/3-4.png" alt="Components in a managed Analytics Architecture." width="100%" />
+<p class="caption">
+Figure 3.4: Components in a managed Analytics Architecture.
+</p>
+</div>
+<p>This approach has many of the same benefits as using a data lake, autoscales based on query and storage needs, and has minimal operational overhead. The main drawbacks are that managed services can be expensive, and taking this approach will likely result in using platform specific tools that are not portable to other cloud providers.</p>
+<p>In my career I had the most success working with the database era approach, since it provided the analytics team with access to all of the relevant data. However, it wasn’t a setup that would continue to scale and most teams that I worked on have since moved to data lake environments. In order for a data lake environment to be successful, analytics teams need access to the underlying data, and mature tooling to support their processes. For a startup, the serverless approach is usually the best way to start building a data pipeline, because it can scale to match demand and requires minimal staff to maintain the data pipeline. The next section will walk through building a sample pipeline with managed services.</p>
+</div>
+</div>
+<div id="a-scalable-pipeline" class="section level2">
+<h2><span class="header-section-number">3.3</span> A Scalable Pipeline</h2>
+<p>We’ll build a data pipeline that receives events using Google’s PuSub as an endpoint, and save the events to a data lake and database. The approach presented here will save the events as raw data, but I’ll also discuss ways of transforming the events into processed data.</p>
+<p>The data pipeline that performs all of this functionality is relatively simple. The pipeline reads messages from PubSub and then transforms the events for persistence: the BigQuery portion of the pipeline converts messages to TableRow objects and streams directly to BigQuery, while the AVRO portion of the pipeline batches events into discrete windows and then saves the events to Google Storage. The graph of operations is shown in the figure above.</p>
+<div class="figure" style="text-align: center"><span id="fig:3-5"></span>
+<img src="images/3-5.png" alt="The streaming pipeline deployed to GCP." width="80%" />
+<p class="caption">
+Figure 3.5: The streaming pipeline deployed to GCP.
+</p>
+</div>
+<div id="setting-up-the-environment" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> Setting up the Environment</h3>
+<p>The first step in building a data pipeline is setting up the dependencies necessary to compile and deploy the project. I used the following maven dependencies to set up environments for the tracking API that sends events to the pipeline, and the data pipeline that processes events.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&lt;!--</span><span class="st"> </span>Dependencies <span class="cf">for</span> the Tracking API -&gt;
+<span class="er">&lt;</span>dependency<span class="op">&gt;</span>
+<span class="st">  </span><span class="er">&lt;</span>groupId<span class="op">&gt;</span>com.google.cloud<span class="op">&lt;</span><span class="er">/</span>groupId<span class="op">&gt;</span>
+<span class="st">  </span><span class="er">&lt;</span>artifactId<span class="op">&gt;</span>google<span class="op">-</span>cloud<span class="op">-</span>pubsub<span class="op">&lt;</span><span class="er">/</span>artifactId<span class="op">&gt;</span>
+<span class="st">  </span><span class="er">&lt;</span>version<span class="op">&gt;</span><span class="fl">0.32</span>.<span class="dv">0</span><span class="op">-</span>beta<span class="op">&lt;</span><span class="er">/</span>version<span class="op">&gt;</span>
+<span class="st">  </span><span class="er">&lt;/</span>dependency<span class="op">&gt;</span>
+<span class="er">&lt;/</span>dependencies<span class="op">&gt;</span>
+<span class="er">&lt;</span><span class="op">!--</span><span class="st"> </span>Dependencies <span class="cf">for</span> the data pipeline -&gt;
+<span class="er">&lt;</span>dependency<span class="op">&gt;</span>
+<span class="st">  </span><span class="er">&lt;</span>groupId<span class="op">&gt;</span>com.google.cloud.dataflow<span class="op">&lt;</span><span class="er">/</span>groupId<span class="op">&gt;</span>
+<span class="st">  </span><span class="er">&lt;</span>artifactId<span class="op">&gt;</span>google<span class="op">-</span>cloud<span class="op">-</span>dataflow<span class="op">-</span>java<span class="op">-</span>sdk<span class="op">-</span>all
+      <span class="op">&lt;</span><span class="er">/</span>artifactId<span class="op">&gt;</span>
+<span class="st">  </span><span class="er">&lt;</span>version<span class="op">&gt;</span><span class="fl">2.2</span>.<span class="dv">0</span><span class="op">&lt;</span><span class="er">/</span>version<span class="op">&gt;</span>
+<span class="er">&lt;/</span>dependency<span class="op">&gt;</span></code></pre></div>
+<p>I used Eclipse to author and compile the code for this tutorial, since it is open source. However, other IDEs such as IntelliJ provide additional features for deploying and monitoring DataFlow tasks. Before you can deploy jobs to Google Cloud, you’ll need to set up a service account for both PubSub and DataFlow. Setting up these credentials is outside the scope of this book, and more details are available in the Google documentation<a href="#fn8" class="footnoteRef" id="fnref8"><sup>8</sup></a>.</p>
+<p>An additional prerequisite for running this data pipeline is setting up a PubSub topic on GCP. I defined a raw-events topic that is used for publishing and consuming messages for the data pipeline. Additional details on creating a PubSub topic are available online<a href="#fn9" class="footnoteRef" id="fnref9"><sup>9</sup></a>.</p>
+<p>To deploy this data pipeline, you’ll need to set up a java environment with the maven dependencies listed above, set up a Google Cloud project and enable billing, enable billing on the storage and BigQuery services, and create a PubSub topic for sending and receiving messages. All of these managed services do cost money, but there is a free tier that can be used for prototyping a data pipeline.</p>
+<div class="figure" style="text-align: center"><span id="fig:3-6"></span>
+<img src="images/3-6.png" alt="Sending events from a server to a PubSub topic." width="60%" />
+<p class="caption">
+Figure 3.6: Sending events from a server to a PubSub topic.
+</p>
+</div>
+</div>
+<div id="publishing-events" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> Publishing Events</h3>
+<p>In order to build a usable data pipeline, it’s useful to build APIs that encapsulate the details of sending event data. The Tracking API class provides this functionality, and can be used to send generated event data to the data pipeline. The code below shows the method signature for sending events, and shows how to generate sample data.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">/</span><span class="er">/</span><span class="st"> </span>send a batch of events    
+<span class="cf">for</span> (int <span class="dt">i=</span><span class="dv">0</span>; i<span class="op">&lt;</span><span class="dv">10000</span>; i<span class="op">++</span>) {
+  
+  <span class="op">/</span><span class="er">/</span><span class="st"> </span>generate event names      
+  String type =<span class="st"> </span><span class="kw">Math.random</span>() <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.5</span> ? <span class="st">&quot;Session&quot;</span>
+   (<span class="kw">Math.random</span>() <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.5</span> ? <span class="st">&quot;Login&quot;</span> <span class="op">:</span><span class="st"> &quot;MatchStart&quot;</span>);
+  
+  <span class="op">/</span><span class="er">/</span><span class="st"> </span>create attributes to send      
+  HashMap attributes =<span class="st"> </span>new <span class="kw">HashMap</span>();
+  <span class="kw">attributes.put</span>(<span class="st">&quot;userID&quot;</span>, (int)(<span class="kw">Math.random</span>()<span class="op">*</span><span class="dv">100</span>));
+  <span class="kw">attributes.put</span>(<span class="st">&quot;deviceType&quot;</span>, <span class="kw">Math.random</span>() <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.5</span> ? 
+    <span class="st">&quot;Android&quot;</span> <span class="op">:</span><span class="st"> </span>(<span class="kw">Math.random</span>() <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.5</span> ? <span class="st">&quot;iOS&quot;</span> <span class="op">:</span><span class="st"> &quot;Web&quot;</span>));
+  
+  <span class="op">/</span><span class="er">/</span><span class="st"> </span>send the event      
+  <span class="kw">tracking.sendEvent</span>(type, <span class="st">&quot;V1&quot;</span>, attributes);      
+}</code></pre></div>
+<p>The tracking API establishes a connection to a PubSub topic, passes events as a JSON format, and implements a callback for notification of delivery failures. The code used to send events is provided below, and is based on Google’s PubSub example.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">/</span><span class="er">/</span><span class="st"> </span>Setup a PubSub connection 
+TopicName topicName =<span class="st"> </span><span class="kw">TopicName.of</span>(projectID, topicID);
+Publisher publisher =<span class="st"> </span>Publisher
+    <span class="kw">.newBuilder</span>(topicName)<span class="kw">.build</span>();
+
+<span class="op">/</span><span class="er">/</span><span class="st"> </span>Specify an event to send
+String event =<span class="st"> </span>
+<span class="st">    </span>{\<span class="st">&quot;type</span><span class="ch">\&quot;</span><span class="st">:</span><span class="ch">\&quot;</span><span class="st">session</span><span class="ch">\&quot;</span><span class="st">,</span><span class="ch">\&quot;</span><span class="st">version</span><span class="ch">\&quot;</span><span class="st">:</span><span class="ch">\&quot;</span><span class="st">1</span><span class="ch">\&quot;</span><span class="st">}&quot;</span>;
+
+<span class="op">/</span><span class="er">/</span><span class="st"> </span>Convert the event to bytes    
+ByteString data =<span class="st"> </span>ByteString
+    <span class="kw">.copyFromUtf8</span>(<span class="kw">event.toString</span>());
+
+<span class="op">/</span><span class="er">/</span>schedule a message to be published    
+PubsubMessage msg =<span class="st"> </span>
+<span class="st">  </span><span class="kw">PubsubMessage.newBuilder</span>()<span class="kw">.setData</span>(data)<span class="kw">.build</span>();
+
+<span class="op">/</span><span class="er">/</span><span class="st"> </span>publish the message 
+ApiFuture<span class="op">&lt;</span>String<span class="op">&gt;</span><span class="st"> </span>future =<span class="st"> </span><span class="kw">publisher.publish</span>(msg);    
+<span class="kw">ApiFutures.addCallback</span>(future, this);</code></pre></div>
+<p>The code above enables apps to send events to a PubSub topic. The next step is to process this events in a fully-managed environment that can scale as necessary to meet demand.</p>
+</div>
+<div id="storing-events" class="section level3">
+<h3><span class="header-section-number">3.3.3</span> Storing Events</h3>
+<p>One of the key functions of a data pipeline is to make instrumented events available to data science and analytics teams for analysis. The data sources used as endpoints should have low latency and be able to scale up to a massive volume of events. The data pipeline defined in this tutorial shows how to output events to both BigQuery and a data lake that can be used to support a large number of analytics business users.</p>
+<div class="figure" style="text-align: center"><span id="fig:3-7"></span>
+<img src="images/3-7.png" alt="Streaming event data from PubSub to DataFlow." width="60%" />
+<p class="caption">
+Figure 3.7: Streaming event data from PubSub to DataFlow.
+</p>
+</div>
+<p>The first step in this data pipeline is reading events from a PubSub topic and passing ingested messages to the DataFlow process. DataFlow provides a PubSub connector that enables streaming of PubSub messages to other DataFlow components. The code below shows how to instantiate the data pipeline, specify streaming mode, and to consume messages from a specific PubSub topic. The output of this process is a collection of PubSub messages that can be stored for later analysis.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">/</span><span class="er">/</span><span class="st"> </span>set up pipeline options    
+Options options =<span class="st"> </span><span class="kw">PipelineOptionsFactory.fromArgs</span>(args)
+  <span class="kw">.withValidation</span>()<span class="kw">.as</span>(Options.class);    
+<span class="kw">options.setStreaming</span>(true);    
+Pipeline pipeline =<span class="st"> </span><span class="kw">Pipeline.create</span>(options);
+  
+<span class="op">/</span><span class="er">/</span><span class="st"> </span>read game events from PubSub    
+PCollection<span class="op">&lt;</span>PubsubMessage<span class="op">&gt;</span><span class="st"> </span>events =<span class="st"> </span>pipeline
+  <span class="kw">.apply</span>(<span class="kw">PubsubIO.readMessages</span>()<span class="kw">.fromTopic</span>(topic));</code></pre></div>
+<p>The first way we want to store events is in a columnar format that can be used to build a data lake. While this chapter doesn’t show how to utilize these files in downstream ETLs, having a data lake is a great way to maintain a copy of your data set in case you need to make changes to your database. The data lake provides a way to backload your data if necessary due to changes in schemas or data ingestion issues. The portion of the data pipeline allocated to this process is shown below.</p>
+<div class="figure" style="text-align: center"><span id="fig:3-8"></span>
+<img src="images/3-8.png" alt="Batching events to AVRO format and saving to GS." width="50%" />
+<p class="caption">
+Figure 3.8: Batching events to AVRO format and saving to GS.
+</p>
+</div>
+<p>For AVRO, we can’t use a direct streaming approach. We need to group events into batches before we can save to flat files. The way this can be accomplished in DataFlow is by applying a windowing function that groups events into fixed batches. The code below applies transformations that convert the PubSub messages into String objects, group the messages into 5 minute intervals, and output the resulting batches to AVRO files on Google Storage. To summarize, the code batches events into 5 minute windows and then exports the events to AVRO files on Google Storage.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">/</span><span class="er">/</span><span class="st"> </span>AVRO output portion of the pipeline    
+<span class="kw">events.apply</span>(<span class="st">&quot;To String&quot;</span>, 
+    <span class="kw">ParDo.of</span>(new DoFn<span class="op">&lt;</span>PubsubMessage, String<span class="op">&gt;</span>() {
+      
+  <span class="op">@</span>ProcessElement        
+  public void <span class="kw">processElement</span>(ProcessContext c)  {
+    String msg =<span class="st"> </span>new <span class="kw">String</span>(<span class="kw">c.element</span>()<span class="kw">.getPayload</span>());
+    <span class="kw">c.output</span>(msg);        
+  }      
+}))
+
+<span class="op">/</span><span class="er">/</span><span class="st"> </span>Batch events into <span class="dv">5</span> minute windows      
+<span class="kw">.apply</span>(<span class="st">&quot;Batch Events&quot;</span>, Window.<span class="op">&lt;</span>String<span class="op">&gt;</span><span class="kw">into</span>(    
+    <span class="kw">FixedWindows.of</span>(<span class="kw">Duration.standardMinutes</span>(<span class="dv">5</span>)))       
+  <span class="kw">.triggering</span>(<span class="kw">AfterWatermark.pastEndOfWindow</span>())     
+  <span class="kw">.discardingFiredPanes</span>()              
+  <span class="kw">.withAllowedLateness</span>(<span class="kw">Duration.standardMinutes</span>(<span class="dv">5</span>)))
+
+<span class="op">/</span><span class="er">/</span><span class="st"> </span>Save the events <span class="cf">in</span> ARVO format      
+<span class="kw">.apply</span>(<span class="st">&quot;To AVRO&quot;</span>, <span class="kw">AvroIO.write</span>(String.class)
+  <span class="kw">.to</span>(<span class="st">&quot;gs://your_gs_bucket/avro/raw-events.avro&quot;</span>)
+  <span class="kw">.withWindowedWrites</span>() 
+  <span class="kw">.withSuffix</span>(<span class="st">&quot;.avro&quot;</span>));</code></pre></div>
+<p>The result of this portion of the data pipeline is a collection of AVRO files on google storage that can be used to build a data lake. A new AVRO output is generated every 5 minutes, and downstream ETLs can parse the raw events into processed event-specific table schemas. The image below shows a sample output of AVRO files.</p>
+<div class="figure" style="text-align: center"><span id="fig:3-9"></span>
+<img src="images/3-9.png" alt="AVRO files saved to Google Storage." width="100%" />
+<p class="caption">
+Figure 3.9: AVRO files saved to Google Storage.
+</p>
+</div>
+<p>In addition to creating a data lake, we want the events to be immediately accessible in a query environment. DataFlow provides a BigQuery connector which serves this functionality, and data streamed to this endpoint is available for analysis after a short duration. This portion of the data pipeline is shown below.</p>
+<div class="figure" style="text-align: center"><span id="fig:3-10"></span>
+<img src="images/3-10.png" alt="Streaming events from DataFlow to BigQuery." width="50%" />
+<p class="caption">
+Figure 3.10: Streaming events from DataFlow to BigQuery.
+</p>
+</div>
+<p>The data pipeline converts the PubSub messages into TableRow objects, which can be directly inserted into BigQuery. The code below consists of two apply methods: a data transformation and a IO writer. The transform step reads the message payloads from PubSub, parses the message as a JSON object, extracts the eventType and eventVersion attributes, and creates a TableRow object with these attributes in addition to a timestamp and the message payload. The second apply method tells the pipeline to write the records to BigQuery and to append the events to an existing table.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">/</span><span class="er">/</span><span class="st"> </span>parse the PubSub events and create rows  
+<span class="kw">events.apply</span>(<span class="st">&quot;To Table Rows&quot;</span>, <span class="kw">ParDo.of</span>(new  
+          DoFn<span class="op">&lt;</span>PubsubMessage, TableRow<span class="op">&gt;</span>() {    
+     
+ <span class="op">@</span>ProcessElement          
+ public void <span class="kw">processElement</span>(ProcessContext c) {
+   String msg =<span class="st"> </span>new <span class="kw">String</span>(<span class="kw">c.element</span>()<span class="kw">.getPayload</span>()); 
+ 
+   <span class="op">/</span><span class="er">/</span><span class="st"> </span>parse the json message <span class="cf">for</span> attributes
+   JsonObject jsonObject =<span class="st"> </span>
+<span class="st">      </span>new <span class="kw">JsonParser</span>()<span class="kw">.parse</span>(msg)<span class="kw">.getAsJsonObject</span>();
+   String type =<span class="st"> </span><span class="kw">jsonObject.get</span>(<span class="st">&quot;type&quot;</span>)<span class="kw">.getAsString</span>();
+   String eventVersion =<span class="st"> </span>jsonObject.
+       <span class="kw">get</span>(<span class="st">&quot;eventVersion&quot;</span>)<span class="kw">.getAsString</span>();          
+   String serverTime =<span class="st"> </span><span class="kw">dateFormat.format</span>(new <span class="kw">Date</span>()); 
+ 
+   <span class="op">/</span><span class="er">/</span><span class="st"> </span>create and output the table row            
+   TableRow record =<span class="st"> </span>new <span class="kw">TableRow</span>();            
+   <span class="kw">record.set</span>(<span class="st">&quot;eventType&quot;</span>, type);               
+   <span class="kw">record.set</span>(<span class="st">&quot;eventVersion&quot;</span>, eventVersion);          
+   <span class="kw">record.set</span>(<span class="st">&quot;serverTime&quot;</span>, serverTime);
+   <span class="kw">record.set</span>(<span class="st">&quot;message&quot;</span>, message);            
+   <span class="kw">c.output</span>(record);          
+  }
+}))
+<span class="op">/</span><span class="er">/</span>stream the events to Big Query    
+<span class="kw">.apply</span>(<span class="st">&quot;To BigQuery&quot;</span>,<span class="kw">BigQueryIO.writeTableRows</span>()   
+  <span class="kw">.to</span>(table)           
+  <span class="kw">.withSchema</span>(schema)
+  <span class="kw">.withCreateDisposition</span>(
+    CreateDisposition.CREATE_IF_NEEDED)
+  <span class="kw">.withWriteDisposition</span>(WriteDisposition.WRITE_APPEND))</code></pre></div>
+<p>Each message that is consumed from PubSub is converted into a TableRow object with a timestamp and then streamed to BigQuery for storage. The result of this portion of the data pipeline is that events will be streamed to BigQuery and will be available for analysis in the output table specified by the DataFlow task. In order to effectively use these events for queries, you’ll need to build additional ETLs for creating processed event tables with schematized records, but you now have a data collection mechanism in place for storing tracking events.</p>
+<div class="figure" style="text-align: center"><span id="fig:3-11"></span>
+<img src="images/3-11.png" alt="Game event records queried from the raw-events table in BigQuery." width="100%" />
+<p class="caption">
+Figure 3.11: Game event records queried from the raw-events table in BigQuery.
+</p>
+</div>
+</div>
+<div id="deploying-and-auto-scaling" class="section level3">
+<h3><span class="header-section-number">3.3.4</span> Deploying and Auto Scaling</h3>
+<p>With DataFlow you can test the data pipeline locally or deploy to the cloud. If you run the code samples without specifying additional attributes, then the data pipeline will execute on your local machine. In order to deploy to the cloud and take advantage of the auto scaling capabilities of this data pipeline, you need to specify a new runner class as part of your runtime arguments. In order to run the data pipeline, I used the following runtime arguments:</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">--</span>runner=org.apache.beam.runners.dataflow.DataflowRunner 
+<span class="op">--</span>jobName=game<span class="op">-</span>analytics
+<span class="op">--</span>project=your_project_id 
+<span class="op">--</span>tempLocation=gs<span class="op">:</span><span class="er">//</span>temp<span class="op">-</span>bucket</code></pre></div>
+<p>Once the job is deployed, you should see a message that the job has been submitted. You can then click on the DataFlow console to see the task. The runtime configuration specified above will not default to an auto scaling configuration. In order to deploy a job that scales up based on demand, you’ll need to specify additional attributes:</p>
+<div class="figure" style="text-align: center"><span id="fig:3-12"></span>
+<img src="images/3-12.png" alt="The steaming data pipeline running on Google Cloud." width="80%" />
+<p class="caption">
+Figure 3.12: The steaming data pipeline running on Google Cloud.
+</p>
+</div>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">--</span>autoscalingAlgorithm=THROUGHPUT_BASED
+<span class="op">--</span>maxNumWorkers=<span class="dv">30</span></code></pre></div>
+<p>Additional details on setting up a DataFlow task to scale to heavy workload conditions are available from Spotify<a href="#fn10" class="footnoteRef" id="fnref10"><sup>10</sup></a>. The image above shows how DataFlow can scale up to meet demand as necessary.</p>
+<div class="figure" style="text-align: center"><span id="fig:3-13"></span>
+<img src="images/3-13.png" alt="An example of Dataflow auto scaling." width="100%" />
+<p class="caption">
+Figure 3.13: An example of Dataflow auto scaling.
+</p>
+</div>
+</div>
+<div id="raw-to-processed-events" class="section level3">
+<h3><span class="header-section-number">3.3.5</span> Raw to Processed Events</h3>
+<p>The pipeline presented so far saves tracking events as raw data. To translate these events to processed data, we’ll need to apply event specific schemas. There’s a few different approaches we can take with this pipeline:</p>
+<ul>
+<li>Apply the schemas in the current DataFlow pipeline and save to BigQuery.</li>
+<li>Apply the schemas in the pipeline and send to a new PubSub.</li>
+<li>Apply additional attributes to the raw events and send to a new PubSub.</li>
+<li>Use downstream ETLs to apply schemas.</li>
+</ul>
+<p>The first approach is the simplest, but it doesn’t provide a good solution for updating the event definitions if needed. This approach can be implemented as shown in the code below, which shows how to filter and parse MatchStart events for entry into BigQuery.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">events.apply</span>(<span class="st">&quot;To MatchStart Events&quot;</span>, <span class="kw">ParDo.of</span>(
+    new DoFn<span class="op">&lt;</span>PubsubMessage, TableRow<span class="op">&gt;</span>() {
+      
+<span class="op">@</span>ProcessElement 
+public void <span class="kw">processElement</span>(ProcessContext c) {
+  String msg =<span class="st"> </span>new <span class="kw">String</span>(<span class="kw">c.element</span>()<span class="kw">.getPayload</span>());
+  JsonObject jsonObject =<span class="st"> </span>new 
+      <span class="kw">JsonParser</span>()<span class="kw">.parse</span>(msg)<span class="kw">.getAsJsonObject</span>();
+  String eventType =<span class="st"> </span><span class="kw">jsonObject.get</span>(<span class="st">&quot;type&quot;</span>);
+  String version =<span class="st"> </span><span class="kw">jsonObject.get</span>(<span class="st">&quot;eventVersion&quot;</span>);
+  String serverTime =<span class="st"> </span><span class="kw">dateFormat.format</span>(new <span class="kw">Date</span>());
+
+  <span class="op">/</span><span class="er">/</span><span class="st"> </span>Filter <span class="cf">for</span> MatchStart events
+  <span class="cf">if</span> (<span class="kw">eventType.equals</span>(<span class="st">&quot;MatchStart&quot;</span>)) {
+
+    TableRow record =<span class="st"> </span>new <span class="kw">TableRow</span>();
+    <span class="kw">record.set</span>(<span class="st">&quot;eventType&quot;</span>, eventType);
+    <span class="kw">record.set</span>(<span class="st">&quot;eventVersion&quot;</span>, version);
+    <span class="kw">record.set</span>(<span class="st">&quot;server_time&quot;</span>, serverTime);
+
+    <span class="op">/</span><span class="er">/</span><span class="st"> </span>event specifc attributes
+    <span class="kw">record.set</span>(<span class="st">&quot;userID&quot;</span>, <span class="kw">jsonObject.get</span>(<span class="st">&quot;userID&quot;</span>));
+    <span class="kw">record.set</span>(<span class="st">&quot;type&quot;</span>, <span class="kw">jsonObject.get</span>(<span class="st">&quot;deviceType&quot;</span>));
+    <span class="kw">c.output</span>(record);
+  }
+}}))
+<span class="kw">.apply</span>(<span class="st">&quot;To BigQuery&quot;</span>,<span class="kw">BigQueryIO.writeTableRows</span>()</code></pre></div>
+<p>In order to implement this approach, you’d need to create a new DoFn implementation for each type of event. The second approach is similar to the first, but instead of passing the parsed events to BigQuery, they are passed to a new PubSub topic. It’s possible to send multiple types of events to a single topic or create a topic per event. The drawback of using the first two approaches is that the message parsing logic is part of the raw event pipeline. This means that changing event definitions involves restarting the pipeline.</p>
+<div class="figure" style="text-align: center"><span id="fig:3-14"></span>
+<img src="images/3-14.png" alt="The streaming pipeline with an additional output." width="100%" />
+<p class="caption">
+Figure 3.14: The streaming pipeline with an additional output.
+</p>
+</div>
+<p>A third approach that can be used is sending raw events with additional attributes to another PubSub topic. A second DataFlow job can then be set up to parse events as needed. The code below shows how to parse raw events, add additional attributes to the PubSub message for filtering, and publish the events to a second topic. This approach enables event definitions to be changed without restarting the raw event pipeline.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">/</span><span class="er">/</span><span class="st"> </span>topic <span class="cf">for</span> raw events with additional attributes 
+private static String processed =<span class="st"> </span>
+<span class="st">  &quot;projects/your_project_id/topics/processed-events&quot;</span>;
+
+<span class="kw">events.apply</span>(<span class="st">&quot;PubSub Processed&quot;</span>, 
+  <span class="kw">ParDo.of</span>(new DoFn<span class="op">&lt;</span>PubsubMessage, PubsubMessage<span class="op">&gt;</span>() {             
+    
+  <span class="op">@</span>ProcessElement            
+  public void <span class="kw">processElement</span>(ProcessContext c)  { 
+    String msg =<span class="st"> </span>new <span class="kw">String</span>(<span class="kw">c.element</span>()<span class="kw">.getPayload</span>());   
+   
+    <span class="op">/</span><span class="er">/</span><span class="st"> </span>parse the JSON message <span class="cf">for</span> attributes 
+    JsonObject jsonObject =<span class="st"> </span>new 
+        <span class="kw">JsonParser</span>()<span class="kw">.parse</span>(msg)<span class="kw">.getAsJsonObject</span>(); 
+    String eventType =<span class="st"> </span><span class="kw">jsonObject.get</span>(<span class="st">&quot;eventType&quot;</span>); 
+        
+    <span class="op">/</span><span class="er">/</span><span class="st"> </span>Add additional attributes <span class="cf">for</span> filtering 
+    HashMap<span class="op">&lt;</span>String, String<span class="op">&gt;</span><span class="st"> </span>atts =<span class="st"> </span>new <span class="kw">HashMap</span>();               
+    <span class="kw">atts.put</span>(<span class="st">&quot;EventType&quot;</span>, eventType);               
+    PubsubMessage out =<span class="st"> </span>new <span class="kw">PubsubMessage</span>(
+        <span class="kw">msg.getBytes</span>(), atts);
+    <span class="kw">c.output</span>(out);                                                 
+  }  
+}))     
+<span class="kw">.apply</span>(<span class="kw">PubsubIO.writeMessages</span>()<span class="kw">.to</span>(processed));</code></pre></div>
+<p>A fourth approach that can be used is having downstream ETLs processes apply schemas to the raw events and break apart the raw events table into event specific tables. We’ll cover this approach in the next chapter.</p>
+</div>
+</div>
+<div id="conclusion-1" class="section level2">
+<h2><span class="header-section-number">3.4</span> Conclusion</h2>
+<p>This chapter has provided an introduction to building a data pipeline for a startup. We covered the types of data in a pipeline, desired properties of a high functioning data pipeline, the evolution of data pipelines, and a sample pipeline built on GCP. The full source code for this sample pipeline is available on Github<a href="#fn11" class="footnoteRef" id="fnref11"><sup>11</sup></a>.</p>
+<p>There is now a variety of tools available that make it possible to set up an analytics pipeline for an application with minimal effort. Using managed resources enables small teams to take advantage of serverless and autoscaling infrastructure to scale up to massive event volumes with minimal infrastructure management. Rather than using a data vendor’s off-the-shelf solution for collecting data, you can record all relevant data for your app. While the approach presented here isn’t directly portable to other clouds, the Apache Beam library used to implement the core functionality of this data pipeline is portable and similar tools can be leveraged to build scalable data pipelines on other cloud providers.</p>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="7">
+<li id="fn7"><p><a href="https://databricks.com/customers/riot-games" class="uri">https://databricks.com/customers/riot-games</a><a href="data-pipelines.html#fnref7">↩</a></p></li>
+<li id="fn8"><p><a href="https://cloud.google.com/bigquery/docs/authentication" class="uri">https://cloud.google.com/bigquery/docs/authentication</a><a href="data-pipelines.html#fnref8">↩</a></p></li>
+<li id="fn9"><p><a href="https://cloud.google.com/pubsub/docs/quickstart-console" class="uri">https://cloud.google.com/pubsub/docs/quickstart-console</a><a href="data-pipelines.html#fnref9">↩</a></p></li>
+<li id="fn10"><p><a href="https://labs.spotify.com/2016/03/10/" class="uri">https://labs.spotify.com/2016/03/10/</a><a href="data-pipelines.html#fnref10">↩</a></p></li>
+<li id="fn11"><p><a href="https://github.com/bgweber/GameAnalytics" class="uri">https://github.com/bgweber/GameAnalytics</a><a href="data-pipelines.html#fnref11">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="tracking-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="business-intelligence.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-pipeline.Rmd",
+"text": "Edit"
+},
+"download": ["startup-data-science.pdf", "startup-data-science.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

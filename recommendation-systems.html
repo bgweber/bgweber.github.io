@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Data Science for Startups</title>
+  <meta name="description" content="Data Science for Startups">
+  <meta name="generator" content="bookdown 0.7.8 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Data Science for Startups" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Data Science for Startups" />
+  <meta name="github-repo" content="bgweber/StartupDataScience" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data Science for Startups" />
+  
+  <meta name="twitter:description" content="Data Science for Startups" />
+  
+
+<meta name="author" content="Ben G Weber">
+
+
+<meta name="date" content="2018-05-29">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="experimentation.html">
+<link rel="next" href="deep-learning.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Data Science for Startups</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#why-data-science"><i class="fa fa-check"></i><b>1.1</b> Why Data Science?</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#book-overview"><i class="fa fa-check"></i><b>1.2</b> Book Overview</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#tooling"><i class="fa fa-check"></i><b>1.3</b> Tooling</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="tracking-data.html"><a href="tracking-data.html"><i class="fa fa-check"></i><b>2</b> Tracking Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="tracking-data.html"><a href="tracking-data.html#what-to-record"><i class="fa fa-check"></i><b>2.1</b> What to Record?</a></li>
+<li class="chapter" data-level="2.2" data-path="tracking-data.html"><a href="tracking-data.html#tracking-specs"><i class="fa fa-check"></i><b>2.2</b> Tracking Specs</a></li>
+<li class="chapter" data-level="2.3" data-path="tracking-data.html"><a href="tracking-data.html#client-vs-server-tracking"><i class="fa fa-check"></i><b>2.3</b> Client vs Server Tracking</a></li>
+<li class="chapter" data-level="2.4" data-path="tracking-data.html"><a href="tracking-data.html#sending-tracking-events"><i class="fa fa-check"></i><b>2.4</b> Sending Tracking Events</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="tracking-data.html"><a href="tracking-data.html#web-call"><i class="fa fa-check"></i><b>2.4.1</b> Web Call</a></li>
+<li class="chapter" data-level="2.4.2" data-path="tracking-data.html"><a href="tracking-data.html#web-server"><i class="fa fa-check"></i><b>2.4.2</b> Web Server</a></li>
+<li class="chapter" data-level="2.4.3" data-path="tracking-data.html"><a href="tracking-data.html#subscription-service"><i class="fa fa-check"></i><b>2.4.3</b> Subscription Service</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="tracking-data.html"><a href="tracking-data.html#message-encoding"><i class="fa fa-check"></i><b>2.5</b> Message Encoding</a></li>
+<li class="chapter" data-level="2.6" data-path="tracking-data.html"><a href="tracking-data.html#building-a-tracking-api"><i class="fa fa-check"></i><b>2.6</b> Building a Tracking API</a></li>
+<li class="chapter" data-level="2.7" data-path="tracking-data.html"><a href="tracking-data.html#privacy"><i class="fa fa-check"></i><b>2.7</b> Privacy</a></li>
+<li class="chapter" data-level="2.8" data-path="tracking-data.html"><a href="tracking-data.html#conclusion"><i class="fa fa-check"></i><b>2.8</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-pipelines.html"><a href="data-pipelines.html"><i class="fa fa-check"></i><b>3</b> Data Pipelines</a><ul>
+<li class="chapter" data-level="3.1" data-path="data-pipelines.html"><a href="data-pipelines.html#types-of-data"><i class="fa fa-check"></i><b>3.1</b> Types of Data</a></li>
+<li class="chapter" data-level="3.2" data-path="data-pipelines.html"><a href="data-pipelines.html#the-evolution-of-data-pipelines"><i class="fa fa-check"></i><b>3.2</b> The Evolution of Data Pipelines</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="data-pipelines.html"><a href="data-pipelines.html#flat-file-era"><i class="fa fa-check"></i><b>3.2.1</b> Flat File Era</a></li>
+<li class="chapter" data-level="3.2.2" data-path="data-pipelines.html"><a href="data-pipelines.html#database-era"><i class="fa fa-check"></i><b>3.2.2</b> Database Era</a></li>
+<li class="chapter" data-level="3.2.3" data-path="data-pipelines.html"><a href="data-pipelines.html#data-lake-era"><i class="fa fa-check"></i><b>3.2.3</b> Data Lake Era</a></li>
+<li class="chapter" data-level="3.2.4" data-path="data-pipelines.html"><a href="data-pipelines.html#serverless-era"><i class="fa fa-check"></i><b>3.2.4</b> Serverless Era</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="data-pipelines.html"><a href="data-pipelines.html#a-scalable-pipeline"><i class="fa fa-check"></i><b>3.3</b> A Scalable Pipeline</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="data-pipelines.html"><a href="data-pipelines.html#setting-up-the-environment"><i class="fa fa-check"></i><b>3.3.1</b> Setting up the Environment</a></li>
+<li class="chapter" data-level="3.3.2" data-path="data-pipelines.html"><a href="data-pipelines.html#publishing-events"><i class="fa fa-check"></i><b>3.3.2</b> Publishing Events</a></li>
+<li class="chapter" data-level="3.3.3" data-path="data-pipelines.html"><a href="data-pipelines.html#storing-events"><i class="fa fa-check"></i><b>3.3.3</b> Storing Events</a></li>
+<li class="chapter" data-level="3.3.4" data-path="data-pipelines.html"><a href="data-pipelines.html#deploying-and-auto-scaling"><i class="fa fa-check"></i><b>3.3.4</b> Deploying and Auto Scaling</a></li>
+<li class="chapter" data-level="3.3.5" data-path="data-pipelines.html"><a href="data-pipelines.html#raw-to-processed-events"><i class="fa fa-check"></i><b>3.3.5</b> Raw to Processed Events</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="data-pipelines.html"><a href="data-pipelines.html#conclusion-1"><i class="fa fa-check"></i><b>3.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="business-intelligence.html"><a href="business-intelligence.html"><i class="fa fa-check"></i><b>4</b> Business Intelligence</a><ul>
+<li class="chapter" data-level="4.1" data-path="business-intelligence.html"><a href="business-intelligence.html#kpis"><i class="fa fa-check"></i><b>4.1</b> KPIs</a></li>
+<li class="chapter" data-level="4.2" data-path="business-intelligence.html"><a href="business-intelligence.html#reporting-with-r"><i class="fa fa-check"></i><b>4.2</b> Reporting with R</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="business-intelligence.html"><a href="business-intelligence.html#base-r"><i class="fa fa-check"></i><b>4.2.1</b> Base R</a></li>
+<li class="chapter" data-level="4.2.2" data-path="business-intelligence.html"><a href="business-intelligence.html#r-markdown"><i class="fa fa-check"></i><b>4.2.2</b> R Markdown</a></li>
+<li class="chapter" data-level="4.2.3" data-path="business-intelligence.html"><a href="business-intelligence.html#r-shiny"><i class="fa fa-check"></i><b>4.2.3</b> R Shiny</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="business-intelligence.html"><a href="business-intelligence.html#etls"><i class="fa fa-check"></i><b>4.3</b> ETLs</a></li>
+<li class="chapter" data-level="4.4" data-path="business-intelligence.html"><a href="business-intelligence.html#reporting-tools"><i class="fa fa-check"></i><b>4.4</b> Reporting Tools</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="business-intelligence.html"><a href="business-intelligence.html#google-data-studio"><i class="fa fa-check"></i><b>4.4.1</b> Google Data Studio</a></li>
+<li class="chapter" data-level="4.4.2" data-path="business-intelligence.html"><a href="business-intelligence.html#tableau"><i class="fa fa-check"></i><b>4.4.2</b> Tableau</a></li>
+<li class="chapter" data-level="4.4.3" data-path="business-intelligence.html"><a href="business-intelligence.html#mode"><i class="fa fa-check"></i><b>4.4.3</b> Mode</a></li>
+<li class="chapter" data-level="4.4.4" data-path="business-intelligence.html"><a href="business-intelligence.html#custom-tooling"><i class="fa fa-check"></i><b>4.4.4</b> Custom Tooling</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="business-intelligence.html"><a href="business-intelligence.html#conclusion-2"><i class="fa fa-check"></i><b>4.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>5</b> Exploratory Data Analysis</a><ul>
+<li class="chapter" data-level="5.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#summary-statistics"><i class="fa fa-check"></i><b>5.1</b> Summary Statistics</a></li>
+<li class="chapter" data-level="5.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plotting"><i class="fa fa-check"></i><b>5.2</b> Plotting</a></li>
+<li class="chapter" data-level="5.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#correlation-analysis"><i class="fa fa-check"></i><b>5.3</b> Correlation Analysis</a></li>
+<li class="chapter" data-level="5.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#feature-importance"><i class="fa fa-check"></i><b>5.4</b> Feature Importance</a></li>
+<li class="chapter" data-level="5.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#conclusion-3"><i class="fa fa-check"></i><b>5.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="predictive-modeling.html"><a href="predictive-modeling.html"><i class="fa fa-check"></i><b>6</b> Predictive Modeling</a><ul>
+<li class="chapter" data-level="6.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#types-of-predictive-models"><i class="fa fa-check"></i><b>6.1</b> Types of Predictive Models</a></li>
+<li class="chapter" data-level="6.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#training-a-classification-model"><i class="fa fa-check"></i><b>6.2</b> Training a Classification Model</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#weka"><i class="fa fa-check"></i><b>6.2.1</b> Weka</a></li>
+<li class="chapter" data-level="6.2.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#bigml"><i class="fa fa-check"></i><b>6.2.2</b> BigML</a></li>
+<li class="chapter" data-level="6.2.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#r-glmnet"><i class="fa fa-check"></i><b>6.2.3</b> R — Glmnet</a></li>
+<li class="chapter" data-level="6.2.4" data-path="predictive-modeling.html"><a href="predictive-modeling.html#python-scikit-learn"><i class="fa fa-check"></i><b>6.2.4</b> Python — scikit-learn</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#clustering"><i class="fa fa-check"></i><b>6.3</b> Clustering</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#how-many-clusters-to-use"><i class="fa fa-check"></i><b>6.3.1</b> How many clusters to use?</a></li>
+<li class="chapter" data-level="6.3.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#cluster-descriptions"><i class="fa fa-check"></i><b>6.3.2</b> Cluster Descriptions</a></li>
+<li class="chapter" data-level="6.3.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#cluster-populations-by-net-worth"><i class="fa fa-check"></i><b>6.3.3</b> Cluster Populations by Net Worth</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="predictive-modeling.html"><a href="predictive-modeling.html#conclusion-4"><i class="fa fa-check"></i><b>6.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="productizing-models.html"><a href="productizing-models.html"><i class="fa fa-check"></i><b>7</b> Productizing Models</a><ul>
+<li class="chapter" data-level="7.1" data-path="productizing-models.html"><a href="productizing-models.html#building-a-model-specification"><i class="fa fa-check"></i><b>7.1</b> Building a Model Specification</a></li>
+<li class="chapter" data-level="7.2" data-path="productizing-models.html"><a href="productizing-models.html#batch-deployments"><i class="fa fa-check"></i><b>7.2</b> Batch Deployments</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="productizing-models.html"><a href="productizing-models.html#sql-query"><i class="fa fa-check"></i><b>7.2.1</b> SQL Query</a></li>
+<li class="chapter" data-level="7.2.2" data-path="productizing-models.html"><a href="productizing-models.html#dataflow-bigquery"><i class="fa fa-check"></i><b>7.2.2</b> DataFlow — BigQuery</a></li>
+<li class="chapter" data-level="7.2.3" data-path="productizing-models.html"><a href="productizing-models.html#dataflow-datastore"><i class="fa fa-check"></i><b>7.2.3</b> DataFlow — DataStore</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="productizing-models.html"><a href="productizing-models.html#live-deployments"><i class="fa fa-check"></i><b>7.3</b> Live Deployments</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="productizing-models.html"><a href="productizing-models.html#web-service"><i class="fa fa-check"></i><b>7.3.1</b> Web Service</a></li>
+<li class="chapter" data-level="7.3.2" data-path="productizing-models.html"><a href="productizing-models.html#dataflow---pubsub"><i class="fa fa-check"></i><b>7.3.2</b> DataFlow - PubSub</a></li>
+<li class="chapter" data-level="7.3.3" data-path="productizing-models.html"><a href="productizing-models.html#custom-engineering"><i class="fa fa-check"></i><b>7.3.3</b> Custom Engineering</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="productizing-models.html"><a href="productizing-models.html#conclusion-5"><i class="fa fa-check"></i><b>7.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="experimentation.html"><a href="experimentation.html"><i class="fa fa-check"></i><b>8</b> Experimentation</a><ul>
+<li class="chapter" data-level="8.1" data-path="experimentation.html"><a href="experimentation.html#staged-rollouts"><i class="fa fa-check"></i><b>8.1</b> Staged Rollouts</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="experimentation.html"><a href="experimentation.html#staged-rollout-biases"><i class="fa fa-check"></i><b>8.1.1</b> Staged Rollout Biases</a></li>
+<li class="chapter" data-level="8.1.2" data-path="experimentation.html"><a href="experimentation.html#time-series-analysis"><i class="fa fa-check"></i><b>8.1.2</b> Time Series Analysis</a></li>
+<li class="chapter" data-level="8.1.3" data-path="experimentation.html"><a href="experimentation.html#difference-in-differences-estimation"><i class="fa fa-check"></i><b>8.1.3</b> Difference-in-Differences Estimation</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="experimentation.html"><a href="experimentation.html#conclusion-6"><i class="fa fa-check"></i><b>8.2</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="recommendation-systems.html"><a href="recommendation-systems.html"><i class="fa fa-check"></i><b>9</b> Recommendation Systems</a><ul>
+<li class="chapter" data-level="9.1" data-path="recommendation-systems.html"><a href="recommendation-systems.html#r---recommender-lab"><i class="fa fa-check"></i><b>9.1</b> R - Recommender Lab</a></li>
+<li class="chapter" data-level="9.2" data-path="recommendation-systems.html"><a href="recommendation-systems.html#java---apache-mahout"><i class="fa fa-check"></i><b>9.2</b> Java - Apache Mahout</a></li>
+<li class="chapter" data-level="9.3" data-path="recommendation-systems.html"><a href="recommendation-systems.html#scala---mllib"><i class="fa fa-check"></i><b>9.3</b> Scala - MLlib</a></li>
+<li class="chapter" data-level="9.4" data-path="recommendation-systems.html"><a href="recommendation-systems.html#sql---spark-sql"><i class="fa fa-check"></i><b>9.4</b> SQL - Spark SQL</a></li>
+<li class="chapter" data-level="9.5" data-path="recommendation-systems.html"><a href="recommendation-systems.html#conclusion-7"><i class="fa fa-check"></i><b>9.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="deep-learning.html"><a href="deep-learning.html"><i class="fa fa-check"></i><b>10</b> Deep Learning</a><ul>
+<li class="chapter" data-level="10.1" data-path="deep-learning.html"><a href="deep-learning.html#improving-shallow-problems"><i class="fa fa-check"></i><b>10.1</b> Improving Shallow Problems</a></li>
+<li class="chapter" data-level="10.2" data-path="deep-learning.html"><a href="deep-learning.html#loss-functions-in-keras"><i class="fa fa-check"></i><b>10.2</b> Loss Functions in Keras</a></li>
+<li class="chapter" data-level="10.3" data-path="deep-learning.html"><a href="deep-learning.html#evaluating-loss-functions"><i class="fa fa-check"></i><b>10.3</b> Evaluating Loss Functions</a></li>
+<li class="chapter" data-level="10.4" data-path="deep-learning.html"><a href="deep-learning.html#conclusion-8"><i class="fa fa-check"></i><b>10.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science for Startups</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="recommendation-systems" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> Recommendation Systems</h1>
+<p>A data scientist at a startup is usually responsible for prototyping new data products, such as a recommendation system. When I was at Twitch, many of the products were powered by recommendation systems including VOD recommendations, Clips recommendations, and similar channels. Before productizing a recommendation system at Twitch, the science team first prototyped a recommendation system to see if the output was useful for one of our products. Prototyping a recommendation can be low cost, and this chapter provides examples of building a recommendation system in four different programming languages.</p>
+<div class="figure" style="text-align: center"><span id="fig:9-1"></span>
+<img src="images/9-1.png" alt="Amazon.com recommendations for “Mahout in Action”." width="100%" />
+<p class="caption">
+Figure 9.1: Amazon.com recommendations for “Mahout in Action”.
+</p>
+</div>
+<p>Each of the examples uses a different library to prototype a recommendation system using collaborative filtering. An introduction to the collaborative filtering approach used on Amazon.com is available in this paper<a href="#fn25" class="footnoteRef" id="fnref25"><sup>25</sup></a>, and a good overview of the different algorithms and similarity measures used in recommendations systems is covered in Mahout in Action <span class="citation">(Owen et al. <a href="#ref-Mahout">2011</a>)</span>. I also provide an overview of recommendation systems in my GDC Talk<a href="#fn26" class="footnoteRef" id="fnref26"><sup>26</sup></a> on the marketplace in EverQuest Landmark. User-based collaborative filtering is used in all of the examples below, except for the Scala example which uses alternating least squares (ALS).</p>
+<p>The examples load a data set and then recommend five items for the user with ID 101. The synthetic data set used in these examples is a collection of user purchases of games, where each line includes a user ID and a game ID. The example data set and source code for all examples is available on GitHub<a href="#fn27" class="footnoteRef" id="fnref27"><sup>27</sup></a>.</p>
+<div id="r---recommender-lab" class="section level2">
+<h2><span class="header-section-number">9.1</span> R - Recommender Lab</h2>
+<p>If R is your programming language of choice, the recommenderlab package makes it easy to prototype different recommendation systems. The package is available on the CRAN repository and can be installed using the standard install.packages function. Once loaded, the package provides a Recommender function which takes a data matrix and recommendation method as inputs. In this script, the data matrix is loaded from a CSV file, and the method used is user-based collaborative filtering. The predict function is then used to retrieve five items for user 101.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;recommenderlab&quot;</span>)
+<span class="kw">library</span>(recommenderlab)
+matrix &lt;-<span class="st"> </span><span class="kw">as</span>(<span class="kw">read.csv</span>(<span class="st">&quot;Games.csv&quot;</span>),<span class="st">&quot;realRatingMatrix&quot;</span>)
+
+model &lt;-<span class="kw">Recommender</span>(matrix, <span class="dt">method =</span> <span class="st">&quot;UBCF&quot;</span>)
+games &lt;-<span class="st"> </span><span class="kw">predict</span>(model, matrix[<span class="st">&quot;101&quot;</span>,], <span class="dt">n=</span><span class="dv">5</span>)
+<span class="kw">as</span>(games, <span class="st">&quot;list&quot;</span>)</code></pre></div>
+</div>
+<div id="java---apache-mahout" class="section level2">
+<h2><span class="header-section-number">9.2</span> Java - Apache Mahout</h2>
+<p>Mahout is a machine learning library implemented in Java that provides a variety of collaborative filtering algorithms. Mahout implements user-based collaborative filtering with a UserNeighborhood class that specifies how similar a user needs to be in order to provide feedback for item recommendations. This example uses the Tanimoto similarity measure to find the similarity between users, which computes the ratio of the number of shared games (intersection) over the total number of games owned by the players (union). This CSV file is used as input to a data model which is then passed to the recommender object. Once a recommender object has been instantiated, the recommend method can be used to create a list of game recommendations for a specific user.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">import org.apache.mahout.cf.taste.<span class="op">*</span>;
+DataModel model =<span class="st"> </span>new 
+          <span class="kw">FileDataModel</span>(new <span class="kw">File</span>(<span class="st">&quot;Games.csv&quot;</span>));
+UserSimilarity similarity =<span class="st"> </span>new
+  <span class="kw">TanimotoCoefficientSimilarity</span>(model);
+UserNeighborhood neighborhood =<span class="st"> </span>
+<span class="st">  </span>new <span class="kw">ThresholdUserNeighborhood</span>(<span class="fl">0.1</span>,similarity,model);
+UserBasedRecommender recommender =<span class="st"> </span>
+<span class="st">       </span>new <span class="kw">GenericUserBasedRecommender</span>(
+       model, neighborhood, similarity);
+  
+List recommendations =<span class="st"> </span><span class="kw">recommender.recommend</span>(<span class="dv">101</span>, <span class="dv">5</span>);
+<span class="kw">System.out.println</span>(recommendations);</code></pre></div>
+</div>
+<div id="scala---mllib" class="section level2">
+<h2><span class="header-section-number">9.3</span> Scala - MLlib</h2>
+<p>One of the tools becoming more popular for building recommendation systems is Apache Spark, which provides a built-in library called MLlib that includes a collection of machine learning algorithms. This example first runs a query to retrieve game purchases in a UserID, GameID tuple format, and then transforms the data frame into a collection of ratings that can be used by the ALS model. Implicit data feedback is being used in this example, which is why the trainImplicit method is used instead of the train method. The input parameters to the train method are the game ratings, the number of latent features to use, the number of iterations to perform for matrix factorization, the lambda parameter which is used for regularization, and the alpha parameter which specifies how implicit ratings are measured. Once the model is trained, the recommendProducts method can be used to retrieve a recommended list of games for a user.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">import org.apache.spark.mllib.recommendation._
+val games =<span class="st"> </span>sqlContext.read
+    <span class="kw">.format</span>(<span class="st">&quot;com.databricks.spark.csv&quot;</span>)
+    <span class="kw">.option</span>(<span class="st">&quot;header&quot;</span>, <span class="st">&quot;false&quot;</span>)  
+    <span class="kw">.option</span>(<span class="st">&quot;inferSchema&quot;</span>, <span class="st">&quot;true&quot;</span>)  
+    <span class="kw">.load</span>(<span class="st">&quot;/Users/bgweber/spark/Games.csv&quot;</span>)
+    
+val ratings =<span class="st"> </span><span class="kw">games.rdd.map</span>(<span class="dt">row =</span><span class="op">&gt;</span>
+<span class="st">  </span><span class="kw">Rating</span>(<span class="kw">row.getInt</span>(<span class="dv">0</span>), <span class="kw">row.getInt</span>(<span class="dv">1</span>), <span class="dv">1</span>)
+)
+
+val rank =<span class="st"> </span><span class="dv">10</span>
+val model =<span class="st"> </span><span class="kw">ALS.trainImplicit</span>(ratings,rank <span class="dv">5</span>,<span class="fl">0.01</span>,<span class="dv">1</span>)
+val recommendations =<span class="st"> </span><span class="kw">model.recommendProducts</span>(<span class="dv">101</span>, <span class="dv">5</span>)
+<span class="kw">recommendations.foreach</span>(println)</code></pre></div>
+</div>
+<div id="sql---spark-sql" class="section level2">
+<h2><span class="header-section-number">9.4</span> SQL - Spark SQL</h2>
+<p>In situations where pulling data to a machine running Spark or R is too slow or expensive, you can use SQL to prototype a recommendation system. This approach may be computationally expensive to use, but can be useful for spot-checking a few results. The example below uses Spark SQL, because I wanted to make the example reproducible for the provided data set. The first part of the code loads the table from a CSV file and registers the loaded data frame as a temporary table. The second part of the example includes SQL CTAs that prepare the data and then scores games for a single user. The inner query computes the Tanimoto coefficient between users by finding the ratio in overlapping games divided by total number of games purchased, and the outer query returns an overall score for each retrieved game.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">val games =<span class="st"> </span>sqlContext.read
+    <span class="kw">.format</span>(<span class="st">&quot;com.databricks.spark.csv&quot;</span>)
+    <span class="kw">.option</span>(<span class="st">&quot;header&quot;</span>, <span class="st">&quot;false&quot;</span>)  
+    <span class="kw">.option</span>(<span class="st">&quot;inferSchema&quot;</span>, <span class="st">&quot;true&quot;</span>)  
+    <span class="kw">.load</span>(<span class="st">&quot;/Users/bgweber/spark/Games.csv&quot;</span>)
+    
+<span class="kw">games.registerTempTable</span>(<span class="st">&quot;games&quot;</span>)
+val result =<span class="st"> </span><span class="kw">sqlContext.sql</span>(<span class="st">&quot;&quot;&quot;</span>
+<span class="st">with users as (</span>
+<span class="st">    select _c0 as User_ID, sum(1) as NumGames </span>
+<span class="st">    from games </span>
+<span class="st">    group by 1 </span>
+<span class="st">)</span>
+<span class="st">, purchases as (</span>
+<span class="st">    select _c0 as User_ID, _c1 as Game_ID, NumGames</span>
+<span class="st">    from games g</span>
+<span class="st">    join users u</span>
+<span class="st">      on g._c0 = u.User_ID</span>
+<span class="st">)</span>
+<span class="st">select u.User_ID, v.Game_ID, sum(Tanimoto) GameWeight</span>
+<span class="st">from ( </span>
+<span class="st">    select u.User_ID, v.User_ID as Other_User_ID,</span>
+<span class="st">        count(u.Game_ID)/(u.NumGames + v.NumGames - </span>
+<span class="st">                        count(u.Game_ID)) as Tanimoto</span>
+<span class="st">    from purchases u</span>
+<span class="st">    Join purchases v</span>
+<span class="st">        on u.Game_ID = v.Game_ID </span>
+<span class="st">    where u.User_ID = 101</span>
+<span class="st">    group by 1, 2, u.NumGames, v.NumGames</span>
+<span class="st">) u</span>
+<span class="st">Join purchases v</span>
+<span class="st">    on Other_User_ID = v.User_ID</span>
+<span class="st">group by u.User_ID, v.Game_ID</span>
+<span class="st">order by GameWeight desc</span>
+<span class="st">&quot;&quot;&quot;</span>)
+<span class="kw">result.show</span>(<span class="dv">5</span>)</code></pre></div>
+</div>
+<div id="conclusion-7" class="section level2">
+<h2><span class="header-section-number">9.5</span> Conclusion</h2>
+<p>These scripts have provided examples for how to retrieve game suggestions for a specific user. One of the ways to evaluate the quality of a recommender is to use a qualitative approach, in which the output of the recommender is manually examined for a small group of users. Another approach is to use the built-in evaluation metrics included in the different libraries. For example, recommenderlab and MLlib provide functions for computing ROC curves which can be used to evaluate different system configurations. When evaluating a recommender, it is also a good practice to compare the performance of the recommendation system to other handcrafted approaches, such as a top sellers list.</p>
+<p>It’s important to be familiar with a wide variety of tools as a data scientist at a startup, because you may need to prototype a data product outside of your preferred programming environment. This chapter was motivated based on a case study at Twitch and provides an overview of four different approaches that can be used to start prototyping a recommender system.</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Mahout">
+<p>Owen, Sean, Robin Anil, Ted Dunning, and Ellen Friedman. 2011. <em>Mahout in Action</em>. Greenwich, CT, USA: Manning Publications Co.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="25">
+<li id="fn25"><p><a href="https://www.cs.umd.edu/~samir/498/Amazon-Recommendations.pdf" class="uri">https://www.cs.umd.edu/~samir/498/Amazon-Recommendations.pdf</a><a href="recommendation-systems.html#fnref25">↩</a></p></li>
+<li id="fn26"><p><a href="http://www.gdcvault.com/play/1021850" class="uri">http://www.gdcvault.com/play/1021850</a><a href="recommendation-systems.html#fnref26">↩</a></p></li>
+<li id="fn27"><p><a href="https://github.com/bgweber/Twitch/tree/master/Recommendations" class="uri">https://github.com/bgweber/Twitch/tree/master/Recommendations</a><a href="recommendation-systems.html#fnref27">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="experimentation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="deep-learning.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/09-recco.Rmd",
+"text": "Edit"
+},
+"download": ["startup-data-science.pdf", "startup-data-science.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Data Science for Startups</title>
+  <meta name="description" content="Data Science for Startups">
+  <meta name="generator" content="bookdown 0.7.8 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Data Science for Startups" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Data Science for Startups" />
+  <meta name="github-repo" content="bgweber/StartupDataScience" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data Science for Startups" />
+  
+  <meta name="twitter:description" content="Data Science for Startups" />
+  
+
+<meta name="author" content="Ben G Weber">
+
+
+<meta name="date" content="2018-05-29">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="intro.html">
+<link rel="next" href="data-pipelines.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Data Science for Startups</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#why-data-science"><i class="fa fa-check"></i><b>1.1</b> Why Data Science?</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#book-overview"><i class="fa fa-check"></i><b>1.2</b> Book Overview</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#tooling"><i class="fa fa-check"></i><b>1.3</b> Tooling</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="tracking-data.html"><a href="tracking-data.html"><i class="fa fa-check"></i><b>2</b> Tracking Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="tracking-data.html"><a href="tracking-data.html#what-to-record"><i class="fa fa-check"></i><b>2.1</b> What to Record?</a></li>
+<li class="chapter" data-level="2.2" data-path="tracking-data.html"><a href="tracking-data.html#tracking-specs"><i class="fa fa-check"></i><b>2.2</b> Tracking Specs</a></li>
+<li class="chapter" data-level="2.3" data-path="tracking-data.html"><a href="tracking-data.html#client-vs-server-tracking"><i class="fa fa-check"></i><b>2.3</b> Client vs Server Tracking</a></li>
+<li class="chapter" data-level="2.4" data-path="tracking-data.html"><a href="tracking-data.html#sending-tracking-events"><i class="fa fa-check"></i><b>2.4</b> Sending Tracking Events</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="tracking-data.html"><a href="tracking-data.html#web-call"><i class="fa fa-check"></i><b>2.4.1</b> Web Call</a></li>
+<li class="chapter" data-level="2.4.2" data-path="tracking-data.html"><a href="tracking-data.html#web-server"><i class="fa fa-check"></i><b>2.4.2</b> Web Server</a></li>
+<li class="chapter" data-level="2.4.3" data-path="tracking-data.html"><a href="tracking-data.html#subscription-service"><i class="fa fa-check"></i><b>2.4.3</b> Subscription Service</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="tracking-data.html"><a href="tracking-data.html#message-encoding"><i class="fa fa-check"></i><b>2.5</b> Message Encoding</a></li>
+<li class="chapter" data-level="2.6" data-path="tracking-data.html"><a href="tracking-data.html#building-a-tracking-api"><i class="fa fa-check"></i><b>2.6</b> Building a Tracking API</a></li>
+<li class="chapter" data-level="2.7" data-path="tracking-data.html"><a href="tracking-data.html#privacy"><i class="fa fa-check"></i><b>2.7</b> Privacy</a></li>
+<li class="chapter" data-level="2.8" data-path="tracking-data.html"><a href="tracking-data.html#conclusion"><i class="fa fa-check"></i><b>2.8</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-pipelines.html"><a href="data-pipelines.html"><i class="fa fa-check"></i><b>3</b> Data Pipelines</a><ul>
+<li class="chapter" data-level="3.1" data-path="data-pipelines.html"><a href="data-pipelines.html#types-of-data"><i class="fa fa-check"></i><b>3.1</b> Types of Data</a></li>
+<li class="chapter" data-level="3.2" data-path="data-pipelines.html"><a href="data-pipelines.html#the-evolution-of-data-pipelines"><i class="fa fa-check"></i><b>3.2</b> The Evolution of Data Pipelines</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="data-pipelines.html"><a href="data-pipelines.html#flat-file-era"><i class="fa fa-check"></i><b>3.2.1</b> Flat File Era</a></li>
+<li class="chapter" data-level="3.2.2" data-path="data-pipelines.html"><a href="data-pipelines.html#database-era"><i class="fa fa-check"></i><b>3.2.2</b> Database Era</a></li>
+<li class="chapter" data-level="3.2.3" data-path="data-pipelines.html"><a href="data-pipelines.html#data-lake-era"><i class="fa fa-check"></i><b>3.2.3</b> Data Lake Era</a></li>
+<li class="chapter" data-level="3.2.4" data-path="data-pipelines.html"><a href="data-pipelines.html#serverless-era"><i class="fa fa-check"></i><b>3.2.4</b> Serverless Era</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="data-pipelines.html"><a href="data-pipelines.html#a-scalable-pipeline"><i class="fa fa-check"></i><b>3.3</b> A Scalable Pipeline</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="data-pipelines.html"><a href="data-pipelines.html#setting-up-the-environment"><i class="fa fa-check"></i><b>3.3.1</b> Setting up the Environment</a></li>
+<li class="chapter" data-level="3.3.2" data-path="data-pipelines.html"><a href="data-pipelines.html#publishing-events"><i class="fa fa-check"></i><b>3.3.2</b> Publishing Events</a></li>
+<li class="chapter" data-level="3.3.3" data-path="data-pipelines.html"><a href="data-pipelines.html#storing-events"><i class="fa fa-check"></i><b>3.3.3</b> Storing Events</a></li>
+<li class="chapter" data-level="3.3.4" data-path="data-pipelines.html"><a href="data-pipelines.html#deploying-and-auto-scaling"><i class="fa fa-check"></i><b>3.3.4</b> Deploying and Auto Scaling</a></li>
+<li class="chapter" data-level="3.3.5" data-path="data-pipelines.html"><a href="data-pipelines.html#raw-to-processed-events"><i class="fa fa-check"></i><b>3.3.5</b> Raw to Processed Events</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="data-pipelines.html"><a href="data-pipelines.html#conclusion-1"><i class="fa fa-check"></i><b>3.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="business-intelligence.html"><a href="business-intelligence.html"><i class="fa fa-check"></i><b>4</b> Business Intelligence</a><ul>
+<li class="chapter" data-level="4.1" data-path="business-intelligence.html"><a href="business-intelligence.html#kpis"><i class="fa fa-check"></i><b>4.1</b> KPIs</a></li>
+<li class="chapter" data-level="4.2" data-path="business-intelligence.html"><a href="business-intelligence.html#reporting-with-r"><i class="fa fa-check"></i><b>4.2</b> Reporting with R</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="business-intelligence.html"><a href="business-intelligence.html#base-r"><i class="fa fa-check"></i><b>4.2.1</b> Base R</a></li>
+<li class="chapter" data-level="4.2.2" data-path="business-intelligence.html"><a href="business-intelligence.html#r-markdown"><i class="fa fa-check"></i><b>4.2.2</b> R Markdown</a></li>
+<li class="chapter" data-level="4.2.3" data-path="business-intelligence.html"><a href="business-intelligence.html#r-shiny"><i class="fa fa-check"></i><b>4.2.3</b> R Shiny</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="business-intelligence.html"><a href="business-intelligence.html#etls"><i class="fa fa-check"></i><b>4.3</b> ETLs</a></li>
+<li class="chapter" data-level="4.4" data-path="business-intelligence.html"><a href="business-intelligence.html#reporting-tools"><i class="fa fa-check"></i><b>4.4</b> Reporting Tools</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="business-intelligence.html"><a href="business-intelligence.html#google-data-studio"><i class="fa fa-check"></i><b>4.4.1</b> Google Data Studio</a></li>
+<li class="chapter" data-level="4.4.2" data-path="business-intelligence.html"><a href="business-intelligence.html#tableau"><i class="fa fa-check"></i><b>4.4.2</b> Tableau</a></li>
+<li class="chapter" data-level="4.4.3" data-path="business-intelligence.html"><a href="business-intelligence.html#mode"><i class="fa fa-check"></i><b>4.4.3</b> Mode</a></li>
+<li class="chapter" data-level="4.4.4" data-path="business-intelligence.html"><a href="business-intelligence.html#custom-tooling"><i class="fa fa-check"></i><b>4.4.4</b> Custom Tooling</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="business-intelligence.html"><a href="business-intelligence.html#conclusion-2"><i class="fa fa-check"></i><b>4.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>5</b> Exploratory Data Analysis</a><ul>
+<li class="chapter" data-level="5.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#summary-statistics"><i class="fa fa-check"></i><b>5.1</b> Summary Statistics</a></li>
+<li class="chapter" data-level="5.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plotting"><i class="fa fa-check"></i><b>5.2</b> Plotting</a></li>
+<li class="chapter" data-level="5.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#correlation-analysis"><i class="fa fa-check"></i><b>5.3</b> Correlation Analysis</a></li>
+<li class="chapter" data-level="5.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#feature-importance"><i class="fa fa-check"></i><b>5.4</b> Feature Importance</a></li>
+<li class="chapter" data-level="5.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#conclusion-3"><i class="fa fa-check"></i><b>5.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="predictive-modeling.html"><a href="predictive-modeling.html"><i class="fa fa-check"></i><b>6</b> Predictive Modeling</a><ul>
+<li class="chapter" data-level="6.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#types-of-predictive-models"><i class="fa fa-check"></i><b>6.1</b> Types of Predictive Models</a></li>
+<li class="chapter" data-level="6.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#training-a-classification-model"><i class="fa fa-check"></i><b>6.2</b> Training a Classification Model</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#weka"><i class="fa fa-check"></i><b>6.2.1</b> Weka</a></li>
+<li class="chapter" data-level="6.2.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#bigml"><i class="fa fa-check"></i><b>6.2.2</b> BigML</a></li>
+<li class="chapter" data-level="6.2.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#r-glmnet"><i class="fa fa-check"></i><b>6.2.3</b> R — Glmnet</a></li>
+<li class="chapter" data-level="6.2.4" data-path="predictive-modeling.html"><a href="predictive-modeling.html#python-scikit-learn"><i class="fa fa-check"></i><b>6.2.4</b> Python — scikit-learn</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#clustering"><i class="fa fa-check"></i><b>6.3</b> Clustering</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#how-many-clusters-to-use"><i class="fa fa-check"></i><b>6.3.1</b> How many clusters to use?</a></li>
+<li class="chapter" data-level="6.3.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#cluster-descriptions"><i class="fa fa-check"></i><b>6.3.2</b> Cluster Descriptions</a></li>
+<li class="chapter" data-level="6.3.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#cluster-populations-by-net-worth"><i class="fa fa-check"></i><b>6.3.3</b> Cluster Populations by Net Worth</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="predictive-modeling.html"><a href="predictive-modeling.html#conclusion-4"><i class="fa fa-check"></i><b>6.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="productizing-models.html"><a href="productizing-models.html"><i class="fa fa-check"></i><b>7</b> Productizing Models</a><ul>
+<li class="chapter" data-level="7.1" data-path="productizing-models.html"><a href="productizing-models.html#building-a-model-specification"><i class="fa fa-check"></i><b>7.1</b> Building a Model Specification</a></li>
+<li class="chapter" data-level="7.2" data-path="productizing-models.html"><a href="productizing-models.html#batch-deployments"><i class="fa fa-check"></i><b>7.2</b> Batch Deployments</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="productizing-models.html"><a href="productizing-models.html#sql-query"><i class="fa fa-check"></i><b>7.2.1</b> SQL Query</a></li>
+<li class="chapter" data-level="7.2.2" data-path="productizing-models.html"><a href="productizing-models.html#dataflow-bigquery"><i class="fa fa-check"></i><b>7.2.2</b> DataFlow — BigQuery</a></li>
+<li class="chapter" data-level="7.2.3" data-path="productizing-models.html"><a href="productizing-models.html#dataflow-datastore"><i class="fa fa-check"></i><b>7.2.3</b> DataFlow — DataStore</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="productizing-models.html"><a href="productizing-models.html#live-deployments"><i class="fa fa-check"></i><b>7.3</b> Live Deployments</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="productizing-models.html"><a href="productizing-models.html#web-service"><i class="fa fa-check"></i><b>7.3.1</b> Web Service</a></li>
+<li class="chapter" data-level="7.3.2" data-path="productizing-models.html"><a href="productizing-models.html#dataflow---pubsub"><i class="fa fa-check"></i><b>7.3.2</b> DataFlow - PubSub</a></li>
+<li class="chapter" data-level="7.3.3" data-path="productizing-models.html"><a href="productizing-models.html#custom-engineering"><i class="fa fa-check"></i><b>7.3.3</b> Custom Engineering</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="productizing-models.html"><a href="productizing-models.html#conclusion-5"><i class="fa fa-check"></i><b>7.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="experimentation.html"><a href="experimentation.html"><i class="fa fa-check"></i><b>8</b> Experimentation</a><ul>
+<li class="chapter" data-level="8.1" data-path="experimentation.html"><a href="experimentation.html#staged-rollouts"><i class="fa fa-check"></i><b>8.1</b> Staged Rollouts</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="experimentation.html"><a href="experimentation.html#staged-rollout-biases"><i class="fa fa-check"></i><b>8.1.1</b> Staged Rollout Biases</a></li>
+<li class="chapter" data-level="8.1.2" data-path="experimentation.html"><a href="experimentation.html#time-series-analysis"><i class="fa fa-check"></i><b>8.1.2</b> Time Series Analysis</a></li>
+<li class="chapter" data-level="8.1.3" data-path="experimentation.html"><a href="experimentation.html#difference-in-differences-estimation"><i class="fa fa-check"></i><b>8.1.3</b> Difference-in-Differences Estimation</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="experimentation.html"><a href="experimentation.html#conclusion-6"><i class="fa fa-check"></i><b>8.2</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="recommendation-systems.html"><a href="recommendation-systems.html"><i class="fa fa-check"></i><b>9</b> Recommendation Systems</a><ul>
+<li class="chapter" data-level="9.1" data-path="recommendation-systems.html"><a href="recommendation-systems.html#r---recommender-lab"><i class="fa fa-check"></i><b>9.1</b> R - Recommender Lab</a></li>
+<li class="chapter" data-level="9.2" data-path="recommendation-systems.html"><a href="recommendation-systems.html#java---apache-mahout"><i class="fa fa-check"></i><b>9.2</b> Java - Apache Mahout</a></li>
+<li class="chapter" data-level="9.3" data-path="recommendation-systems.html"><a href="recommendation-systems.html#scala---mllib"><i class="fa fa-check"></i><b>9.3</b> Scala - MLlib</a></li>
+<li class="chapter" data-level="9.4" data-path="recommendation-systems.html"><a href="recommendation-systems.html#sql---spark-sql"><i class="fa fa-check"></i><b>9.4</b> SQL - Spark SQL</a></li>
+<li class="chapter" data-level="9.5" data-path="recommendation-systems.html"><a href="recommendation-systems.html#conclusion-7"><i class="fa fa-check"></i><b>9.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="deep-learning.html"><a href="deep-learning.html"><i class="fa fa-check"></i><b>10</b> Deep Learning</a><ul>
+<li class="chapter" data-level="10.1" data-path="deep-learning.html"><a href="deep-learning.html#improving-shallow-problems"><i class="fa fa-check"></i><b>10.1</b> Improving Shallow Problems</a></li>
+<li class="chapter" data-level="10.2" data-path="deep-learning.html"><a href="deep-learning.html#loss-functions-in-keras"><i class="fa fa-check"></i><b>10.2</b> Loss Functions in Keras</a></li>
+<li class="chapter" data-level="10.3" data-path="deep-learning.html"><a href="deep-learning.html#evaluating-loss-functions"><i class="fa fa-check"></i><b>10.3</b> Evaluating Loss Functions</a></li>
+<li class="chapter" data-level="10.4" data-path="deep-learning.html"><a href="deep-learning.html#conclusion-8"><i class="fa fa-check"></i><b>10.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science for Startups</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="tracking-data" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Tracking Data</h1>
+<p>In order to make data-driven decisions at a startup, you need to collect data about how your products are being used. You also need to be able to measure the impact of making changes to your product and the efficacy of running campaigns, such as deploying a custom audience for marketing on Facebook. Again, collecting data is necessary for accomplishing these goals.</p>
+<p>Usually data is generated directly by the product. For example, a mobile game can generate data points about launching the game, starting additional sessions, and leveling up. But data can also come from other sources, such as an email vendor that provides response data about which users read and click on links within an email. This chapter focuses on the first type of data, where tracking events are being generated by the product.</p>
+<p>Why record data about product usage?</p>
+<ul>
+<li><strong>Track metrics:</strong> You may want to record performance metrics for tracking product health or other metrics useful for running the business.</li>
+<li><strong>Enable experimentation:</strong> To determine if changes to a product are beneficial, you need to be able to measure results.</li>
+<li><strong>Build data products:</strong> In order to make something like a recommendation system, you need to know which items users are interacting with.</li>
+</ul>
+<p>It’s been said that data is the new oil, and there’s a wide variety of reasons to collect data from products. When I first started in the gaming industry, data tracked from products was referred to as telemetry. Now, data collected from products is frequently called tracking.</p>
+<p>This chapter discusses what type of data to collect about product usage, how to send data to a server for analysis, issues when building a tracking API, and some concerns to consider when tracking user behavior.</p>
+<div id="what-to-record" class="section level2">
+<h2><span class="header-section-number">2.1</span> What to Record?</h2>
+<p>One of the questions to answer when deploying a new product is:</p>
+<ul>
+<li>What data should we collect about user behavior?</li>
+</ul>
+<p>The answer is that it depends on your product and intended use cases, but there are some general guidelines about what types of data to collect across most web, mobile, and native applications.</p>
+<ul>
+<li><strong>Installs:</strong> How big is the user base?</li>
+<li><strong>Sessions:</strong> How engaged is the user base?</li>
+<li><strong>Monetization:</strong> How much are users spending?</li>
+</ul>
+<p>For these three types of events, the data may actually be generated from three different systems. Installation data might come from a third party, such as Google Play or the App Store, a session start event will be generated from the client application, and spending money in an application, or viewing ads, may be tracked by a different server. As long as you own the service that is generating the data points, you can use the same infrastructure to collect data about different types of events.</p>
+<p>Collecting data about how many users launch and log into a application will enable you to answer basic questions about the size of your user base, and enable you to track business metrics such as DAU, MAU, ARPDAU, and D-7 retention. However, it doesn’t provide much insight into what users are doing within an application, and it doesn’t provide many data points that are useful for building data products. In order to better understand user engagement, it’s necessary to track data points that are domain or product specific. For example, you might want to track the following types of events in a multiplayer shooter game for consoles:</p>
+<ul>
+<li><strong>GameStarted:</strong> tracks when the player starts a single or multiplayer game.</li>
+<li><strong>PlayerSpawn:</strong> tracks when the player spawns into the game world and tracks the class that the user is playing, such as combat medic.</li>
+<li><strong>PlayerDeath:</strong> tracks where players are dying and getting stuck and enables calculating metrics such as KDR (kill/death ratio).</li>
+<li><strong>RankUp:</strong> tracks when the player levels up or unlocks a new rank.</li>
+</ul>
+<p>Most of these events translate well to other shooter games and other genres such as action/adventure. For a specific game, such as FIFA, you may want to record game specific events, such as:</p>
+<ul>
+<li><strong>GoalScored:</strong> tracks when a point is scored by the player or opponent.</li>
+<li><strong>PlayerSubstitution:</strong> tracks when a player is substituted.</li>
+<li><strong>RedCardReceived:</strong> when the player receives a red card.</li>
+</ul>
+<p>Like the prior events, many of these game-specific events can actually be generalized to sports games. If you’re a company like EA with a portfolio of different sports titles, it’s useful to track all of these events across all of your sports titles (the red card event can be generalized to a penalty event).</p>
+<p>If we’re able to collect these types of events about players, we can start to answer useful questions about the player base, such as:</p>
+<ul>
+<li>Are users that receive more red cards more likely to quit?</li>
+<li>Do online focused players play more than single-player focused players?</li>
+<li>Do users play the new career mode that was released?</li>
+</ul>
+<p>A majority of tracking events are focused on collecting data points about released titles, but it’s also possible to collect data during development. At Microsoft Studios, I worked with the user research team to get tracking in place for playtesting. As a result, we could generate visualizations that were useful for conveying to game teams where players were getting stuck. Incorporating these visualizations into the playtesting results resulted in a much better reception from game teams.</p>
+<div class="figure"><span id="fig:ryse"></span>
+<img src="images/tracking-ryse.png" alt="Ryse: Son of Rome Playtesting - Microsoft Studios User Research" width="100%" />
+<p class="caption">
+Figure 2.1: Ryse: Son of Rome Playtesting - Microsoft Studios User Research
+</p>
+</div>
+<p>When you first add tracking to a product, you won’t know of every event and attribute that will be useful to record, but you can make a good guess by asking team members what types of questions they intend to ask about user behavior and by implementing events that are able to answer these questions. Even with good tracking data, you won’t be able to answer every question, but if you have good coverage you can start to improve your products.</p>
+</div>
+<div id="tracking-specs" class="section level2">
+<h2><span class="header-section-number">2.2</span> Tracking Specs</h2>
+<p>Some teams write tracking specifications to in order to define which tracking events need to be implemented in a product. Other teams don’t have any documentation and simply take a best guess approach at determining what to record. I highly recommend writing tracking specifications as a best practice. For each event, the spec should identify the conditions for firing an event, the attributes to send, and definitions for any event-specific attributes. For example, a session start event for a web app might have the following form:</p>
+<ul>
+<li><strong>Condition:</strong> fired when the user first browses to the domain. The event should not be fired when the user clicks on new pages or uses the back button, but should fire it the user browses to a new domain and then back.</li>
+<li><strong>Properties:</strong> web browser and version, userID, landing page, referring URL, client timestamp</li>
+<li><strong>Definitions:</strong> referring URL should list the URL of the page that referred the user to this domain, or the application that referred the user to the web page (e.g. Facebook or Twitter).</li>
+</ul>
+<p>Tracking specs are a highly useful piece of documentation. Small teams might be able to get away without having an official process for writing tracking specs, but a number of scenarios can make the documentation critical, such as implementing events on a new platform, re-implementing events for a new backend service, or having engineers leave the team. In order for specs to be useful, it’s necessary to answer the following questions:</p>
+<ul>
+<li>Who is responsible for writing the spec?</li>
+<li>Who is responsible for implementing the spec?</li>
+<li>Who is responsible for testing the implementation?</li>
+</ul>
+<p>In small organizations, a data scientist might be responsible for all of the aspects of tracking. For a larger organization, it’s common for the owners to be a product manager, engineering team, and testing group.</p>
+</div>
+<div id="client-vs-server-tracking" class="section level2">
+<h2><span class="header-section-number">2.3</span> Client vs Server Tracking</h2>
+<p>Another consideration when setting up tracking for a product is determining whether to send events from a client application or a backend service. For example, a video-streaming web site can send data about which video a user is watching directly from the web browser, or from the backend service that is serving the video. While there are pros and cons to both approaches, I prefer setting up tracking for backend services rather than client applications if possible. Some of the benefits of server-side tracking are:</p>
+<ul>
+<li><strong>Trusted Source:</strong> You don’t need to expose an endpoint on the web, and you know that events are being generated from your services rather than bots. This helps avoid fraud and DDoS attacks.</li>
+<li><strong>Avoid Ad Blocking:</strong> If you send data from a client application to an endpoint exposed on the web, some users may block access to the endpoint, which impacts business metrics.</li>
+<li><strong>Versioning:</strong> You might need to make changes to an event. You can update your web servers as needed, but often cannot require users to update a client application.</li>
+</ul>
+<p>Generating tracking from servers rather than client applications helps avoid issues around fraud, security, and versioning. However, there are some drawbacks to server-side tracking:</p>
+<ul>
+<li><strong>Testing:</strong> You might need to add new events or modify existing tracking events for testing purposes. This is often easier to do by making changes on the client side.</li>
+<li><strong>Data availability:</strong> Some of the events that you might want to track do not make calls to a web server. For example, a console game might not connect to any web services during a session start, and instead want until a multiplayer match starts. Also, attributes such as the referring URL may only be available for the client application and not the backend service.</li>
+</ul>
+<p>A general guideline is to not trust anything sent by a client application, because often endpoints are not secured and there is no way to verify that the data was generated by your application. But client data is very useful, so it’s best to combine both client and server side tracking and to secure endpoints used for collecting tracking from clients.</p>
+</div>
+<div id="sending-tracking-events" class="section level2">
+<h2><span class="header-section-number">2.4</span> Sending Tracking Events</h2>
+<p>The goal of sending data to a server is to make the data available for analysis and data products. There’s a number of different approaches that can be used based on your use case. This section introduces three different ways of sending events to an endpoint on the web and saving the events to local storage. The samples below are not intended to be production code, but instead simple proofs of concept. The next chapter covers building a pipeline for processing events. Code for the samples is available on Github<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>.</p>
+<div id="web-call" class="section level3">
+<h3><span class="header-section-number">2.4.1</span> Web Call</h3>
+<p>The easiest way to set up a tracking service is by making web calls with the event data to a web site. This can be implemented with a lightweight PHP script, which is shown in the code block below.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&lt;</span>?php
+    <span class="op">$</span>message =<span class="st"> </span><span class="er">$</span>_GET[<span class="st">&#39;message&#39;</span>];
+    <span class="cf">if</span> (<span class="op">$</span>message <span class="op">!=</span><span class="st"> &#39;&#39;</span>) {
+        <span class="op">$</span>dataFile =<span class="st"> </span><span class="kw">fopen</span>(<span class="st">&quot;telemetry.log&quot;</span>, <span class="st">&quot;a&quot;</span>);
+        <span class="kw">fwrite</span>(<span class="op">$</span>dataFile, <span class="st">&quot;$message</span><span class="ch">\n</span><span class="st">&quot;</span>);
+        <span class="kw">fflush</span>(<span class="op">$</span>dataFile);
+        <span class="kw">fclose</span>(<span class="op">$</span>dataFile);
+    }
+?<span class="op">&gt;</span></code></pre></div>
+<p>This php script reads the message parameter from the URL and appends the message to a local file. The script can be invoked by making a web call:</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">http<span class="op">:</span><span class="er">//</span>...<span class="op">/</span>tracking.php?message=Hello_World</code></pre></div>
+<p>The call can be made from client or server using the following code:</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">/</span><span class="er">/</span><span class="st"> </span>endpoint
+String endPoint =<span class="st"> &quot;http://.../tracking.php&quot;</span>;
+
+<span class="op">/</span><span class="er">/</span><span class="st"> </span>send the message
+String message =<span class="st"> &quot;Hello_World&quot;</span>;   
+URL url =<span class="st"> </span>new <span class="kw">URL</span>(endPoint <span class="op">+</span><span class="st"> &quot;?message=&quot;</span> <span class="op">+</span><span class="st"> </span>message);  
+URLConnection con =<span class="st"> </span><span class="kw">url.openConnection</span>();  
+BufferedReader <span class="cf">in</span> =<span class="st"> </span>new <span class="kw">BufferedReader</span>(new 
+    <span class="kw">InputStreamReader</span>(<span class="kw">con.getInputStream</span>()));  
+
+<span class="op">/</span><span class="er">/</span><span class="st"> </span>process the response 
+<span class="cf">while</span> (<span class="kw">in.readLine</span>() <span class="op">!=</span><span class="st"> </span>null) {}  
+<span class="kw">in.close</span>();</code></pre></div>
+<p>This is one of the easiest ways to start collecting tracking data, but it doesn’t scale and it’s not secure. It’s useful for testing, but should be avoided for anything customer facing. I did use this approach in the past to collect data about players for a Mario level generator experiment<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>.</p>
+</div>
+<div id="web-server" class="section level3">
+<h3><span class="header-section-number">2.4.2</span> Web Server</h3>
+<p>Another approach you can use is setting up a web service to collect tracking events. The code below shows how to use Jetty to set up a lightweight service for collecting data. In order to compile and run the example, you’ll need to include the project pom file. The first step is to start a web service that will handle tracking requests:</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">public class TrackingServer extends AbstractHandler {
+  public static void <span class="kw">main</span>(String[] args) {
+    Server server =<span class="st"> </span>new <span class="kw">Server</span>(<span class="dv">8080</span>);
+    <span class="kw">server.setHandler</span>(new <span class="kw">TrackingServer</span>());
+    <span class="kw">server.start</span>();
+    <span class="kw">server.join</span>();
+  }
+  
+  public void <span class="kw">handle</span>(String target, 
+    Request baseRequest, HttpServletRequest request, 
+    HttpServletResponse response) 
+    throws IOException, ServletException {
+        
+    <span class="op">/</span><span class="er">/</span><span class="st"> </span>Process Request
+  }
+}</code></pre></div>
+<p>In order to process events, the application reads the message parameter from the web request, appends the message to a local file, and then responds to the web request.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">/</span><span class="er">/</span><span class="st"> </span>append the event data to a local file 
+String message =<span class="st"> </span><span class="kw">baseRequest.getParameter</span>(<span class="st">&quot;message&quot;</span>);
+<span class="cf">if</span> (message <span class="op">!=</span><span class="st"> </span>null) {
+  BufferedWriter writer =<span class="st"> </span>new <span class="kw">BufferedWriter</span>(
+      new <span class="kw">FileWriter</span>(<span class="st">&quot;tracking.log&quot;</span>, true));
+  <span class="kw">writer.write</span>(message <span class="op">+</span><span class="st"> &quot;</span><span class="ch">\n</span><span class="st">&quot;</span>);
+  <span class="kw">writer.close</span>();
+}
+
+<span class="op">/</span><span class="er">/</span><span class="st"> </span>service the web request
+<span class="kw">response.setStatus</span>(HttpServletResponse.SC_OK);</code></pre></div>
+<p>In order to call the endpoint with Java, we’ll need to modify the URL:</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">URL url =<span class="st"> </span>new <span class="kw">URL</span>(
+    <span class="st">&quot;http://localhost:8080/?message=&quot;</span> <span class="op">+</span><span class="st"> </span>message);</code></pre></div>
+<p>This approach can scale a bit more than the PHP approach, but is still insecure and not the best approach for building a production system. My advice for building a production ready tracking service is to use a stream processing system such as Kafka, Amazon Kinesis, or Google’s PubSub.</p>
+</div>
+<div id="subscription-service" class="section level3">
+<h3><span class="header-section-number">2.4.3</span> Subscription Service</h3>
+<p>Using messaging services such as PubSub enables systems to collect massive amounts of tracking data, and forward the data to a number of different consumers. Some systems such as Kafka require setting up and maintaining servers, while other approaches like PubSub are managed services that are serverless. Managed services are great for startups, because they reduce the amount of DevOps support needed. But the tradeoff is cost, and it’s pricer to use managed services for massive data collection.</p>
+<p>The code below shows how to use Java to post a message to a topic on PubSub. In order to run this example, you’ll need to set up a free google cloud project, and enable PubSub. More details on setting up GCP and PubSub are available online<a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a>.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">/</span><span class="er">/</span><span class="st"> </span>Set up a publisher
+TopicName topicName =<span class="st"> </span>
+<span class="st">    </span><span class="kw">TopicName.of</span>(<span class="st">&quot;projectID&quot;</span>, <span class="st">&quot;raw-events&quot;</span>);
+Publisher publisher =<span class="st"> </span>Publisher
+    <span class="kw">.newBuilder</span>(topicName)<span class="kw">.build</span>();
+
+<span class="op">/</span><span class="er">/</span>schedule a message to be published
+String message =<span class="st"> &quot;Hello World!&quot;</span>;
+PubsubMessage msg =<span class="st"> </span>PubsubMessage
+    <span class="kw">.newBuilder</span>()<span class="kw">.setData</span>(ByteString
+    <span class="kw">.copyFromUtf8</span>(message))<span class="kw">.build</span>();
+    
+<span class="op">/</span><span class="er">/</span><span class="st"> </span>publish the message, add a callback listener
+ApiFuture<span class="op">&lt;</span>String<span class="op">&gt;</span><span class="st"> </span>future =<span class="st"> </span><span class="kw">publisher.publish</span>(msg);
+<span class="kw">ApiFutures.addCallback</span>(future, 
+    new ApiFutureCallback<span class="op">&lt;</span>String<span class="op">&gt;</span>() {
+      
+  public void <span class="kw">onFailure</span>(Throwable arg0) {}
+  public void <span class="kw">onSuccess</span>(String arg0) {}
+});
+
+<span class="kw">publisher.shutdown</span>();</code></pre></div>
+<p>This code example shows how to send a single message to PubSub for recording a tracking event. For a production system, you’ll want to implement the onFailure method in order to deal with failed deliveries. The code above shows how to send a message with Java, while other languages are supported including Go, Python, C#, and PHP. It’s also possible to interface with other stream processing systems such as Kafka.</p>
+<p>The next code segment shows how to read a message from PubSub and append the message to a local file. In the next chapter I’ll show how to consume messages using DataFlow.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">/</span><span class="er">/</span><span class="st"> </span>set up a message handler
+MessageReceiver receiver =<span class="st"> </span>new <span class="kw">MessageReceiver</span>() {
+  public void <span class="kw">receiveMessage</span>(PubsubMessage message, 
+    AckReplyConsumer consumer) {
+    try {
+      BufferedWriter writer =<span class="st"> </span>new <span class="kw">BufferedWriter</span>(new
+        <span class="kw">FileWriter</span>(<span class="st">&quot;tracking.log&quot;</span>, true));
+      <span class="kw">writer.write</span>(
+          <span class="kw">message.getData</span>()<span class="kw">.toStringUtf8</span>() <span class="op">+</span><span class="st"> &quot;</span><span class="ch">\n</span><span class="st">&quot;</span>);
+      <span class="kw">writer.close</span>();
+      <span class="kw">consumer.ack</span>();
+    }
+    <span class="kw">catch</span> (Exception e) {}
+}};
+
+<span class="op">/</span><span class="er">/</span><span class="st"> </span>start the listener <span class="cf">for</span> <span class="dv">1</span> minute
+SubscriptionName subscriptionName =
+<span class="st">    </span><span class="kw">SubscriptionName.of</span>(<span class="st">&quot;projectId&quot;</span>, <span class="st">&quot;raw-events&quot;</span>);
+Subscriber subscriber =<span class="st"> </span><span class="kw">Subscriber.newBuilder</span>(
+    subscriptionName, receiver)<span class="kw">.build</span>();
+
+<span class="kw">subscriber.startAsync</span>();
+<span class="kw">Thread.sleep</span>(<span class="dv">60000</span>);
+<span class="kw">subscriber.stopAsync</span>();</code></pre></div>
+<p>We now have a way of getting data from client applications and backend services to a central location for analysis. The last approach shown is a scalable and secure method for collecting tracking data, and is a managed service making it a good fit for startups with small data teams.</p>
+</div>
+</div>
+<div id="message-encoding" class="section level2">
+<h2><span class="header-section-number">2.5</span> Message Encoding</h2>
+<p>One of the decisions to make when sending data to an endpoint for collection is how to encode the messages being sent, since all events that are sent from an application to an endpoint need to be serialized. When sending data over the internet, it’s good to avoid language specific encodings, such as Java serialization, because the application and backend services are likely implemented in different languages. There’s also versioning issues that can arise when using a language-specific serialization approach.</p>
+<p>Some common ways of encoding tracking events are using the JSON format and Google’s protocol buffers. JSON has the benefit of being human readable and supported by a wide variety of languages, while buffers provide better compression and may better suited for certain data structures. One of the benefits of using these approaches is that a schema does not need to be defined before you can send events, since metadata about the event is included in the message. You can add new attributes as needed, and even change data types, but this may impact downstream event processing.</p>
+<p>When getting started with building a data pipeline, I’d recommended using JSON to get started, since it’s human readable and supported by a wide variety of languages. It’s also good to avoid encodings such as pipe-delimited formats, because you many need to support more complex data structures, such as lists or maps, when you update your tracking events. Here’s an example of what a message might look like:</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># JSON</span>
+{<span class="st">&quot;Type&quot;</span><span class="op">:</span><span class="st">&quot;Session&quot;</span>,<span class="st">&quot;Version&quot;</span><span class="op">:</span><span class="fl">1.0</span>,<span class="st">&quot;UserID&quot;</span><span class="op">:</span><span class="st">&quot;12345&quot;</span>
+    ,<span class="st">&quot;Platform&quot;</span><span class="op">:</span><span class="st">&quot;iOS&quot;</span>}
+
+<span class="co"># Pipe delimited</span>
+Session<span class="op">|</span><span class="fl">1.0</span><span class="op">|</span><span class="dv">12345</span><span class="op">|</span>iOS</code></pre></div>
+<p>What about XML? No!</p>
+</div>
+<div id="building-a-tracking-api" class="section level2">
+<h2><span class="header-section-number">2.6</span> Building a Tracking API</h2>
+<p>To build a production system, you’ll need to add a bit more sophistication to your tracking code. A production system should handle the following issues:</p>
+<ul>
+<li><strong>Delivery Failures:</strong> if a message delivery fails, the system should retry sending the message, and have a backoff mechanism.</li>
+<li><strong>Queueing:</strong> if the endpoint is not available, such as a phone without a signal, the trackling library should be able to store events for later transmission, such as when wifi is available.</li>
+<li><strong>Batching:</strong> instead of sending a large number of small requests, it’s often useful to send batches of tracking events.</li>
+<li><strong>Prioritization:</strong> some messages are more important to track than others, such as preferring monetization events over click events. A tracking library should be able to prioritize more critical events.</li>
+</ul>
+<p>It’s also useful to have a process in place for disabling tracking events. I’ve seen data pipelines explode from client applications sending way too much data, and there was no way of disabling the clients from sending the problematic event without turning off all tracking.</p>
+<p>Ideally, a production level system should have some sort of auditing in place, in order to validate that the endpoints are receiving all of the data being sent. One approach is to send data to a different endpoint built on a different infrastructure and tracking library, but that much redundancy is usually overkill. A more lightweight approach is to add a sequential counting attribute to all events, so if a client sends 100 messages, the backend can use this attribute to know how many events the client attempted to send and validate the result.</p>
+</div>
+<div id="privacy" class="section level2">
+<h2><span class="header-section-number">2.7</span> Privacy</h2>
+<p>There’s privacy concerns to consider when storing user data. When data is being made available to analytics and data science teams, all personally identifiable information (PII) should be stripped from events, which can include names, addresses, and phone numbers. In some instances, user names, such as a player’s gamertag on Steam, may be considered PII as well. It’s also good to strip IP addresses from any data being collected, to limit privacy concerns. The general recommendation is to collect as much behavioral data as needed to answer questions about product usage, while avoiding the need to collect sensitive information, such as gender and age. If you’re building a product based on sensitive information, you should have strong user access controls in place to limit access to sensitive data. Policies such GDPR are setting new regulations for collecting and processing data, and GDPR should be reviewed before shipping a product with tracking.</p>
+</div>
+<div id="conclusion" class="section level2">
+<h2><span class="header-section-number">2.8</span> Conclusion</h2>
+<p>Tracking data enables teams to answer a variety of questions about product usage, enables teams to track the performance and health of products, and can be used to build data products. This chapter discussed some of the issues involved in collecting data about user behavior, and provided examples for how to send data from a client application to an endpoint for later analysis. Here are the key takeaways to from this chapter:</p>
+<ul>
+<li>Use server-side tracking if possible. It helps avoid a wide variety of issues.</li>
+<li>QA/test your tracking events. If you’re sending bad data, you may be drawing incorrect conclusions from your data.</li>
+<li>Have a versioning system in place. You’ll need to add new events and modify existing events, and this should be a simple process.</li>
+<li>Use JSON for sending events. It’s human readable, extensible, and supported by a wide variety of languages</li>
+<li>Use managed services for collecting data. You won’t need to spin up servers and can collect huge amounts of data.</li>
+</ul>
+<p>As you ship more products and scale up your user base, you may need to change to a different data collection platform, but this advice is a good starting point for shipping products with tracking.</p>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="4">
+<li id="fn4"><p><a href="https://github.com/bgweber/StartupDataScience/" class="uri">https://github.com/bgweber/StartupDataScience/</a><a href="tracking-data.html#fnref4">↩</a></p></li>
+<li id="fn5"><p><a href="http://www.gamasutra.com/blogs/BenWeber/20131228/207819/" class="uri">http://www.gamasutra.com/blogs/BenWeber/20131228/207819/</a><a href="tracking-data.html#fnref5">↩</a></p></li>
+<li id="fn6"><p><a href="https://medium.com/p/4087b66952a1" class="uri">https://medium.com/p/4087b66952a1</a><a href="tracking-data.html#fnref6">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-pipelines.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-TrackingData.Rmd",
+"text": "Edit"
+},
+"download": ["startup-data-science.pdf", "startup-data-science.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

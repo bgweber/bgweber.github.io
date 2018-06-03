@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Data Science for Startups</title>
+  <meta name="description" content="Data Science for Startups">
+  <meta name="generator" content="bookdown 0.7.8 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Data Science for Startups" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Data Science for Startups" />
+  <meta name="github-repo" content="bgweber/StartupDataScience" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data Science for Startups" />
+  
+  <meta name="twitter:description" content="Data Science for Startups" />
+  
+
+<meta name="author" content="Ben G Weber">
+
+
+<meta name="date" content="2018-05-29">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="predictive-modeling.html">
+<link rel="next" href="experimentation.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Data Science for Startups</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#why-data-science"><i class="fa fa-check"></i><b>1.1</b> Why Data Science?</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#book-overview"><i class="fa fa-check"></i><b>1.2</b> Book Overview</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#tooling"><i class="fa fa-check"></i><b>1.3</b> Tooling</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="tracking-data.html"><a href="tracking-data.html"><i class="fa fa-check"></i><b>2</b> Tracking Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="tracking-data.html"><a href="tracking-data.html#what-to-record"><i class="fa fa-check"></i><b>2.1</b> What to Record?</a></li>
+<li class="chapter" data-level="2.2" data-path="tracking-data.html"><a href="tracking-data.html#tracking-specs"><i class="fa fa-check"></i><b>2.2</b> Tracking Specs</a></li>
+<li class="chapter" data-level="2.3" data-path="tracking-data.html"><a href="tracking-data.html#client-vs-server-tracking"><i class="fa fa-check"></i><b>2.3</b> Client vs Server Tracking</a></li>
+<li class="chapter" data-level="2.4" data-path="tracking-data.html"><a href="tracking-data.html#sending-tracking-events"><i class="fa fa-check"></i><b>2.4</b> Sending Tracking Events</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="tracking-data.html"><a href="tracking-data.html#web-call"><i class="fa fa-check"></i><b>2.4.1</b> Web Call</a></li>
+<li class="chapter" data-level="2.4.2" data-path="tracking-data.html"><a href="tracking-data.html#web-server"><i class="fa fa-check"></i><b>2.4.2</b> Web Server</a></li>
+<li class="chapter" data-level="2.4.3" data-path="tracking-data.html"><a href="tracking-data.html#subscription-service"><i class="fa fa-check"></i><b>2.4.3</b> Subscription Service</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="tracking-data.html"><a href="tracking-data.html#message-encoding"><i class="fa fa-check"></i><b>2.5</b> Message Encoding</a></li>
+<li class="chapter" data-level="2.6" data-path="tracking-data.html"><a href="tracking-data.html#building-a-tracking-api"><i class="fa fa-check"></i><b>2.6</b> Building a Tracking API</a></li>
+<li class="chapter" data-level="2.7" data-path="tracking-data.html"><a href="tracking-data.html#privacy"><i class="fa fa-check"></i><b>2.7</b> Privacy</a></li>
+<li class="chapter" data-level="2.8" data-path="tracking-data.html"><a href="tracking-data.html#conclusion"><i class="fa fa-check"></i><b>2.8</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-pipelines.html"><a href="data-pipelines.html"><i class="fa fa-check"></i><b>3</b> Data Pipelines</a><ul>
+<li class="chapter" data-level="3.1" data-path="data-pipelines.html"><a href="data-pipelines.html#types-of-data"><i class="fa fa-check"></i><b>3.1</b> Types of Data</a></li>
+<li class="chapter" data-level="3.2" data-path="data-pipelines.html"><a href="data-pipelines.html#the-evolution-of-data-pipelines"><i class="fa fa-check"></i><b>3.2</b> The Evolution of Data Pipelines</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="data-pipelines.html"><a href="data-pipelines.html#flat-file-era"><i class="fa fa-check"></i><b>3.2.1</b> Flat File Era</a></li>
+<li class="chapter" data-level="3.2.2" data-path="data-pipelines.html"><a href="data-pipelines.html#database-era"><i class="fa fa-check"></i><b>3.2.2</b> Database Era</a></li>
+<li class="chapter" data-level="3.2.3" data-path="data-pipelines.html"><a href="data-pipelines.html#data-lake-era"><i class="fa fa-check"></i><b>3.2.3</b> Data Lake Era</a></li>
+<li class="chapter" data-level="3.2.4" data-path="data-pipelines.html"><a href="data-pipelines.html#serverless-era"><i class="fa fa-check"></i><b>3.2.4</b> Serverless Era</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="data-pipelines.html"><a href="data-pipelines.html#a-scalable-pipeline"><i class="fa fa-check"></i><b>3.3</b> A Scalable Pipeline</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="data-pipelines.html"><a href="data-pipelines.html#setting-up-the-environment"><i class="fa fa-check"></i><b>3.3.1</b> Setting up the Environment</a></li>
+<li class="chapter" data-level="3.3.2" data-path="data-pipelines.html"><a href="data-pipelines.html#publishing-events"><i class="fa fa-check"></i><b>3.3.2</b> Publishing Events</a></li>
+<li class="chapter" data-level="3.3.3" data-path="data-pipelines.html"><a href="data-pipelines.html#storing-events"><i class="fa fa-check"></i><b>3.3.3</b> Storing Events</a></li>
+<li class="chapter" data-level="3.3.4" data-path="data-pipelines.html"><a href="data-pipelines.html#deploying-and-auto-scaling"><i class="fa fa-check"></i><b>3.3.4</b> Deploying and Auto Scaling</a></li>
+<li class="chapter" data-level="3.3.5" data-path="data-pipelines.html"><a href="data-pipelines.html#raw-to-processed-events"><i class="fa fa-check"></i><b>3.3.5</b> Raw to Processed Events</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="data-pipelines.html"><a href="data-pipelines.html#conclusion-1"><i class="fa fa-check"></i><b>3.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="business-intelligence.html"><a href="business-intelligence.html"><i class="fa fa-check"></i><b>4</b> Business Intelligence</a><ul>
+<li class="chapter" data-level="4.1" data-path="business-intelligence.html"><a href="business-intelligence.html#kpis"><i class="fa fa-check"></i><b>4.1</b> KPIs</a></li>
+<li class="chapter" data-level="4.2" data-path="business-intelligence.html"><a href="business-intelligence.html#reporting-with-r"><i class="fa fa-check"></i><b>4.2</b> Reporting with R</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="business-intelligence.html"><a href="business-intelligence.html#base-r"><i class="fa fa-check"></i><b>4.2.1</b> Base R</a></li>
+<li class="chapter" data-level="4.2.2" data-path="business-intelligence.html"><a href="business-intelligence.html#r-markdown"><i class="fa fa-check"></i><b>4.2.2</b> R Markdown</a></li>
+<li class="chapter" data-level="4.2.3" data-path="business-intelligence.html"><a href="business-intelligence.html#r-shiny"><i class="fa fa-check"></i><b>4.2.3</b> R Shiny</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="business-intelligence.html"><a href="business-intelligence.html#etls"><i class="fa fa-check"></i><b>4.3</b> ETLs</a></li>
+<li class="chapter" data-level="4.4" data-path="business-intelligence.html"><a href="business-intelligence.html#reporting-tools"><i class="fa fa-check"></i><b>4.4</b> Reporting Tools</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="business-intelligence.html"><a href="business-intelligence.html#google-data-studio"><i class="fa fa-check"></i><b>4.4.1</b> Google Data Studio</a></li>
+<li class="chapter" data-level="4.4.2" data-path="business-intelligence.html"><a href="business-intelligence.html#tableau"><i class="fa fa-check"></i><b>4.4.2</b> Tableau</a></li>
+<li class="chapter" data-level="4.4.3" data-path="business-intelligence.html"><a href="business-intelligence.html#mode"><i class="fa fa-check"></i><b>4.4.3</b> Mode</a></li>
+<li class="chapter" data-level="4.4.4" data-path="business-intelligence.html"><a href="business-intelligence.html#custom-tooling"><i class="fa fa-check"></i><b>4.4.4</b> Custom Tooling</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="business-intelligence.html"><a href="business-intelligence.html#conclusion-2"><i class="fa fa-check"></i><b>4.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>5</b> Exploratory Data Analysis</a><ul>
+<li class="chapter" data-level="5.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#summary-statistics"><i class="fa fa-check"></i><b>5.1</b> Summary Statistics</a></li>
+<li class="chapter" data-level="5.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plotting"><i class="fa fa-check"></i><b>5.2</b> Plotting</a></li>
+<li class="chapter" data-level="5.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#correlation-analysis"><i class="fa fa-check"></i><b>5.3</b> Correlation Analysis</a></li>
+<li class="chapter" data-level="5.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#feature-importance"><i class="fa fa-check"></i><b>5.4</b> Feature Importance</a></li>
+<li class="chapter" data-level="5.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#conclusion-3"><i class="fa fa-check"></i><b>5.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="predictive-modeling.html"><a href="predictive-modeling.html"><i class="fa fa-check"></i><b>6</b> Predictive Modeling</a><ul>
+<li class="chapter" data-level="6.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#types-of-predictive-models"><i class="fa fa-check"></i><b>6.1</b> Types of Predictive Models</a></li>
+<li class="chapter" data-level="6.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#training-a-classification-model"><i class="fa fa-check"></i><b>6.2</b> Training a Classification Model</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#weka"><i class="fa fa-check"></i><b>6.2.1</b> Weka</a></li>
+<li class="chapter" data-level="6.2.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#bigml"><i class="fa fa-check"></i><b>6.2.2</b> BigML</a></li>
+<li class="chapter" data-level="6.2.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#r-glmnet"><i class="fa fa-check"></i><b>6.2.3</b> R — Glmnet</a></li>
+<li class="chapter" data-level="6.2.4" data-path="predictive-modeling.html"><a href="predictive-modeling.html#python-scikit-learn"><i class="fa fa-check"></i><b>6.2.4</b> Python — scikit-learn</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#clustering"><i class="fa fa-check"></i><b>6.3</b> Clustering</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#how-many-clusters-to-use"><i class="fa fa-check"></i><b>6.3.1</b> How many clusters to use?</a></li>
+<li class="chapter" data-level="6.3.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#cluster-descriptions"><i class="fa fa-check"></i><b>6.3.2</b> Cluster Descriptions</a></li>
+<li class="chapter" data-level="6.3.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#cluster-populations-by-net-worth"><i class="fa fa-check"></i><b>6.3.3</b> Cluster Populations by Net Worth</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="predictive-modeling.html"><a href="predictive-modeling.html#conclusion-4"><i class="fa fa-check"></i><b>6.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="productizing-models.html"><a href="productizing-models.html"><i class="fa fa-check"></i><b>7</b> Productizing Models</a><ul>
+<li class="chapter" data-level="7.1" data-path="productizing-models.html"><a href="productizing-models.html#building-a-model-specification"><i class="fa fa-check"></i><b>7.1</b> Building a Model Specification</a></li>
+<li class="chapter" data-level="7.2" data-path="productizing-models.html"><a href="productizing-models.html#batch-deployments"><i class="fa fa-check"></i><b>7.2</b> Batch Deployments</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="productizing-models.html"><a href="productizing-models.html#sql-query"><i class="fa fa-check"></i><b>7.2.1</b> SQL Query</a></li>
+<li class="chapter" data-level="7.2.2" data-path="productizing-models.html"><a href="productizing-models.html#dataflow-bigquery"><i class="fa fa-check"></i><b>7.2.2</b> DataFlow — BigQuery</a></li>
+<li class="chapter" data-level="7.2.3" data-path="productizing-models.html"><a href="productizing-models.html#dataflow-datastore"><i class="fa fa-check"></i><b>7.2.3</b> DataFlow — DataStore</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="productizing-models.html"><a href="productizing-models.html#live-deployments"><i class="fa fa-check"></i><b>7.3</b> Live Deployments</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="productizing-models.html"><a href="productizing-models.html#web-service"><i class="fa fa-check"></i><b>7.3.1</b> Web Service</a></li>
+<li class="chapter" data-level="7.3.2" data-path="productizing-models.html"><a href="productizing-models.html#dataflow---pubsub"><i class="fa fa-check"></i><b>7.3.2</b> DataFlow - PubSub</a></li>
+<li class="chapter" data-level="7.3.3" data-path="productizing-models.html"><a href="productizing-models.html#custom-engineering"><i class="fa fa-check"></i><b>7.3.3</b> Custom Engineering</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="productizing-models.html"><a href="productizing-models.html#conclusion-5"><i class="fa fa-check"></i><b>7.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="experimentation.html"><a href="experimentation.html"><i class="fa fa-check"></i><b>8</b> Experimentation</a><ul>
+<li class="chapter" data-level="8.1" data-path="experimentation.html"><a href="experimentation.html#staged-rollouts"><i class="fa fa-check"></i><b>8.1</b> Staged Rollouts</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="experimentation.html"><a href="experimentation.html#staged-rollout-biases"><i class="fa fa-check"></i><b>8.1.1</b> Staged Rollout Biases</a></li>
+<li class="chapter" data-level="8.1.2" data-path="experimentation.html"><a href="experimentation.html#time-series-analysis"><i class="fa fa-check"></i><b>8.1.2</b> Time Series Analysis</a></li>
+<li class="chapter" data-level="8.1.3" data-path="experimentation.html"><a href="experimentation.html#difference-in-differences-estimation"><i class="fa fa-check"></i><b>8.1.3</b> Difference-in-Differences Estimation</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="experimentation.html"><a href="experimentation.html#conclusion-6"><i class="fa fa-check"></i><b>8.2</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="recommendation-systems.html"><a href="recommendation-systems.html"><i class="fa fa-check"></i><b>9</b> Recommendation Systems</a><ul>
+<li class="chapter" data-level="9.1" data-path="recommendation-systems.html"><a href="recommendation-systems.html#r---recommender-lab"><i class="fa fa-check"></i><b>9.1</b> R - Recommender Lab</a></li>
+<li class="chapter" data-level="9.2" data-path="recommendation-systems.html"><a href="recommendation-systems.html#java---apache-mahout"><i class="fa fa-check"></i><b>9.2</b> Java - Apache Mahout</a></li>
+<li class="chapter" data-level="9.3" data-path="recommendation-systems.html"><a href="recommendation-systems.html#scala---mllib"><i class="fa fa-check"></i><b>9.3</b> Scala - MLlib</a></li>
+<li class="chapter" data-level="9.4" data-path="recommendation-systems.html"><a href="recommendation-systems.html#sql---spark-sql"><i class="fa fa-check"></i><b>9.4</b> SQL - Spark SQL</a></li>
+<li class="chapter" data-level="9.5" data-path="recommendation-systems.html"><a href="recommendation-systems.html#conclusion-7"><i class="fa fa-check"></i><b>9.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="deep-learning.html"><a href="deep-learning.html"><i class="fa fa-check"></i><b>10</b> Deep Learning</a><ul>
+<li class="chapter" data-level="10.1" data-path="deep-learning.html"><a href="deep-learning.html#improving-shallow-problems"><i class="fa fa-check"></i><b>10.1</b> Improving Shallow Problems</a></li>
+<li class="chapter" data-level="10.2" data-path="deep-learning.html"><a href="deep-learning.html#loss-functions-in-keras"><i class="fa fa-check"></i><b>10.2</b> Loss Functions in Keras</a></li>
+<li class="chapter" data-level="10.3" data-path="deep-learning.html"><a href="deep-learning.html#evaluating-loss-functions"><i class="fa fa-check"></i><b>10.3</b> Evaluating Loss Functions</a></li>
+<li class="chapter" data-level="10.4" data-path="deep-learning.html"><a href="deep-learning.html#conclusion-8"><i class="fa fa-check"></i><b>10.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science for Startups</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="productizing-models" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> Productizing Models</h1>
+<p>One the key ways that a data scientist can provide value to a startup is by building data products that can be used to improve products. Making the shift from model training to model deployment means learning a whole new set of tools for building production systems. Instead of just outputting a report or a specification of a model, productizing a model means that a data science team needs to support operational issues for maintaining a live system.</p>
+<p>An approach I’ve used to ease this transition is managed tools, such as Google Dataflow, which provides a managed and scalable solution for putting models into production. Most of the approaches discussed in this chapter are using a serverless approach, because it’s usually a better fit for startups than manually provisioning servers. Using tools like Dataflow also enables data scientists to work much closer with engineering teams, since it’s possible to set up staging environments were portions of a data pipeline can be tested prior to deployment. Most early data scientists at a startup will likely be playing a machine learning (ML) engineer role as well, by building data products.</p>
+<p>Rather than relying on a engineering team to translate a model specification to a production system, data scientists should have the tools needed to scale models. One of the ways I’ve accomplished this in the past is by using predictive model markup language (PMML) and Google’s Cloud Dataflow. Here is the workflow I recommend for building and deploying models:</p>
+<ul>
+<li>Train offline models in R or Python.</li>
+<li>Translate the models to PMML.</li>
+<li>Use Dataflow jobs to ingest PMML models for production.</li>
+</ul>
+<p>This approach enables data scientists to work locally with sampled data sets for training models, and then use the resulting model specifications on the complete data set. The third step may take some initial support from an engineering team, but only needs to be set up once. Using this approach means that data scientists can use any predictive model supported by PMML, and leveraging the managed Dataflow service means that the team does not need to worry about maintaining infrastructure.</p>
+<p>In this chapter, I’ll discuss a few different ways of productizing models. First, I discuss how to train a model in R and output the specification to PMML. Next, I provide examples of two types of model deployments: batch and live. And finally, I’ll discuss some custom approaches that I’ve seen teams use to productize models.</p>
+<div id="building-a-model-specification" class="section level2">
+<h2><span class="header-section-number">7.1</span> Building a Model Specification</h2>
+<p>To build a predictive model, we’ll again use the Natality public data set. For this chapter, we’ll build a linear regression model for predicting birth weights. The complete notebook for performing the model building and exporting process is available online<a href="#fn19" class="footnoteRef" id="fnref19"><sup>19</sup></a>. The first part of the script downloads data from BigQuery and stores the results in a data frame.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(bigrquery)
+project &lt;-<span class="st"> &quot;gcp_project_id&quot;</span>
+
+sql &lt;-<span class="st"> &quot;</span>
+<span class="st"> SELECT year, plurality, apgar_5min, mother_age</span>
+<span class="st">       ,father_age,  gestation_weeks, ever_born</span>
+<span class="st">       ,mother_married, weight_pounds</span>
+<span class="st"> FROM `bigquery-public-data.samples.natality`</span>
+<span class="st"> order by rand() </span>
+<span class="st"> LIMIT 10000&quot;</span>
+
+df &lt;-<span class="st"> </span><span class="kw">query_exec</span>(sql, <span class="dt">project =</span> project
+                 , <span class="dt">use_legacy_sql =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<p>Next, we train a linear regression model to predict the birth weight, and compute error metrics:</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">lm &lt;-<span class="st"> </span><span class="kw">lm</span>(weight_pounds <span class="op">~</span><span class="st"> </span>., <span class="dt">data =</span> df)
+<span class="kw">summary</span>(lm)
+<span class="kw">cor</span>(df<span class="op">$</span>weight_pounds, <span class="kw">predict</span>(lm, df))
+<span class="kw">mean</span>(<span class="kw">abs</span>(df<span class="op">$</span>weight_pounds <span class="op">-</span><span class="st"> </span><span class="kw">predict</span>(lm, df))) 
+<span class="kw">sqrt</span>(<span class="kw">mean</span>(<span class="kw">abs</span>(df<span class="op">$</span>weight_pounds <span class="op">-</span><span class="st"> </span><span class="kw">predict</span>(lm, df)<span class="op">^</span><span class="dv">2</span>)))</code></pre></div>
+<p>Which produces the following results:</p>
+<ul>
+<li>Correlation Coefficient: 0.335</li>
+<li>Mean Error: 0.928</li>
+<li>RMSE: 6.825</li>
+</ul>
+<p>The model performance is quite weak, and other algorithms and features could be explored to improve it. Since the goal of this chapter is to focus on productizing a model, the trained model is sufficient.</p>
+<p>The next step is to translate the trained model into PMML. The r2pmml R package and the jpmml-r tool make this process easy and support a wide range of different algorithms. The first library does a direct translation of a R model object to a PMML file, while the second library requires saving the model object to an RDS file and then running a command line tool. We used the first library to do the translation directly:</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(r2pmml)
+<span class="kw">r2pmml</span>(lm, <span class="st">&quot;natality.pmml&quot;</span>)</code></pre></div>
+<p>This code generates a pmml file we can use for model production. The PMML file format specifies the data fields to use for the model, the type of calculation to perform (regression), and the structure of the model. In this case, the structure of the model is a set of coefficients, which is defined as follows:</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&lt;</span>RegressionTable intercept=<span class="st">&quot;7.5619&quot;</span><span class="op">&gt;</span><span class="st">   </span>
+<span class="st">  </span><span class="er">&lt;</span>NumericPredictor name=<span class="st">&quot;year&quot;</span> 
+                           coefficient=<span class="st">&quot;3.6683E-4&quot;</span><span class="op">/</span><span class="er">&gt;</span>
+<span class="st">  </span><span class="er">&lt;</span>NumericPreda ictor name=<span class="st">&quot;plurality&quot;</span> 
+                           coefficient=<span class="st">&quot;-2.0459&quot;</span><span class="op">/</span><span class="er">&gt;</span><span class="st"> </span>
+<span class="st">  </span>...
+  <span class="op">&lt;</span>NumericPredictor name=<span class="st">&quot;mother_married&quot;</span> 
+                          coefficient=<span class="st">&quot;0.2784&quot;</span><span class="op">/</span><span class="er">&gt;</span><span class="st">  </span>
+<span class="er">&lt;/</span>RegressionTable<span class="op">&gt;</span></code></pre></div>
+<p>We now have a model specification that we are ready to productize and apply to our entire data set.</p>
+</div>
+<div id="batch-deployments" class="section level2">
+<h2><span class="header-section-number">7.2</span> Batch Deployments</h2>
+<p>In a batch deployment, a model is applied to a large collection of records, and the results are saved for later use. This is different from live approaches which apply models to individual records in near real-time. A batch approach can be set up to run of a regular schedule, such as daily, or ad-hoc as needed.</p>
+<div id="sql-query" class="section level3">
+<h3><span class="header-section-number">7.2.1</span> SQL Query</h3>
+<p>The first approach I’ll use to perform batch model deployment is one of the easiest approaches to take, because it uses BigQuery directly and does not require spinning up additional servers. This approach applies a model by encoding the model logic directly in a query. For example, we can apply the linear regression model specified in the PMML file as follows:</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">select weight_pounds as actual,  
+  <span class="op">+</span><span class="st"> </span><span class="fl">11.82825946749738</span>
+  <span class="op">+</span><span class="st"> </span>year <span class="op">*</span><span class="st"> </span><span class="op">-</span><span class="fl">0.0015478882184680862</span>
+  <span class="op">+</span><span class="st"> </span>plurality <span class="op">*</span><span class="st"> </span><span class="op">-</span><span class="fl">2.1703912756511254</span>
+  <span class="op">+</span><span class="st"> </span>apgar_5min <span class="op">*</span><span class="st"> </span><span class="op">-</span><span class="fl">7.204416271249425E-4</span>
+  <span class="op">+</span><span class="st"> </span>mother_age <span class="op">*</span><span class="st"> </span><span class="fl">0.011490472355621577</span>
+  <span class="op">+</span><span class="st"> </span>father_age <span class="op">*</span><span class="st"> </span><span class="op">-</span><span class="fl">0.0024906543152388157</span>
+  <span class="op">+</span><span class="st"> </span>gestation_weeks <span class="op">*</span><span class="st"> </span><span class="fl">0.010845982465606988</span>
+  <span class="op">+</span><span class="st"> </span>ever_born <span class="op">*</span><span class="st"> </span><span class="fl">0.010980856659668442</span>
+  <span class="op">+</span><span class="st"> </span>case when mother_married then <span class="dv">1</span> <span class="cf">else</span> <span class="dv">0</span> end<span class="op">*</span><span class="fl">0.264942</span>
+    as predicted
+from records</code></pre></div>
+<p>The result is that each record in the data set now has a predicted value, calculated based on the model specification. For this example, I manually translated the PMML file to a SQL query, but you could build a tool to perform this function. Since all of the data is already in BigQuery, this operation runs relatively quickly and is inexpensive to perform. It’s also possible to validate a model against records with existing labels in SQL:</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">select <span class="kw">sum</span>(<span class="dv">1</span>) as records
+  ,<span class="kw">corr</span>(actual, predicted) as Correlation
+  ,<span class="kw">avg</span>(<span class="kw">abs</span>(actual <span class="op">-</span><span class="st"> </span>predicted)) as MAE
+  ,<span class="kw">avg</span>(<span class="kw">abs</span>( (predicted <span class="op">-</span><span class="st"> </span>actual)<span class="op">/</span>actual )) as Relative
+from predictions</code></pre></div>
+<p>The results of this query show that our model has a mean-absolute error of 0.92 lbs, a correlation coefficient of 0.33, and a relative error of 15.8%. Using SQL is not limited to linear regression models, and can be applied to a wide range of different types of models, even Deep Nets. Here’s how to modify the prior query to compute a logistic rather than linear regression:</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">/</span>(<span class="dv">1</span> <span class="op">+</span><span class="st"> </span><span class="kw">exp</span>(<span class="op">-</span><span class="dv">1</span><span class="op">*</span>(
+    <span class="op">--</span>regression calculation
+))) as predicted</code></pre></div>
+<p>I’ve also used this approach in the past to deploy boosted models, such as AdaBoost. It’s useful when the structure of the model is relatively simple, and you need the results of the model in a database.</p>
+</div>
+<div id="dataflow-bigquery" class="section level3">
+<h3><span class="header-section-number">7.2.2</span> DataFlow — BigQuery</h3>
+<div class="figure" style="text-align: center"><span id="fig:7-1"></span>
+<img src="images/7-1.png" alt="Components in the BigQuery Batch Deployment." width="100%" />
+<p class="caption">
+Figure 7.1: Components in the BigQuery Batch Deployment.
+</p>
+</div>
+<p>If your model is more complex, Dataflow provides a great solution for deploying models. When using the Dataflow Java SDK, you define an graph of operations to perform on a collection of objects, and the service will automatically provision hardware to scale up as necessary. In this case, our graph is a set of three operations: read the data from BigQuery, calculate the model prediction for every record, and write the results back to BigQuery. This pipeline generates the Dataflow DAG shown below.</p>
+<div class="figure" style="text-align: center"><span id="fig:7-2"></span>
+<img src="images/7-2.png" alt="The Dataflow graph of operations used in this tutorial." width="50%" />
+<p class="caption">
+Figure 7.2: The Dataflow graph of operations used in this tutorial.
+</p>
+</div>
+<p>I use IntelliJ IDEA for authoring and deploying Dataflow jobs. While setting up the Java environment is outside of the scope of this book, the pom file used for building the project is available on Github. It includes the following dependencies for the Dataflow sdk and the JPMML library:</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&lt;</span>dependency<span class="op">&gt;</span><span class="st">            </span>
+<span class="st">  </span><span class="er">&lt;</span>groupId<span class="op">&gt;</span>com.google.cloud.dataflow<span class="op">&lt;</span><span class="er">/</span>groupId<span class="op">&gt;</span><span class="st">              </span>
+<span class="st">  </span><span class="er">&lt;</span>artifactId<span class="op">&gt;</span>google<span class="op">-</span>cloud<span class="op">-</span>dataflow<span class="op">-</span>java<span class="op">-</span>sdk<span class="op">-</span>all
+      <span class="op">&lt;</span><span class="er">/</span>artifactId<span class="op">&gt;</span><span class="st">   </span>
+<span class="st">  </span><span class="er">&lt;</span>version<span class="op">&gt;</span><span class="fl">2.2</span>.<span class="dv">0</span><span class="op">&lt;</span><span class="er">/</span>version<span class="op">&gt;</span><span class="st">        </span>
+<span class="er">&lt;/</span>dependency<span class="op">&gt;</span>
+<span class="er">&lt;</span>dependency<span class="op">&gt;</span><span class="st">            </span>
+<span class="st">  </span><span class="er">&lt;</span>groupId<span class="op">&gt;</span>org.jpmml<span class="op">&lt;</span><span class="er">/</span>groupId<span class="op">&gt;</span><span class="st">            </span>
+<span class="st">  </span><span class="er">&lt;</span>artifactId<span class="op">&gt;</span>pmml<span class="op">-</span>evaluator<span class="op">&lt;</span><span class="er">/</span>artifactId<span class="op">&gt;</span><span class="st">            </span>
+<span class="st">  </span><span class="er">&lt;</span>version<span class="op">&gt;</span><span class="fl">1.3</span>.<span class="dv">9</span><span class="op">&lt;</span><span class="er">/</span>version<span class="op">&gt;</span><span class="st">  </span>
+<span class="er">&lt;/</span>dependency<span class="op">&gt;</span></code></pre></div>
+<p>As shown in the figure below, our data flow job consists of three steps that we’ll cover in more detail. Before discussing these steps, we need to create the pipeline object:</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">PmmlPipeline.Options options =<span class="st"> </span>PipelineOptionsFactory
+  <span class="kw">.fromArgs</span>(args)<span class="kw">.withValidation</span>()
+  <span class="kw">.as</span>(PmmlPipeline.Options.class); 
+Pipeline pipeline =<span class="st"> </span><span class="kw">Pipeline.create</span>(options);</code></pre></div>
+<p>We create a pipeline object, which defines the set of operations to apply to a collection of objects. In our case, the pipeline is operating on a collection of TableRow objects. We pass an options class as input to the pipeline class, which defines a set of runtime arguments for the dataflow job, such as the GCP temporary location to use for running the job.</p>
+<p>The first step in the pipeline is reading data from the public BigQuery data set. The object returned from this step is a PCollection of TableRow objects. The feature query String defines the query to run, and we specify that we want to use standard SQL when running the query.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">private static final String query =<span class="st">     </span>
+<span class="st">  &quot;SELECT year, plurality, ... weight_pounds</span><span class="ch">\n</span><span class="st">&quot;</span> <span class="op">+</span>
+<span class="st">  &quot;FROM `bigquery-public-data.samples.natality`&quot;</span>;
+
+<span class="kw">pipeline.apply</span>(<span class="kw">BigQueryIO.read</span>()<span class="kw">.fromQuery</span>(query)           
+   <span class="kw">.usingStandardSql</span>()<span class="kw">.withoutResultFlattening</span>())</code></pre></div>
+<p>The next step in the pipeline is to apply the model prediction to every record in the data set. We define a PTransform that loads the model specification and then applies a DoFn that performs the model calculation on each TableRow.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">.apply</span>(<span class="st">&quot;PMML Application&quot;</span>, new PTransform
+    <span class="op">&lt;</span>PCollection<span class="op">&lt;</span>TableRow<span class="op">&gt;</span>, PCollection<span class="op">&lt;</span>TableRow<span class="op">&gt;</span><span class="er">&gt;</span>() {
+    
+model=new <span class="kw">RegressionModelEvaluator</span>(<span class="kw">PMMLUtil.unmarshal</span>(
+ <span class="kw">Resources.getResource</span>(<span class="st">&quot;natality.pmml&quot;</span>)<span class="kw">.openStream</span>()));
+
+return <span class="kw">input.apply</span>(<span class="st">&quot;To Predictions&quot;</span>, <span class="kw">ParDo.of</span>(
+    new DoFn<span class="op">&lt;</span>TableRow, TableRow<span class="op">&gt;</span>() {           
+     <span class="op">@</span>ProcessElement          
+      
+     public void <span class="kw">processElement</span>(ProcessContext c) {
+     <span class="op">/</span><span class="er">*</span><span class="st"> </span>Apply Model <span class="op">*</span><span class="er">/</span>
+}}))<span class="er">)</span></code></pre></div>
+<p>The apply model code segment is shown below. It retrieves the TableRow to create an estimate for, creates a map of input fields for the pmml object, uses the model to estimate the birth weight, creates a new TableRow that stores the actual and predicted weights for the birth, and then adds this object to the output of this DoFn. To summarize, this apply step loads the model, defines a function to transform each of the records in the input collection, and creates an output collection of prediction objects.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">TableRow row =<span class="st"> </span><span class="kw">c.element</span>();
+HashMap<span class="op">&lt;</span>FieldName, Double<span class="op">&gt;</span><span class="st"> </span>inputs =<span class="st"> </span>new HashMap<span class="op">&lt;</span><span class="er">&gt;</span>();            
+<span class="cf">for</span> (String key <span class="op">:</span><span class="st"> </span><span class="kw">row.keySet</span>()) {              
+  <span class="cf">if</span> (<span class="op">!</span><span class="kw">key.equals</span>(<span class="st">&quot;weight_pounds&quot;</span>)) {                   
+    <span class="kw">inputs.put</span>(<span class="kw">FieldName.create</span>(key), Double
+        <span class="kw">.parseDouble</span>(<span class="kw">row.get</span>(key)<span class="kw">.toString</span>()));              
+  }
+}
+
+Double estimate =(Double)<span class="kw">model.evaluate</span>(inputs)
+  <span class="kw">.get</span>(<span class="kw">FieldName.create</span>(<span class="st">&quot;weight_pounds&quot;</span>));
+  
+TableRow prediction =<span class="st"> </span>new <span class="kw">TableRow</span>();            
+<span class="kw">prediction.set</span>(<span class="st">&quot;actual_weight&quot;</span>, <span class="kw">Double.parseDouble</span>(
+    <span class="kw">row.get</span>(<span class="st">&quot;weight_pounds&quot;</span>)<span class="kw">.toString</span>()));            
+    <span class="kw">prediction.set</span>(<span class="st">&quot;predicted_weight&quot;</span>, estimate);
+<span class="kw">c.output</span>(prediction);</code></pre></div>
+<p>The final step is to write the results back to BigQuery. Earlier in the class, we defined the schema to use when writing records back to BigQuery.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">List<span class="op">&lt;</span>TableFieldSchema<span class="op">&gt;</span><span class="st"> </span>fields =<span class="st"> </span>new ArrayList<span class="op">&lt;</span><span class="er">&gt;</span>();    
+<span class="kw">fields.add</span>(new <span class="kw">TableFieldSchema</span>()
+   <span class="kw">.setName</span>(<span class="st">&quot;actual_weight&quot;</span>)<span class="kw">.setType</span>(<span class="st">&quot;FLOAT64&quot;</span>));    
+<span class="kw">fields.add</span>(new <span class="kw">TableFieldSchema</span>()
+   <span class="kw">.setName</span>(<span class="st">&quot;predicted_weight&quot;</span>)<span class="kw">.setType</span>(<span class="st">&quot;FLOAT64&quot;</span>));    
+
+TableSchema schema=new <span class="kw">TableSchema</span>()<span class="kw">.setFields</span>(fields);
+
+<span class="kw">.apply</span>(<span class="kw">BigQueryIO.writeTableRows</span>()
+  <span class="kw">.to</span>(<span class="kw">String.format</span>(<span class="st">&quot;%s:%s.%s&quot;</span>,  proj, dataset, table))   
+  <span class="kw">.withCreateDisposition</span>(Write.CreateDisposition     
+  .CREATE_IF_NEEDED)<span class="kw">.withSchema</span>(schema));
+
+<span class="kw">pipeline.run</span>();</code></pre></div>
+<p>We now have a pipeline defined that we can run to create predictions for the entire data set. The full code listing for this class is available online<a href="#fn20" class="footnoteRef" id="fnref20"><sup>20</sup></a>. Running this class spins up a Dataflow job that generates the DAG shown above, and will provision a number of GCE instances to complete the job. Here’s an example of the autoscaling used to run this pipeline:</p>
+<div class="figure" style="text-align: center"><span id="fig:7-3"></span>
+<img src="images/7-3.png" alt="Autoscaling the Model Prediction Task." width="80%" />
+<p class="caption">
+Figure 7.3: Autoscaling the Model Prediction Task.
+</p>
+</div>
+<p>When the job completes, the output is a new table in our BigQuery project that stores the predicted and actual weights for all of the records in the natality data set. If we want to run a new model, we simply need to point to a new PMML file in the data flow job. All of the files needed to run the offline analysis and data flow project are available on Github.</p>
+</div>
+<div id="dataflow-datastore" class="section level3">
+<h3><span class="header-section-number">7.2.3</span> DataFlow — DataStore</h3>
+<div class="figure" style="text-align: center"><span id="fig:7-4"></span>
+<img src="images/7-4.png" alt="Components in the Datastore Batch Deployment." width="100%" />
+<p class="caption">
+Figure 7.4: Components in the Datastore Batch Deployment.
+</p>
+</div>
+<p>Usually the goal of deploying a model is making the results available to an endpoint, so that they can be used by an application. The past two approaches write the results to BigQuery, which isn’t the best place to store data that needs to be used transactionally. Instead of writing the results to BigQuery, the data pipeline discussed in this section writes the results to Datastore, which can be used directly by a web service or application.</p>
+<p>The pipeline for performing this task reuses the first two parts of the previous pipeline, which reads records from BigQuery and creates TableRow objects with model predictions. I’ve added two steps to the pipeline, which translate the TableRow objects to Datastore entities and write the results to Datastore:</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">.apply</span>(<span class="st">&quot;To DS&quot;</span>, <span class="kw">ParDo.of</span>(new DoFn<span class="op">&lt;</span>TableRow, Entity<span class="op">&gt;</span>() {
+  
+  <span class="op">@</span>ProcessElement
+  public void <span class="kw">processElement</span>(ProcessContext c) {
+    TableRow row =<span class="st"> </span><span class="kw">c.element</span>();
+    
+    <span class="op">/</span><span class="er">/</span><span class="st"> </span>Create a lookup key <span class="cf">for</span> the record
+    String keyName =<span class="st"> </span><span class="kw">row.get</span>(<span class="st">&quot;recordID&quot;</span>)<span class="kw">.toString</span>();
+    Key.Builder keyBuilder =<span class="st"> </span><span class="kw">Key.newBuilder</span>();
+    Key.PathElement.Builder path =<span class="st"> </span>Key.PathElement.
+     <span class="kw">newBuilder</span>()<span class="kw">.setKind</span>(<span class="st">&quot;Profile&quot;</span>)<span class="kw">.setName</span>(keyName);
+    <span class="kw">keyBuilder.addPath</span>(path);
+    Key key =<span class="st"> </span><span class="kw">keyBuilder.build</span>();
+    
+     
+    <span class="op">/</span><span class="er">/</span><span class="st"> </span>set the experiment group
+    String expGroup =<span class="st"> </span><span class="kw">Double.parseDouble</span>(
+         <span class="kw">row.get</span>(<span class="st">&quot;predicted_weight&quot;</span>)
+        <span class="kw">.toString</span>()) <span class="op">&gt;=</span><span class="st"> </span><span class="dv">8</span> ? <span class="st">&quot;Control&quot;</span> <span class="op">:</span><span class="st"> &quot;Treatment&quot;</span>;
+    Value value =<span class="st"> </span><span class="kw">Value.newBuilder</span>().
+        <span class="kw">setStringValue</span>(expGroup)<span class="kw">.build</span>();
+    
+    <span class="op">/</span><span class="er">/</span><span class="st"> </span>create an entity to save to Datastore
+    Entity.Builder builder =<span class="st"> </span>Entity
+        <span class="kw">.newBuilder</span>()<span class="kw">.setKey</span>(key);
+    <span class="kw">builder.putProperties</span>(<span class="st">&quot;Experiment&quot;</span>, value);
+    <span class="kw">c.output</span>(<span class="kw">builder.build</span>());
+  }
+}))
+<span class="kw">.apply</span>(<span class="kw">DatastoreIO.v1</span>()<span class="kw">.write</span>()<span class="kw">.withProjectId</span>(proj));</code></pre></div>
+<p>Datastore is a NoSQL database that can be used directly by applications. To create entities for entry into Datastore, you need to create a key. In this example, I used a recordID which is a unique identifier generated for the birth record using the row_number() function in BigQuery. The key is used to store data about a profile, that can be retrieved using this key as a lookup. The second step in this operation is assigning the record to a control or treatment group, based on the predicted birth weight. This type of approach could be useful for a mobile game, where users with a high likelihood of making a purchase can be placed into an experiment group that provides a nudge to make a purchase. The last part of this snippet builds the entity object and then passes the results to Datastore.</p>
+<p>The resulting entities stored in Datastore can be used in client applications or web services. The Java code snippet below shows how to retrieve a value from Datastore. For example, a web service could be used to check for offers to provide to a user at login, based on the output of a predictive model.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">public static void <span class="kw">main</span>(String[] args) {
+  Datastore datastore =<span class="st"> </span>DatastoreOptions
+      <span class="kw">.getDefaultInstance</span>()<span class="kw">.getService</span>();
+  KeyFactory keyFactory =<span class="st"> </span>datastore
+      <span class="kw">.newKeyFactory</span>()<span class="kw">.setKind</span>(<span class="st">&quot;Profile&quot;</span>);
+  
+  <span class="op">/</span><span class="er">/</span><span class="st"> </span>get a user profile
+  Entity profile =<span class="st"> </span><span class="kw">datastore.get</span>(
+      <span class="kw">keyFactory.newKey</span>(<span class="st">&quot;User101&quot;</span>));
+  <span class="kw">System.out.println</span>(<span class="kw">profile.getString</span>(<span class="st">&quot;Experiment&quot;</span>));
+}</code></pre></div>
+</div>
+</div>
+<div id="live-deployments" class="section level2">
+<h2><span class="header-section-number">7.3</span> Live Deployments</h2>
+<p>The approaches we’ve covered so far have significant latency, and are not useful for creating real-time predictions, such as recommending new content for a user based on their current session activity. To build predictions in near real-time, we’ll need to use different types of model deployments.</p>
+<div id="web-service" class="section level3">
+<h3><span class="header-section-number">7.3.1</span> Web Service</h3>
+<p>One of the ways that you can provide real-time predictions for a model is by setting up a web service that calculates the output. Since we already discussed Jetty in the chapter on tracking data, we’ll reuse it here to accomplish this task. In order for this approach to work, you need to specify all of the model inputs as part of the web request. Alternatively, you could retrieve values from a system like Datastore. An example of using Jetty and JPMML to implement a real-time model service is shown below:</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">public void <span class="kw">handle</span>(...) throws IOException{
+  
+  <span class="op">/</span><span class="er">/</span><span class="st"> </span>load the PMML model
+  final ModelEvaluator<span class="op">&lt;</span>RegressionModel<span class="op">&gt;</span><span class="st"> </span>evaluator;
+  try {
+    evaluator =<span class="st"> </span>new <span class="kw">RegressionModelEvaluator</span>(
+        <span class="kw">PMMLUtil.unmarshal</span>(<span class="kw">Resources.getResource</span>(
+        <span class="st">&quot;natality.pmml&quot;</span>)<span class="kw">.openStream</span>()));
+  }
+  <span class="kw">catch</span> (Exception e) {
+    throw new <span class="kw">RuntimeException</span>(e);
+  }
+  
+  <span class="op">/</span><span class="er">/</span><span class="st"> </span>create a map of inputs <span class="cf">for</span> the pmml model
+  HashMap<span class="op">&lt;</span>FieldName, Double<span class="op">&gt;</span><span class="st"> </span>inputs =<span class="st"> </span>new HashMap<span class="op">&lt;</span><span class="er">&gt;</span>();
+  <span class="cf">for</span> (String attribute <span class="op">:</span><span class="st"> </span>modelFeatures) {
+    String value =<span class="st"> </span><span class="kw">baseRequest.getParameter</span>(attribute);
+    <span class="kw">inputs.put</span>(<span class="kw">FieldName.create</span>(attribute), 
+        <span class="kw">Double.parseDouble</span>(value));
+  }
+  
+  <span class="op">/</span><span class="er">/</span><span class="st"> </span>output the estimate
+  Double estimate =(Double)<span class="kw">evaluator.evaluate</span>(inputs)
+      <span class="kw">.get</span>(<span class="kw">FieldName.create</span>(<span class="st">&quot;weight_pounds&quot;</span>));
+  <span class="kw">response.setStatus</span>(HttpServletResponse.SC_OK);
+  <span class="kw">response.getWriter</span>()<span class="kw">.println</span>(
+      <span class="st">&quot;Prediction: &quot;</span> <span class="op">+</span><span class="st"> </span>estimate);
+  <span class="kw">baseRequest.setHandled</span>(true);
+}</code></pre></div>
+<p>The code processes a message request, which contains parameters with the values to use as model inputs. The snippet first loads the PMML specification, creates an input map of features using the web request parameters, applies the evaluator to get a predicted value, and writes the result as an output. The modelFeatures array contains the list of features specified in the PMML file. A request to the service can be made as follows:</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">http<span class="op">:</span><span class="er">//</span>localhost<span class="op">:</span><span class="dv">8080</span><span class="op">/</span><span class="er">&amp;</span>year=<span class="dv">2000</span><span class="op">&amp;</span>plurality=<span class="dv">1</span>
+  <span class="op">&amp;</span>apgar_5min=<span class="dv">0</span><span class="op">&amp;</span>mother_age=<span class="dv">30</span><span class="op">&amp;</span>father_age=<span class="dv">28</span>
+  <span class="op">&amp;</span>gestation_weeks=<span class="dv">40</span><span class="op">&amp;</span>ever_born=<span class="dv">1</span><span class="op">&amp;</span>married=<span class="dv">1</span></code></pre></div>
+<p>The result of entering this URL in your browser is a web page which lists the predicted weight of 7.547 lbs. In practice, you’d probably want to use a message encoding, such as JSON, rather than passing raw parameters. This approach is simple and has relatively low latency, but does require managing services. Scaling up is easy, because each model application can be performed in isolation, and no state is updated after providing a prediction.</p>
+</div>
+<div id="dataflow---pubsub" class="section level3">
+<h3><span class="header-section-number">7.3.2</span> DataFlow - PubSub</h3>
+<div class="figure" style="text-align: center"><span id="fig:7-5"></span>
+<img src="images/7-5.png" alt="Components in the PubSub Live Model Deployment." width="100%" />
+<p class="caption">
+Figure 7.5: Components in the PubSub Live Model Deployment.
+</p>
+</div>
+<p>It’s also possible to use Dataflow in a streaming mode to provide live predictions. We used streaming Dataflow in the chapter on data pipelines in order to stream events to BigQuery and a downstream PubSub topic. We can use a similar approach for model predictions, using PubSub as a source and a destination for a DataFlow job. The Java code below shows how to set up a data pipeline that consumes messages from a PubSub topic, applies a model prediction, and passing the result as a message to an output PubSub topic. The code snippet excludes the process of loading the PMML file, which we already covered earlier in this chapter.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">/</span><span class="er">/</span><span class="st"> </span>Read messages from PubSub
+PCollection<span class="op">&lt;</span>PubsubMessage<span class="op">&gt;</span><span class="st"> </span>events =<span class="st"> </span><span class="kw">pipeline.apply</span>(
+    <span class="kw">PubsubIO.readMessages</span>()<span class="kw">.fromTopic</span>(inboundTopic));
+
+<span class="op">/</span><span class="er">/</span><span class="st"> </span>create a DoFn <span class="cf">for</span> applying the PMML model
+<span class="kw">events.apply</span>(<span class="st">&quot;To Predictions&quot;</span>, <span class="kw">ParDo.of</span>(
+    new DoFn<span class="op">&lt;</span>PubsubMessage, PubsubMessage<span class="op">&gt;</span>() {
+      
+<span class="op">@</span>ProcessElement
+public void <span class="kw">processElement</span>(ProcessContext c) {
+  PubsubMessage row =<span class="st"> </span><span class="kw">c.element</span>();
+  <span class="op">/</span><span class="er">/</span><span class="st"> </span>create a map of inputs <span class="cf">for</span> the pmml model
+  HashMap<span class="op">&lt;</span>FieldName, Double<span class="op">&gt;</span><span class="st"> </span>inputs =<span class="st"> </span>new HashMap<span class="op">&lt;</span><span class="er">&gt;</span>();
+  <span class="cf">for</span> (String key <span class="op">:</span><span class="st"> </span><span class="kw">row.getAttributeMap</span>()<span class="kw">.keySet</span>()) {
+    <span class="cf">if</span> (<span class="op">!</span><span class="kw">key.equals</span>(<span class="st">&quot;weight_pounds&quot;</span>)) {
+      <span class="kw">inputs.put</span>(<span class="kw">FieldName.create</span>(key),
+          <span class="kw">Double.parseDouble</span>(<span class="kw">row.getAttribute</span>(key)));
+    }
+  }
+  
+  <span class="op">/</span><span class="er">/</span><span class="st"> </span>get the estimate
+  Double estimate =<span class="st"> </span>(Double)<span class="kw">evaluator.evaluate</span>(inputs)
+      <span class="kw">.get</span>(<span class="kw">FieldName.create</span>(<span class="st">&quot;weight_pounds&quot;</span>));
+      
+  <span class="op">/</span><span class="er">/</span><span class="st"> </span>create a message with the prediction
+  String message =<span class="st"> &quot;Prediction:&quot;</span> <span class="op">+</span><span class="st"> </span>estimate;
+  PubsubMessage msg =<span class="st"> </span>new <span class="kw">PubsubMessage</span>(
+      <span class="kw">message.getBytes</span>(), new <span class="kw">HashMap</span>());
+  <span class="kw">c.output</span>(msg);
+}}
+<span class="kw">.apply</span>(<span class="kw">PubsubIO.writeMessages</span>()<span class="kw">.to</span>(outboundTopic));</code></pre></div>
+<p>The code reads a message from an incoming topic and then parses the different attributes from the message to use as feature inputs for the model. The result is saved in a new message that is passed to an outbound topic. Since the Dataflow job is set to run in streaming mode, the pipeline will process the messages in near real-time as they are received. The full code listing for this pipeline is available on Github<a href="#fn21" class="footnoteRef" id="fnref21"><sup>21</sup></a>.</p>
+<p>In practice, PubSub may have too much latency for this approach to be useful for directly handling web requests in an application. This type of approach is useful when a prediction needs to be passed to other components in a system. For example, it could be used to implement a user retention system, where mobile game users with a high churn likelihood are sent targeted emails.</p>
+</div>
+<div id="custom-engineering" class="section level3">
+<h3><span class="header-section-number">7.3.3</span> Custom Engineering</h3>
+<p>Other approaches that are viable for providing live model deployments are Spark streaming, AWS Lambda, and Kinesis analytics.</p>
+<p>Sometimes it’s not possible for a data science team to build data products directly, because the system that needs to apply the model is owned by a different engineering team. For example, Electronic Arts used predictive models to improve matchmaking balance, and the team that built the model likely did not have direct access to the game servers executing the model. In a scenario like this, it’s necessary to have a model specification that can be passed between the two teams. While PMML is an option here, custom model specifications and encodings are common in industry.</p>
+<p>I’ve also seen this process breakdown in the past, when a data science team needs to work with a remote engineering team. If a model needs to be translated, say from a Python notebook to Go code, it’s possible for mistakes to occur during translation, the process can be slow, and it may not be possible to make model changes once deployed.</p>
+</div>
+</div>
+<div id="conclusion-5" class="section level2">
+<h2><span class="header-section-number">7.4</span> Conclusion</h2>
+<p>In order to provide value to a startup, data scientists should be capable of building data products that enable new features. This can be done in combination with an engineering team, or be a responsibility that lives solely with data science. My recommendation for startups is to use serverless technologies when building data products in order to reduce operational costs, and enable quicker product iteration.</p>
+<p>This chapter presented different approaches for productizing models, ranging from encoding logic directly in a SQL query to building a web service to using different output components in a Dataflow task. The result of productizing a model is that predictions can now be used in products to build new features.</p>
+<p>I also introduced the idea of segmenting users into different experiment groups based on a predicted outcome. In the next chapter, I’ll discussed different experimentation methodologies that can be used including A/B testing and staged rollouts.</p>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="19">
+<li id="fn19"><p><a href="https://github.com/bgweber/WindfallData/blob/master/natality" class="uri">https://github.com/bgweber/WindfallData/blob/master/natality</a><a href="productizing-models.html#fnref19">↩</a></p></li>
+<li id="fn20"><p><a href="https://github.com/bgweber/StartupDataScience/tree/master/Productizing" class="uri">https://github.com/bgweber/StartupDataScience/tree/master/Productizing</a><a href="productizing-models.html#fnref20">↩</a></p></li>
+<li id="fn21"><p><a href="https://github.com/bgweber/StartupDataScience/tree/master/Productizing" class="uri">https://github.com/bgweber/StartupDataScience/tree/master/Productizing</a><a href="productizing-models.html#fnref21">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="predictive-modeling.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="experimentation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/07-productize.Rmd",
+"text": "Edit"
+},
+"download": ["startup-data-science.pdf", "startup-data-science.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

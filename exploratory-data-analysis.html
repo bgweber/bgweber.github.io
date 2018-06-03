@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Data Science for Startups</title>
+  <meta name="description" content="Data Science for Startups">
+  <meta name="generator" content="bookdown 0.7.8 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Data Science for Startups" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Data Science for Startups" />
+  <meta name="github-repo" content="bgweber/StartupDataScience" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data Science for Startups" />
+  
+  <meta name="twitter:description" content="Data Science for Startups" />
+  
+
+<meta name="author" content="Ben G Weber">
+
+
+<meta name="date" content="2018-05-29">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="business-intelligence.html">
+<link rel="next" href="predictive-modeling.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Data Science for Startups</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#why-data-science"><i class="fa fa-check"></i><b>1.1</b> Why Data Science?</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#book-overview"><i class="fa fa-check"></i><b>1.2</b> Book Overview</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#tooling"><i class="fa fa-check"></i><b>1.3</b> Tooling</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="tracking-data.html"><a href="tracking-data.html"><i class="fa fa-check"></i><b>2</b> Tracking Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="tracking-data.html"><a href="tracking-data.html#what-to-record"><i class="fa fa-check"></i><b>2.1</b> What to Record?</a></li>
+<li class="chapter" data-level="2.2" data-path="tracking-data.html"><a href="tracking-data.html#tracking-specs"><i class="fa fa-check"></i><b>2.2</b> Tracking Specs</a></li>
+<li class="chapter" data-level="2.3" data-path="tracking-data.html"><a href="tracking-data.html#client-vs-server-tracking"><i class="fa fa-check"></i><b>2.3</b> Client vs Server Tracking</a></li>
+<li class="chapter" data-level="2.4" data-path="tracking-data.html"><a href="tracking-data.html#sending-tracking-events"><i class="fa fa-check"></i><b>2.4</b> Sending Tracking Events</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="tracking-data.html"><a href="tracking-data.html#web-call"><i class="fa fa-check"></i><b>2.4.1</b> Web Call</a></li>
+<li class="chapter" data-level="2.4.2" data-path="tracking-data.html"><a href="tracking-data.html#web-server"><i class="fa fa-check"></i><b>2.4.2</b> Web Server</a></li>
+<li class="chapter" data-level="2.4.3" data-path="tracking-data.html"><a href="tracking-data.html#subscription-service"><i class="fa fa-check"></i><b>2.4.3</b> Subscription Service</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="tracking-data.html"><a href="tracking-data.html#message-encoding"><i class="fa fa-check"></i><b>2.5</b> Message Encoding</a></li>
+<li class="chapter" data-level="2.6" data-path="tracking-data.html"><a href="tracking-data.html#building-a-tracking-api"><i class="fa fa-check"></i><b>2.6</b> Building a Tracking API</a></li>
+<li class="chapter" data-level="2.7" data-path="tracking-data.html"><a href="tracking-data.html#privacy"><i class="fa fa-check"></i><b>2.7</b> Privacy</a></li>
+<li class="chapter" data-level="2.8" data-path="tracking-data.html"><a href="tracking-data.html#conclusion"><i class="fa fa-check"></i><b>2.8</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-pipelines.html"><a href="data-pipelines.html"><i class="fa fa-check"></i><b>3</b> Data Pipelines</a><ul>
+<li class="chapter" data-level="3.1" data-path="data-pipelines.html"><a href="data-pipelines.html#types-of-data"><i class="fa fa-check"></i><b>3.1</b> Types of Data</a></li>
+<li class="chapter" data-level="3.2" data-path="data-pipelines.html"><a href="data-pipelines.html#the-evolution-of-data-pipelines"><i class="fa fa-check"></i><b>3.2</b> The Evolution of Data Pipelines</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="data-pipelines.html"><a href="data-pipelines.html#flat-file-era"><i class="fa fa-check"></i><b>3.2.1</b> Flat File Era</a></li>
+<li class="chapter" data-level="3.2.2" data-path="data-pipelines.html"><a href="data-pipelines.html#database-era"><i class="fa fa-check"></i><b>3.2.2</b> Database Era</a></li>
+<li class="chapter" data-level="3.2.3" data-path="data-pipelines.html"><a href="data-pipelines.html#data-lake-era"><i class="fa fa-check"></i><b>3.2.3</b> Data Lake Era</a></li>
+<li class="chapter" data-level="3.2.4" data-path="data-pipelines.html"><a href="data-pipelines.html#serverless-era"><i class="fa fa-check"></i><b>3.2.4</b> Serverless Era</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="data-pipelines.html"><a href="data-pipelines.html#a-scalable-pipeline"><i class="fa fa-check"></i><b>3.3</b> A Scalable Pipeline</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="data-pipelines.html"><a href="data-pipelines.html#setting-up-the-environment"><i class="fa fa-check"></i><b>3.3.1</b> Setting up the Environment</a></li>
+<li class="chapter" data-level="3.3.2" data-path="data-pipelines.html"><a href="data-pipelines.html#publishing-events"><i class="fa fa-check"></i><b>3.3.2</b> Publishing Events</a></li>
+<li class="chapter" data-level="3.3.3" data-path="data-pipelines.html"><a href="data-pipelines.html#storing-events"><i class="fa fa-check"></i><b>3.3.3</b> Storing Events</a></li>
+<li class="chapter" data-level="3.3.4" data-path="data-pipelines.html"><a href="data-pipelines.html#deploying-and-auto-scaling"><i class="fa fa-check"></i><b>3.3.4</b> Deploying and Auto Scaling</a></li>
+<li class="chapter" data-level="3.3.5" data-path="data-pipelines.html"><a href="data-pipelines.html#raw-to-processed-events"><i class="fa fa-check"></i><b>3.3.5</b> Raw to Processed Events</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="data-pipelines.html"><a href="data-pipelines.html#conclusion-1"><i class="fa fa-check"></i><b>3.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="business-intelligence.html"><a href="business-intelligence.html"><i class="fa fa-check"></i><b>4</b> Business Intelligence</a><ul>
+<li class="chapter" data-level="4.1" data-path="business-intelligence.html"><a href="business-intelligence.html#kpis"><i class="fa fa-check"></i><b>4.1</b> KPIs</a></li>
+<li class="chapter" data-level="4.2" data-path="business-intelligence.html"><a href="business-intelligence.html#reporting-with-r"><i class="fa fa-check"></i><b>4.2</b> Reporting with R</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="business-intelligence.html"><a href="business-intelligence.html#base-r"><i class="fa fa-check"></i><b>4.2.1</b> Base R</a></li>
+<li class="chapter" data-level="4.2.2" data-path="business-intelligence.html"><a href="business-intelligence.html#r-markdown"><i class="fa fa-check"></i><b>4.2.2</b> R Markdown</a></li>
+<li class="chapter" data-level="4.2.3" data-path="business-intelligence.html"><a href="business-intelligence.html#r-shiny"><i class="fa fa-check"></i><b>4.2.3</b> R Shiny</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="business-intelligence.html"><a href="business-intelligence.html#etls"><i class="fa fa-check"></i><b>4.3</b> ETLs</a></li>
+<li class="chapter" data-level="4.4" data-path="business-intelligence.html"><a href="business-intelligence.html#reporting-tools"><i class="fa fa-check"></i><b>4.4</b> Reporting Tools</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="business-intelligence.html"><a href="business-intelligence.html#google-data-studio"><i class="fa fa-check"></i><b>4.4.1</b> Google Data Studio</a></li>
+<li class="chapter" data-level="4.4.2" data-path="business-intelligence.html"><a href="business-intelligence.html#tableau"><i class="fa fa-check"></i><b>4.4.2</b> Tableau</a></li>
+<li class="chapter" data-level="4.4.3" data-path="business-intelligence.html"><a href="business-intelligence.html#mode"><i class="fa fa-check"></i><b>4.4.3</b> Mode</a></li>
+<li class="chapter" data-level="4.4.4" data-path="business-intelligence.html"><a href="business-intelligence.html#custom-tooling"><i class="fa fa-check"></i><b>4.4.4</b> Custom Tooling</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="business-intelligence.html"><a href="business-intelligence.html#conclusion-2"><i class="fa fa-check"></i><b>4.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>5</b> Exploratory Data Analysis</a><ul>
+<li class="chapter" data-level="5.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#summary-statistics"><i class="fa fa-check"></i><b>5.1</b> Summary Statistics</a></li>
+<li class="chapter" data-level="5.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plotting"><i class="fa fa-check"></i><b>5.2</b> Plotting</a></li>
+<li class="chapter" data-level="5.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#correlation-analysis"><i class="fa fa-check"></i><b>5.3</b> Correlation Analysis</a></li>
+<li class="chapter" data-level="5.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#feature-importance"><i class="fa fa-check"></i><b>5.4</b> Feature Importance</a></li>
+<li class="chapter" data-level="5.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#conclusion-3"><i class="fa fa-check"></i><b>5.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="predictive-modeling.html"><a href="predictive-modeling.html"><i class="fa fa-check"></i><b>6</b> Predictive Modeling</a><ul>
+<li class="chapter" data-level="6.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#types-of-predictive-models"><i class="fa fa-check"></i><b>6.1</b> Types of Predictive Models</a></li>
+<li class="chapter" data-level="6.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#training-a-classification-model"><i class="fa fa-check"></i><b>6.2</b> Training a Classification Model</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#weka"><i class="fa fa-check"></i><b>6.2.1</b> Weka</a></li>
+<li class="chapter" data-level="6.2.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#bigml"><i class="fa fa-check"></i><b>6.2.2</b> BigML</a></li>
+<li class="chapter" data-level="6.2.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#r-glmnet"><i class="fa fa-check"></i><b>6.2.3</b> R — Glmnet</a></li>
+<li class="chapter" data-level="6.2.4" data-path="predictive-modeling.html"><a href="predictive-modeling.html#python-scikit-learn"><i class="fa fa-check"></i><b>6.2.4</b> Python — scikit-learn</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#clustering"><i class="fa fa-check"></i><b>6.3</b> Clustering</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#how-many-clusters-to-use"><i class="fa fa-check"></i><b>6.3.1</b> How many clusters to use?</a></li>
+<li class="chapter" data-level="6.3.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#cluster-descriptions"><i class="fa fa-check"></i><b>6.3.2</b> Cluster Descriptions</a></li>
+<li class="chapter" data-level="6.3.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#cluster-populations-by-net-worth"><i class="fa fa-check"></i><b>6.3.3</b> Cluster Populations by Net Worth</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="predictive-modeling.html"><a href="predictive-modeling.html#conclusion-4"><i class="fa fa-check"></i><b>6.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="productizing-models.html"><a href="productizing-models.html"><i class="fa fa-check"></i><b>7</b> Productizing Models</a><ul>
+<li class="chapter" data-level="7.1" data-path="productizing-models.html"><a href="productizing-models.html#building-a-model-specification"><i class="fa fa-check"></i><b>7.1</b> Building a Model Specification</a></li>
+<li class="chapter" data-level="7.2" data-path="productizing-models.html"><a href="productizing-models.html#batch-deployments"><i class="fa fa-check"></i><b>7.2</b> Batch Deployments</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="productizing-models.html"><a href="productizing-models.html#sql-query"><i class="fa fa-check"></i><b>7.2.1</b> SQL Query</a></li>
+<li class="chapter" data-level="7.2.2" data-path="productizing-models.html"><a href="productizing-models.html#dataflow-bigquery"><i class="fa fa-check"></i><b>7.2.2</b> DataFlow — BigQuery</a></li>
+<li class="chapter" data-level="7.2.3" data-path="productizing-models.html"><a href="productizing-models.html#dataflow-datastore"><i class="fa fa-check"></i><b>7.2.3</b> DataFlow — DataStore</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="productizing-models.html"><a href="productizing-models.html#live-deployments"><i class="fa fa-check"></i><b>7.3</b> Live Deployments</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="productizing-models.html"><a href="productizing-models.html#web-service"><i class="fa fa-check"></i><b>7.3.1</b> Web Service</a></li>
+<li class="chapter" data-level="7.3.2" data-path="productizing-models.html"><a href="productizing-models.html#dataflow---pubsub"><i class="fa fa-check"></i><b>7.3.2</b> DataFlow - PubSub</a></li>
+<li class="chapter" data-level="7.3.3" data-path="productizing-models.html"><a href="productizing-models.html#custom-engineering"><i class="fa fa-check"></i><b>7.3.3</b> Custom Engineering</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="productizing-models.html"><a href="productizing-models.html#conclusion-5"><i class="fa fa-check"></i><b>7.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="experimentation.html"><a href="experimentation.html"><i class="fa fa-check"></i><b>8</b> Experimentation</a><ul>
+<li class="chapter" data-level="8.1" data-path="experimentation.html"><a href="experimentation.html#staged-rollouts"><i class="fa fa-check"></i><b>8.1</b> Staged Rollouts</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="experimentation.html"><a href="experimentation.html#staged-rollout-biases"><i class="fa fa-check"></i><b>8.1.1</b> Staged Rollout Biases</a></li>
+<li class="chapter" data-level="8.1.2" data-path="experimentation.html"><a href="experimentation.html#time-series-analysis"><i class="fa fa-check"></i><b>8.1.2</b> Time Series Analysis</a></li>
+<li class="chapter" data-level="8.1.3" data-path="experimentation.html"><a href="experimentation.html#difference-in-differences-estimation"><i class="fa fa-check"></i><b>8.1.3</b> Difference-in-Differences Estimation</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="experimentation.html"><a href="experimentation.html#conclusion-6"><i class="fa fa-check"></i><b>8.2</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="recommendation-systems.html"><a href="recommendation-systems.html"><i class="fa fa-check"></i><b>9</b> Recommendation Systems</a><ul>
+<li class="chapter" data-level="9.1" data-path="recommendation-systems.html"><a href="recommendation-systems.html#r---recommender-lab"><i class="fa fa-check"></i><b>9.1</b> R - Recommender Lab</a></li>
+<li class="chapter" data-level="9.2" data-path="recommendation-systems.html"><a href="recommendation-systems.html#java---apache-mahout"><i class="fa fa-check"></i><b>9.2</b> Java - Apache Mahout</a></li>
+<li class="chapter" data-level="9.3" data-path="recommendation-systems.html"><a href="recommendation-systems.html#scala---mllib"><i class="fa fa-check"></i><b>9.3</b> Scala - MLlib</a></li>
+<li class="chapter" data-level="9.4" data-path="recommendation-systems.html"><a href="recommendation-systems.html#sql---spark-sql"><i class="fa fa-check"></i><b>9.4</b> SQL - Spark SQL</a></li>
+<li class="chapter" data-level="9.5" data-path="recommendation-systems.html"><a href="recommendation-systems.html#conclusion-7"><i class="fa fa-check"></i><b>9.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="deep-learning.html"><a href="deep-learning.html"><i class="fa fa-check"></i><b>10</b> Deep Learning</a><ul>
+<li class="chapter" data-level="10.1" data-path="deep-learning.html"><a href="deep-learning.html#improving-shallow-problems"><i class="fa fa-check"></i><b>10.1</b> Improving Shallow Problems</a></li>
+<li class="chapter" data-level="10.2" data-path="deep-learning.html"><a href="deep-learning.html#loss-functions-in-keras"><i class="fa fa-check"></i><b>10.2</b> Loss Functions in Keras</a></li>
+<li class="chapter" data-level="10.3" data-path="deep-learning.html"><a href="deep-learning.html#evaluating-loss-functions"><i class="fa fa-check"></i><b>10.3</b> Evaluating Loss Functions</a></li>
+<li class="chapter" data-level="10.4" data-path="deep-learning.html"><a href="deep-learning.html#conclusion-8"><i class="fa fa-check"></i><b>10.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science for Startups</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="exploratory-data-analysis" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Exploratory Data Analysis</h1>
+<p>Once you’ve set up a data pipeline and collected data about user behavior, you can start exploring the data in order to determine how to improve your product. Exploratory Data Analysis (EDA) is the process of investigating a data set to understand the shape of the data, correlations between features, and signals in the data that may be useful for building predictive models.</p>
+<p>It’s useful to be able to perform this task in both a query language and a scripting language. R provides useful tools for quickly understanding the shape of a data set, but can only analyze data sets that can fit in memory. To work with massive data sets, SQL is useful for computing summary stats and distributions across a complete data set.</p>
+<p>This chapter presents four types of exploratory analyses, including computing summary statistics, plotting features, correlation analysis, and weighting feature importance for a simple linear model. The goal of performing this type of work is to be able to better understand user behavior, determine how to improve a product, and investigate if the data provides useful signals.</p>
+<p>We’ll use the Natality BigQuery data set for the EDA examples. This data set provides information about births in the USA over the past 50 years. The goal of this analysis is to determine which factors are correlated with birth weight, and build a linear regression model to predict outcomes.</p>
+<div id="summary-statistics" class="section level2">
+<h2><span class="header-section-number">5.1</span> Summary Statistics</h2>
+<p>The first thing we’ll want to do when exploring a new data set is computing summary statistics that help us understand the data set. This can include statistics such as the mean and median values, and well as extremes such as minimum and maximum values. R provides a function called summary that calculates these statistics for every column in a data frame. An example using this function is shown in the code snippet below.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(bigrquery)
+project &lt;-<span class="st"> &quot;your_project_id&quot;</span>
+sql &lt;-<span class="st"> &quot;</span>
+<span class="st"> SELECT year, plurality, mother_age, father_age,    </span>
+<span class="st">       gestation_weeks, ever_born, </span>
+<span class="st">       mother_married, weight_pounds</span>
+<span class="st"> FROM `bigquery-public-data.samples.natality`</span>
+<span class="st"> order by rand() </span>
+<span class="st"> LIMIT 100000&quot;</span>
+df &lt;-<span class="st"> </span><span class="kw">query_exec</span>(sql, <span class="dt">project =</span> project, 
+                 <span class="dt">use_legacy_sql =</span> <span class="ot">FALSE</span>)
+<span class="kw">summary</span>(df[, <span class="dv">2</span><span class="op">:</span><span class="dv">5</span>])</code></pre></div>
+<p>The script queries the Natality data set in BigQuery and pulls a sample data set locally. Next, the second through fifth columns of the result set are passed to the summary function. The result of calling this function is shown in the figure below. For each of the columns, the function calculations min, mean, max values, and the 25th, 50th, and 75th percentiles for each attribute. It also counts the number of instances of missing (NA) values.</p>
+<div class="figure"><span id="fig:5-1"></span>
+<img src="images/5-1.png" alt="Summary Stats for the Natality Data Set." width="100%" />
+<p class="caption">
+Figure 5.1: Summary Stats for the Natality Data Set.
+</p>
+</div>
+<p>Summary provides a quick way of understanding a data set, but usually requires further digging to really understand the shape of the data. The next section shows how to use histograms to build a more complete understanding of a data set. One of the interesting features in the data set is the plurality column, which describes the number of children carried as part of the pregnancy (litter size). The median is slightly above 1, because of the rare occurrence of twins, triples, or even more children. Due to the skewness of this distribution, the summary stats do not provide a good overview of how common twins or triplets are in human pregnancies.</p>
+<p>To find out how common twins and triplets are we can use the sqldf library, which enables queries to be performed on R data frames. The code below shows how to count the number of pregnancies that result in multiple children being delivered. The results show that twins have a frequency of about 2.4%, triplets occur in about 0.1% of pregnancies, and quadruplets have a frequency of about 0.009%.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(sqldf)
+df &lt;-<span class="st"> </span>df[<span class="op">!</span><span class="kw">is.na</span>(df<span class="op">$</span>plurality), ]
+<span class="kw">sqldf</span>(<span class="st">&quot;select plurality, sum(1) as Babies </span>
+<span class="st">from df group by 1</span>
+<span class="st">order by 1&quot;</span>)</code></pre></div>
+<p>These results are based on a sample of 1,000,000 pregnancies. Ideally, we want to calculate these statistics across our compute data set. Aggregate values such as min, max, and mean are easy to compute, because SQL has aggregations for these operations built-in. However, calculating the median and 25th and 75th percentiles is often non trivial. If you try to apply the percentile_cont operation to the complete data set of 138M pregnancies, BigQuery will throw an exception, because this is an analytic function that will shuffle all of the records to a single node.</p>
+<p>There’s a few different approaches to work around this limitation. BigQuery does provide an approximate quantiles function that will support this size of data. You can also partition the data set using a randomly generated value, such as rand()*10 and take the average, to get an approximate result. These approaches work well for the 25th, 50th, and 75th percentile values, but are not as accurate for extreme results, such as the 99.9th percentile. A third approach is to provide a partition key to split up the data, preventing too much data from being shuffled to a single machine. We can use the year field, as shown in the following query.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">select year, <span class="kw">sum</span>(<span class="dv">1</span>) births, <span class="kw">min</span>(father_age) Min
+  ,<span class="kw">avg</span>(Q1) Q1, <span class="kw">avg</span>(Q2) Median
+  ,<span class="kw">round</span>(<span class="kw">avg</span>(father_age), <span class="dv">1</span>) Mean
+  ,<span class="kw">avg</span>(Q3) Q3, <span class="kw">max</span>(father_age) Max
+<span class="kw">from</span> (
+  select year, father_age
+   ,<span class="kw">percentile_cont</span>(father_age, <span class="fl">0.25</span>) 
+        <span class="kw">over</span> (partition by year) as Q1
+   ,<span class="kw">percentile_cont</span>(father_age, <span class="fl">0.50</span>) 
+        <span class="kw">over</span> (partition by year) as Q2
+   ,<span class="kw">percentile_cont</span>(father_age, <span class="fl">0.75</span>) 
+        <span class="kw">over</span> (partition by year) as Q3
+  FROM <span class="st">`</span><span class="dt">bigquery-public-data.samples.natality</span><span class="st">`</span>
+  where <span class="kw">mod</span>(year, <span class="dv">5</span>) =<span class="st"> </span><span class="dv">0</span> and year <span class="op">&gt;=</span><span class="st"> </span><span class="dv">1980</span>
+)
+group by <span class="dv">1</span> order by <span class="dv">1</span></code></pre></div>
+<p>This approach calculates the 25th, 50th, and 75th percentiles for the father_age column. The percentile_cont function is an analytic function, meaning that it returns a result for every record, and needs to be aggregated to create a summary statistic. The query above shows how to compute the same statistics provided by the R summary function using BigQuery, while partitioning the data by the year of the birth. This query generates the following table, which shows statistics about the father age.</p>
+<div class="figure" style="text-align: center"><span id="fig:5-2"></span>
+<img src="images/5-2.png" alt="Birth Summary Statistics by Year (Father Age)." width="80%" />
+<p class="caption">
+Figure 5.2: Birth Summary Statistics by Year (Father Age).
+</p>
+</div>
+<p>There’s a few interesting trends in this data worth noting. The first is the consistent value of 99 years, as the maximum father age. This is likely a data quality issue, and 99 may be set as the age when the age of the father is unknown. Another trend is that the median father age has been increasing over the years, from 28 in 1980 to 32 in 2005. This isn’t normalized for the first child, but the summary statistics do indicate a trend that families are starting to have children later in life.</p>
+</div>
+<div id="plotting" class="section level2">
+<h2><span class="header-section-number">5.2</span> Plotting</h2>
+<p>Summary statistics provide a quick way of getting a snapshot of a data set, but often don’t provide a good overview of how data is distributed. To build a more complete understanding of the shape of a data set, its useful to plot data in various ways, such as using histograms.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(df<span class="op">$</span>weight_pounds, <span class="dt">main =</span> <span class="st">&quot;Distribution of Weights&quot;</span>
+    ,<span class="dt">xlab =</span> <span class="st">&quot;Weight&quot;</span>)</code></pre></div>
+<p>The R code above shows how to plot a histogram of the birth weights in our sampled data set. The result is the following histogram, which seems to indicate that the value is normally distributed. The majority of births weights are between 6 and 9 pounds.</p>
+<div class="figure" style="text-align: center"><span id="fig:5-3"></span>
+<img src="images/5-3.png" alt="Distribution of Birth Weights." width="80%" />
+<p class="caption">
+Figure 5.3: Distribution of Birth Weights.
+</p>
+</div>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(<span class="kw">ecdf</span>(df<span class="op">$</span>weight_pounds), <span class="dt">main =</span> <span class="st">&quot;CDF of Weights&quot;</span>,
+    <span class="dt">xlab =</span> <span class="st">&quot;Weight&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;CDF&quot;</span>)</code></pre></div>
+<p>Histograms are useful for visualizing distributions, but they do have a number of problems, such as the number of buckets influencing whether the distribution is unimodal vs bimodal. It’s also usually difficult to determine percentiles directly from a histogram. One type of visualization that works better for conveying this type of information is the cumulative distribution function (CDF). The code above shows how to visualize the same data, but uses a CDF.</p>
+<p>The code applies the empirical cumulative distribution function, which is similar to computing the running sum and dividing by the total number of instances in the data set. One of the key benefits of CDF plots is that you can directly read percentile values from the visualization. Both types of visualizations can be generated using SQL and then plotting the results in a tool like Excel, but histograms are usually computationally less expensive, since they do not require analytic functions.</p>
+<div class="figure" style="text-align: center"><span id="fig:5-4"></span>
+<img src="images/5-4.png" alt="The same data, plotted as a CDF." width="80%" />
+<p class="caption">
+Figure 5.4: The same data, plotted as a CDF.
+</p>
+</div>
+<p>Another useful trick to explore when investigating data sets is transforming features, such as applying a log transform. This is useful when a data set is not normally distributed. For example, session data is usually a single-sided distribution with a long tail, and applying a log transform often provides a better summarization of the data when plotted.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(df<span class="op">$</span>gestation_weeks, <span class="dt">main =</span> <span class="st">&quot;Gestation Weeks&quot;</span>, 
+     <span class="dt">xlab =</span> <span class="st">&quot;Weeks&quot;</span>)
+<span class="kw">hist</span>(<span class="kw">log</span>(df<span class="op">$</span>gestation_weeks), <span class="dt">main =</span> <span class="st">&quot;Gestation </span>
+<span class="st">     Weeks (Log Transform)&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;log(Weeks)&quot;</span>)</code></pre></div>
+<p>The code above shows how to transform the gestation weeks feature with a log transform. This is useful for distributions with long tails, and only positive values. The code generates the following two plots, which show similar results. For this example the transformation was not useful, but it’s a trick worth exploring when you need to fit data from a skewed distribution to something closer to a normal distribution. You can also apply a square root transformation to generate useful plots.</p>
+<div class="figure"><span id="fig:5-5"></span>
+<img src="images/5-5.png" alt="Log Transforming Gestation Weeks." width="100%" />
+<p class="caption">
+Figure 5.5: Log Transforming Gestation Weeks.
+</p>
+</div>
+<p>An alternative to CDFs that conveys information about percentiles directly is box plots. Box plots show the 25th, 50th, and 75th percentiles, as well as interquartile ranges and outliers. This type of plot is often useful when comparing median values across different partitions of data.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sample &lt;-<span class="st"> </span>df[df<span class="op">$</span>ever_born <span class="op">&lt;=</span><span class="st"> </span><span class="dv">6</span>, ]
+sample<span class="op">$</span>ever_born &lt;-<span class="st"> </span>sample<span class="op">$</span>ever_born <span class="op">-</span><span class="st"> </span><span class="dv">1</span> 
+<span class="kw">boxplot</span>(weight_pounds<span class="op">~</span>ever_born,<span class="dt">data=</span>sample, 
+        <span class="dt">main=</span><span class="st">&quot;Birth Weight vs Prior Births&quot;</span>, 
+        <span class="dt">xlab=</span><span class="st">&quot;Prior Children&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Birth Weight&quot;</span>)</code></pre></div>
+<p>An example of creating a box plot in R is shown in the code snippet above. This code creates a plot of different quartiles ranges, based on the number of previous children delivered by the mother. There’s no strong pattern indicated by this plot, but it does look like the first child delivered has a slightly lower weight than the following children delivered by a mother.</p>
+<div class="figure"><span id="fig:5-6"></span>
+<img src="images/5-6.png" alt="Birth weight based on number of previous children." width="100%" />
+<p class="caption">
+Figure 5.6: Birth weight based on number of previous children.
+</p>
+</div>
+<p>Another type of useful visualization is scatter plots, which compare the values of two different features in a data set. Scatter plots are useful for showing whether two features are strongly or weakly correlated. The R code below shows how to plot a comparison of the gestation period and birth weight. I’ve filtered out values with gestations periods longer than 90 weeks, because these are suspect.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sample &lt;-<span class="st"> </span>df[<span class="dv">1</span><span class="op">:</span><span class="dv">10000</span>, ]
+sample &lt;-<span class="st"> </span>sample[sample<span class="op">$</span>gestation_weeks <span class="op">&lt;</span><span class="st"> </span><span class="dv">90</span>, ]
+<span class="kw">plot</span>(sample<span class="op">$</span>gestation_weeks, sample<span class="op">$</span>weight_pounds, 
+      <span class="dt">main =</span> <span class="st">&quot;Birth Weight vs Gestation Weeks&quot;</span>,
+      <span class="dt">xlab=</span> <span class="st">&quot; Gestation Weeks&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;Birth Weight&quot;</span>)</code></pre></div>
+<p>The results are shown in the visualization above. It’s clear from this plot that significantly shorter gestation periods result in lower birth weights, but it’s unclear how strong the correlation is for periods longer than 35 weeks. Overall, the features have an R-squared value of 0.25 for the sample data set. In order to determine which features are correlated with birth weights, we’ll need to use different methods discussed in the next section.</p>
+<div class="figure"><span id="fig:5-7"></span>
+<img src="images/5-7.png" alt="A comparison of the gestation period and birth weight." width="100%" />
+<p class="caption">
+Figure 5.7: A comparison of the gestation period and birth weight.
+</p>
+</div>
+</div>
+<div id="correlation-analysis" class="section level2">
+<h2><span class="header-section-number">5.3</span> Correlation Analysis</h2>
+<p>It’s useful to know if certain features are predictive of other values in a data set. For example, if we know that users that use a certain product feature are retained longer than other users, it provides useful insight into product development. Correlation analysis helps to understand which features are correlated within a data set. Each feature is compared with all other features in a data set. However, often the goal is to understand only the correlation between a single feature, rather than a complete matrix of comparisons.</p>
+<p>It’s also important to avoid coming to strong conclusions based on only correlation analysis, because it’s not possible to establish causality. Usually the more dedicated users will explore more of the options provided by an application, so trying to drive users to perform a specific action is not going to necessarily increase retention. For example, it’s common to see improved retention for users that add social connections within an application, but driving users to add a friend in an application might not result in the desired outcome of longer user retention. It’s best to experiment using controlled methodologies.</p>
+<p>R has a built in function for performing correlation analysis. The cor function computes the correlation between all of the different columns in a data frame, using a specified methodology. The pearson method is useful when dealing with continuous values, and the spearman method is useful when using discrete values, such as survey data. An example of computing a correlation matrix is shown in the R snippet below.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">res &lt;-<span class="st"> </span><span class="kw">cor</span>(df, <span class="dt">method =</span> <span class="st">&quot;pearson&quot;</span>,<span class="dt">use =</span> <span class="st">&quot;complete.obs&quot;</span>)
+res &lt;-<span class="st"> </span><span class="kw">ifelse</span>(res <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>, res<span class="op">^</span>.<span class="dv">5</span>, <span class="op">-</span><span class="kw">abs</span>(res)<span class="op">^</span>.<span class="dv">5</span>)
+<span class="kw">library</span>(corrplot)
+<span class="kw">corrplot</span>(res, <span class="dt">type =</span> <span class="st">&quot;upper&quot;</span>, <span class="dt">order =</span> <span class="st">&quot;hclust&quot;</span>)</code></pre></div>
+<p>To visualize the results, I’ve included the corrplot library, which creates a plot of the matrix. I noticed that the correlations between different features in the data set were weak, so I applied a square root transformation to make the results more readable. The resulting plot is shown in the figure below. As noted earlier, the gestation period is not the strongest factor in determining birth weight. The plurality is actually the strongest predictor of weight.</p>
+<div class="figure"><span id="fig:5-8"></span>
+<img src="images/5-8.png" alt="Correlation Matrix for the Natality Data Set (R-values have been square-rooted for visibility)." width="100%" />
+<p class="caption">
+Figure 5.8: Correlation Matrix for the Natality Data Set (R-values have been square-rooted for visibility).
+</p>
+</div>
+<p>Similar to plotting histograms, it’s useful to try different transformations of features when calculating correlations. For example, when predicting housing prices, the log transform of the square footage of a home is often a stronger indicator of the home value than the raw square footage value.</p>
+</div>
+<div id="feature-importance" class="section level2">
+<h2><span class="header-section-number">5.4</span> Feature Importance</h2>
+<p>Often the goal in exploring a data set is to determine which features are useful for predicting an outcome. This is similar to correlation analysis, but instead of evaluating the impact of each feature in isolation, the goal is to determine the significance of a single feature when including all other features. Correlation analysis is a way of understanding the marginal effect of a feature, and feature importance is a way of understanding the unique effect of a feature. This is useful for dealing with heavily correlated features, such as number of sessions versus total session length. Both are likely correlated with user retention, but one feature will be a stronger indicator than the other. LIME is a generalization of this type of analysis worth exploring.</p>
+<p>While the next chapter will cover predictive modeling in more detail, we’re going to use a simple linear model here to show how to perform feature analysis. Our goal for this example is to predict birth weight, which is a continuous feature. Given this problem specification, regression is a good fit for predicting outcomes. We can build a linear regression model, and then evaluate the importance of different features in the model to determine which factors are strong predictors of the outcome. The following code example shows how to build a linear regression model in R, and to measure the importance of features using different methods.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(relaimpo)
+fit &lt;-<span class="st"> </span><span class="kw">lm</span>(weight_pounds <span class="op">~</span><span class="st"> </span>. , <span class="dt">data =</span> df)
+boot &lt;-<span class="st"> </span><span class="kw">boot.relimp</span>(fit, <span class="dt">b =</span> <span class="dv">10</span>, 
+    <span class="dt">type =</span> <span class="kw">c</span>(<span class="st">&quot;lmg&quot;</span>, <span class="st">&quot;first&quot;</span>, <span class="st">&quot;last&quot;</span>, <span class="st">&quot;pratt&quot;</span>), 
+    <span class="dt">rank =</span> <span class="ot">TRUE</span>, <span class="dt">diff =</span> <span class="ot">TRUE</span>, <span class="dt">rela =</span> <span class="ot">TRUE</span>)
+<span class="kw">booteval.relimp</span>(boot) 
+<span class="kw">plot</span>(<span class="kw">booteval.relimp</span>(boot,<span class="dt">sort=</span><span class="ot">TRUE</span>))</code></pre></div>
+<p>The results of this script are shown in the plots above. Different approaches are used to weight the features, and all of these methods show that plurality is the strongest feature in determining birth weight. The script first fits a linear regression model by specifying weight_points as the target value, and then uses the relative importance library to determine which features are significant in determining the outcome.</p>
+<div class="figure"><span id="fig:5-9"></span>
+<img src="images/5-9.png" alt="Feature Weighting for the Natality data set." width="100%" />
+<p class="caption">
+Figure 5.9: Feature Weighting for the Natality data set.
+</p>
+</div>
+</div>
+<div id="conclusion-3" class="section level2">
+<h2><span class="header-section-number">5.5</span> Conclusion</h2>
+<p>Exploratory data analysis is one of the key competencies of a data scientist at a startup. You should be able to dig into a new data set and determine how to improve your product based on the results. EDA is a way of understanding the shape of a data set, exploring correlations within the data, and determining if there’s a signal for modeling an outcome based on the different features.</p>
+<p>Exploratory analysis often involves some lightweight modeling to determine the importance of different features within a data set. In the next chapter, we’ll dig into predictive modeling, which focuses on estimating outcomes based on a number of different features.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="business-intelligence.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="predictive-modeling.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-eda.Rmd",
+"text": "Edit"
+},
+"download": ["startup-data-science.pdf", "startup-data-science.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

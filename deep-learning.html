@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Data Science for Startups</title>
+  <meta name="description" content="Data Science for Startups">
+  <meta name="generator" content="bookdown 0.7.8 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Data Science for Startups" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Data Science for Startups" />
+  <meta name="github-repo" content="bgweber/StartupDataScience" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data Science for Startups" />
+  
+  <meta name="twitter:description" content="Data Science for Startups" />
+  
+
+<meta name="author" content="Ben G Weber">
+
+
+<meta name="date" content="2018-05-29">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="recommendation-systems.html">
+<link rel="next" href="references.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Data Science for Startups</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#why-data-science"><i class="fa fa-check"></i><b>1.1</b> Why Data Science?</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#book-overview"><i class="fa fa-check"></i><b>1.2</b> Book Overview</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#tooling"><i class="fa fa-check"></i><b>1.3</b> Tooling</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="tracking-data.html"><a href="tracking-data.html"><i class="fa fa-check"></i><b>2</b> Tracking Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="tracking-data.html"><a href="tracking-data.html#what-to-record"><i class="fa fa-check"></i><b>2.1</b> What to Record?</a></li>
+<li class="chapter" data-level="2.2" data-path="tracking-data.html"><a href="tracking-data.html#tracking-specs"><i class="fa fa-check"></i><b>2.2</b> Tracking Specs</a></li>
+<li class="chapter" data-level="2.3" data-path="tracking-data.html"><a href="tracking-data.html#client-vs-server-tracking"><i class="fa fa-check"></i><b>2.3</b> Client vs Server Tracking</a></li>
+<li class="chapter" data-level="2.4" data-path="tracking-data.html"><a href="tracking-data.html#sending-tracking-events"><i class="fa fa-check"></i><b>2.4</b> Sending Tracking Events</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="tracking-data.html"><a href="tracking-data.html#web-call"><i class="fa fa-check"></i><b>2.4.1</b> Web Call</a></li>
+<li class="chapter" data-level="2.4.2" data-path="tracking-data.html"><a href="tracking-data.html#web-server"><i class="fa fa-check"></i><b>2.4.2</b> Web Server</a></li>
+<li class="chapter" data-level="2.4.3" data-path="tracking-data.html"><a href="tracking-data.html#subscription-service"><i class="fa fa-check"></i><b>2.4.3</b> Subscription Service</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="tracking-data.html"><a href="tracking-data.html#message-encoding"><i class="fa fa-check"></i><b>2.5</b> Message Encoding</a></li>
+<li class="chapter" data-level="2.6" data-path="tracking-data.html"><a href="tracking-data.html#building-a-tracking-api"><i class="fa fa-check"></i><b>2.6</b> Building a Tracking API</a></li>
+<li class="chapter" data-level="2.7" data-path="tracking-data.html"><a href="tracking-data.html#privacy"><i class="fa fa-check"></i><b>2.7</b> Privacy</a></li>
+<li class="chapter" data-level="2.8" data-path="tracking-data.html"><a href="tracking-data.html#conclusion"><i class="fa fa-check"></i><b>2.8</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-pipelines.html"><a href="data-pipelines.html"><i class="fa fa-check"></i><b>3</b> Data Pipelines</a><ul>
+<li class="chapter" data-level="3.1" data-path="data-pipelines.html"><a href="data-pipelines.html#types-of-data"><i class="fa fa-check"></i><b>3.1</b> Types of Data</a></li>
+<li class="chapter" data-level="3.2" data-path="data-pipelines.html"><a href="data-pipelines.html#the-evolution-of-data-pipelines"><i class="fa fa-check"></i><b>3.2</b> The Evolution of Data Pipelines</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="data-pipelines.html"><a href="data-pipelines.html#flat-file-era"><i class="fa fa-check"></i><b>3.2.1</b> Flat File Era</a></li>
+<li class="chapter" data-level="3.2.2" data-path="data-pipelines.html"><a href="data-pipelines.html#database-era"><i class="fa fa-check"></i><b>3.2.2</b> Database Era</a></li>
+<li class="chapter" data-level="3.2.3" data-path="data-pipelines.html"><a href="data-pipelines.html#data-lake-era"><i class="fa fa-check"></i><b>3.2.3</b> Data Lake Era</a></li>
+<li class="chapter" data-level="3.2.4" data-path="data-pipelines.html"><a href="data-pipelines.html#serverless-era"><i class="fa fa-check"></i><b>3.2.4</b> Serverless Era</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="data-pipelines.html"><a href="data-pipelines.html#a-scalable-pipeline"><i class="fa fa-check"></i><b>3.3</b> A Scalable Pipeline</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="data-pipelines.html"><a href="data-pipelines.html#setting-up-the-environment"><i class="fa fa-check"></i><b>3.3.1</b> Setting up the Environment</a></li>
+<li class="chapter" data-level="3.3.2" data-path="data-pipelines.html"><a href="data-pipelines.html#publishing-events"><i class="fa fa-check"></i><b>3.3.2</b> Publishing Events</a></li>
+<li class="chapter" data-level="3.3.3" data-path="data-pipelines.html"><a href="data-pipelines.html#storing-events"><i class="fa fa-check"></i><b>3.3.3</b> Storing Events</a></li>
+<li class="chapter" data-level="3.3.4" data-path="data-pipelines.html"><a href="data-pipelines.html#deploying-and-auto-scaling"><i class="fa fa-check"></i><b>3.3.4</b> Deploying and Auto Scaling</a></li>
+<li class="chapter" data-level="3.3.5" data-path="data-pipelines.html"><a href="data-pipelines.html#raw-to-processed-events"><i class="fa fa-check"></i><b>3.3.5</b> Raw to Processed Events</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="data-pipelines.html"><a href="data-pipelines.html#conclusion-1"><i class="fa fa-check"></i><b>3.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="business-intelligence.html"><a href="business-intelligence.html"><i class="fa fa-check"></i><b>4</b> Business Intelligence</a><ul>
+<li class="chapter" data-level="4.1" data-path="business-intelligence.html"><a href="business-intelligence.html#kpis"><i class="fa fa-check"></i><b>4.1</b> KPIs</a></li>
+<li class="chapter" data-level="4.2" data-path="business-intelligence.html"><a href="business-intelligence.html#reporting-with-r"><i class="fa fa-check"></i><b>4.2</b> Reporting with R</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="business-intelligence.html"><a href="business-intelligence.html#base-r"><i class="fa fa-check"></i><b>4.2.1</b> Base R</a></li>
+<li class="chapter" data-level="4.2.2" data-path="business-intelligence.html"><a href="business-intelligence.html#r-markdown"><i class="fa fa-check"></i><b>4.2.2</b> R Markdown</a></li>
+<li class="chapter" data-level="4.2.3" data-path="business-intelligence.html"><a href="business-intelligence.html#r-shiny"><i class="fa fa-check"></i><b>4.2.3</b> R Shiny</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="business-intelligence.html"><a href="business-intelligence.html#etls"><i class="fa fa-check"></i><b>4.3</b> ETLs</a></li>
+<li class="chapter" data-level="4.4" data-path="business-intelligence.html"><a href="business-intelligence.html#reporting-tools"><i class="fa fa-check"></i><b>4.4</b> Reporting Tools</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="business-intelligence.html"><a href="business-intelligence.html#google-data-studio"><i class="fa fa-check"></i><b>4.4.1</b> Google Data Studio</a></li>
+<li class="chapter" data-level="4.4.2" data-path="business-intelligence.html"><a href="business-intelligence.html#tableau"><i class="fa fa-check"></i><b>4.4.2</b> Tableau</a></li>
+<li class="chapter" data-level="4.4.3" data-path="business-intelligence.html"><a href="business-intelligence.html#mode"><i class="fa fa-check"></i><b>4.4.3</b> Mode</a></li>
+<li class="chapter" data-level="4.4.4" data-path="business-intelligence.html"><a href="business-intelligence.html#custom-tooling"><i class="fa fa-check"></i><b>4.4.4</b> Custom Tooling</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="business-intelligence.html"><a href="business-intelligence.html#conclusion-2"><i class="fa fa-check"></i><b>4.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>5</b> Exploratory Data Analysis</a><ul>
+<li class="chapter" data-level="5.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#summary-statistics"><i class="fa fa-check"></i><b>5.1</b> Summary Statistics</a></li>
+<li class="chapter" data-level="5.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plotting"><i class="fa fa-check"></i><b>5.2</b> Plotting</a></li>
+<li class="chapter" data-level="5.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#correlation-analysis"><i class="fa fa-check"></i><b>5.3</b> Correlation Analysis</a></li>
+<li class="chapter" data-level="5.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#feature-importance"><i class="fa fa-check"></i><b>5.4</b> Feature Importance</a></li>
+<li class="chapter" data-level="5.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#conclusion-3"><i class="fa fa-check"></i><b>5.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="predictive-modeling.html"><a href="predictive-modeling.html"><i class="fa fa-check"></i><b>6</b> Predictive Modeling</a><ul>
+<li class="chapter" data-level="6.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#types-of-predictive-models"><i class="fa fa-check"></i><b>6.1</b> Types of Predictive Models</a></li>
+<li class="chapter" data-level="6.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#training-a-classification-model"><i class="fa fa-check"></i><b>6.2</b> Training a Classification Model</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#weka"><i class="fa fa-check"></i><b>6.2.1</b> Weka</a></li>
+<li class="chapter" data-level="6.2.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#bigml"><i class="fa fa-check"></i><b>6.2.2</b> BigML</a></li>
+<li class="chapter" data-level="6.2.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#r-glmnet"><i class="fa fa-check"></i><b>6.2.3</b> R — Glmnet</a></li>
+<li class="chapter" data-level="6.2.4" data-path="predictive-modeling.html"><a href="predictive-modeling.html#python-scikit-learn"><i class="fa fa-check"></i><b>6.2.4</b> Python — scikit-learn</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#clustering"><i class="fa fa-check"></i><b>6.3</b> Clustering</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="predictive-modeling.html"><a href="predictive-modeling.html#how-many-clusters-to-use"><i class="fa fa-check"></i><b>6.3.1</b> How many clusters to use?</a></li>
+<li class="chapter" data-level="6.3.2" data-path="predictive-modeling.html"><a href="predictive-modeling.html#cluster-descriptions"><i class="fa fa-check"></i><b>6.3.2</b> Cluster Descriptions</a></li>
+<li class="chapter" data-level="6.3.3" data-path="predictive-modeling.html"><a href="predictive-modeling.html#cluster-populations-by-net-worth"><i class="fa fa-check"></i><b>6.3.3</b> Cluster Populations by Net Worth</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="predictive-modeling.html"><a href="predictive-modeling.html#conclusion-4"><i class="fa fa-check"></i><b>6.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="productizing-models.html"><a href="productizing-models.html"><i class="fa fa-check"></i><b>7</b> Productizing Models</a><ul>
+<li class="chapter" data-level="7.1" data-path="productizing-models.html"><a href="productizing-models.html#building-a-model-specification"><i class="fa fa-check"></i><b>7.1</b> Building a Model Specification</a></li>
+<li class="chapter" data-level="7.2" data-path="productizing-models.html"><a href="productizing-models.html#batch-deployments"><i class="fa fa-check"></i><b>7.2</b> Batch Deployments</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="productizing-models.html"><a href="productizing-models.html#sql-query"><i class="fa fa-check"></i><b>7.2.1</b> SQL Query</a></li>
+<li class="chapter" data-level="7.2.2" data-path="productizing-models.html"><a href="productizing-models.html#dataflow-bigquery"><i class="fa fa-check"></i><b>7.2.2</b> DataFlow — BigQuery</a></li>
+<li class="chapter" data-level="7.2.3" data-path="productizing-models.html"><a href="productizing-models.html#dataflow-datastore"><i class="fa fa-check"></i><b>7.2.3</b> DataFlow — DataStore</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="productizing-models.html"><a href="productizing-models.html#live-deployments"><i class="fa fa-check"></i><b>7.3</b> Live Deployments</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="productizing-models.html"><a href="productizing-models.html#web-service"><i class="fa fa-check"></i><b>7.3.1</b> Web Service</a></li>
+<li class="chapter" data-level="7.3.2" data-path="productizing-models.html"><a href="productizing-models.html#dataflow---pubsub"><i class="fa fa-check"></i><b>7.3.2</b> DataFlow - PubSub</a></li>
+<li class="chapter" data-level="7.3.3" data-path="productizing-models.html"><a href="productizing-models.html#custom-engineering"><i class="fa fa-check"></i><b>7.3.3</b> Custom Engineering</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="productizing-models.html"><a href="productizing-models.html#conclusion-5"><i class="fa fa-check"></i><b>7.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="experimentation.html"><a href="experimentation.html"><i class="fa fa-check"></i><b>8</b> Experimentation</a><ul>
+<li class="chapter" data-level="8.1" data-path="experimentation.html"><a href="experimentation.html#staged-rollouts"><i class="fa fa-check"></i><b>8.1</b> Staged Rollouts</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="experimentation.html"><a href="experimentation.html#staged-rollout-biases"><i class="fa fa-check"></i><b>8.1.1</b> Staged Rollout Biases</a></li>
+<li class="chapter" data-level="8.1.2" data-path="experimentation.html"><a href="experimentation.html#time-series-analysis"><i class="fa fa-check"></i><b>8.1.2</b> Time Series Analysis</a></li>
+<li class="chapter" data-level="8.1.3" data-path="experimentation.html"><a href="experimentation.html#difference-in-differences-estimation"><i class="fa fa-check"></i><b>8.1.3</b> Difference-in-Differences Estimation</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="experimentation.html"><a href="experimentation.html#conclusion-6"><i class="fa fa-check"></i><b>8.2</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="recommendation-systems.html"><a href="recommendation-systems.html"><i class="fa fa-check"></i><b>9</b> Recommendation Systems</a><ul>
+<li class="chapter" data-level="9.1" data-path="recommendation-systems.html"><a href="recommendation-systems.html#r---recommender-lab"><i class="fa fa-check"></i><b>9.1</b> R - Recommender Lab</a></li>
+<li class="chapter" data-level="9.2" data-path="recommendation-systems.html"><a href="recommendation-systems.html#java---apache-mahout"><i class="fa fa-check"></i><b>9.2</b> Java - Apache Mahout</a></li>
+<li class="chapter" data-level="9.3" data-path="recommendation-systems.html"><a href="recommendation-systems.html#scala---mllib"><i class="fa fa-check"></i><b>9.3</b> Scala - MLlib</a></li>
+<li class="chapter" data-level="9.4" data-path="recommendation-systems.html"><a href="recommendation-systems.html#sql---spark-sql"><i class="fa fa-check"></i><b>9.4</b> SQL - Spark SQL</a></li>
+<li class="chapter" data-level="9.5" data-path="recommendation-systems.html"><a href="recommendation-systems.html#conclusion-7"><i class="fa fa-check"></i><b>9.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="deep-learning.html"><a href="deep-learning.html"><i class="fa fa-check"></i><b>10</b> Deep Learning</a><ul>
+<li class="chapter" data-level="10.1" data-path="deep-learning.html"><a href="deep-learning.html#improving-shallow-problems"><i class="fa fa-check"></i><b>10.1</b> Improving Shallow Problems</a></li>
+<li class="chapter" data-level="10.2" data-path="deep-learning.html"><a href="deep-learning.html#loss-functions-in-keras"><i class="fa fa-check"></i><b>10.2</b> Loss Functions in Keras</a></li>
+<li class="chapter" data-level="10.3" data-path="deep-learning.html"><a href="deep-learning.html#evaluating-loss-functions"><i class="fa fa-check"></i><b>10.3</b> Evaluating Loss Functions</a></li>
+<li class="chapter" data-level="10.4" data-path="deep-learning.html"><a href="deep-learning.html#conclusion-8"><i class="fa fa-check"></i><b>10.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science for Startups</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="deep-learning" class="section level1">
+<h1><span class="header-section-number">Chapter 10</span> Deep Learning</h1>
+<p>This chapter is a brief introduction to using the Keras deep learning framework to solve classic (shallow) machine learning problems. It presents a case study from my experience at Windfall Data, where I worked on a model to predict housing prices for hundreds of millions of properties in the US.</p>
+<p>I recently started reading “Deep Learning with R” <span class="citation">(Chollet and Allaire <a href="#ref-Deep">2018</a>)</span>, and I’ve been really impressed with the support that R has for digging into deep learning. One of the use cases presented in the book is predicting prices for homes in Boston, which is an interesting problem because homes can have such wide variations in values. This is a machine learning problem that is probably best suited for classical approaches, such as XGBoost, because the data set is structured rather than perceptual data. However, it’s also a data set where deep learning provides a really useful capability, which is the ease of writing new loss functions that may improve the performance of predictive models. The goal of this chapter is to show how deep learning can potentially be used to improve shallow learning problems by using custom loss functions.</p>
+<p>One of the problems that I’ve encountered a few times when working with financial data is that often you need to build predictive models where the output can have a wide range of values, across different orders of magnitude. For example, this can happen when predicting housing prices, where some homes are valued at $100k and others are valued at $10M. If you throw standard machine learning approaches at these problems, such as linear regression or random forests, often the model will overfit the samples with the highest values in order to reduce metrics such as mean absolute error. However, what you may actually want is to treat the samples with similar weighting, and to use an error metric such as relative error that reduces the importance of fitting the samples with the largest values.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Standard approach to linear regression</span>
+fit &lt;-<span class="st"> </span><span class="kw">lm</span>(y <span class="op">~</span><span class="st"> </span>x1 <span class="op">+</span><span class="st"> </span>x2 <span class="op">+</span><span class="st"> </span>x3 <span class="op">+</span><span class="st"> </span>... <span class="op">+</span><span class="st"> </span>x9, <span class="dt">data=</span>df)
+
+<span class="co"># Linear regression with a log-log transformation </span>
+fit &lt;-<span class="st"> </span><span class="kw">nls</span>(<span class="kw">log10</span>(y) <span class="op">~</span><span class="st"> </span><span class="kw">log</span>(x1<span class="op">*</span>b1 <span class="op">+</span><span class="st"> </span>x2<span class="op">*</span>b2 <span class="op">+</span><span class="st"> </span>... <span class="op">+</span><span class="st"> </span>x9<span class="op">*</span>b9) 
+   ,<span class="dt">data =</span> df, <span class="dt">start =</span> <span class="kw">list</span>(<span class="dt">b1=</span><span class="dv">1</span>, <span class="dt">b2=</span><span class="dv">1</span>, ... , <span class="dt">b9 =</span> <span class="dv">1</span>))</code></pre></div>
+<p>You can actually do this explicitly in R, using packages such as nonlinear least squares (nls). The code sample above shows how to build a linear regression model using the built-in optimizer, which will overweight samples with large label values, and the nls approach which shows how to perform a log transformation on both the predicted values and labels, which will give the samples relatively equal weight. The problem with the second approach is that you have to explicitly state how to use the features in the model, creating a feature engineering problem. An additional problem with this approach is that it cannot be applied directly to other algorithms, such as random forests, without writing your own likelihood function and optimizer. This is for a specific scenario where you want to have the error term outside of the log transform, not a scenario where you can simply apply a log transformation to the label and all input variables.</p>
+<p>Deep learning provides an elegant solution to handling these types of problems, where instead of writing a custom likelihood function and optimizer, you can explore different built-in and custom loss functions that can be used with the different optimizers provided. This chapter will show how to write custom loss functions in R when using Keras, and show how using different approaches can be beneficial for different types of data sets.</p>
+<p>The image of error functions is a preview of what I’ll cover in this chapter. It shows the training history of four different Keras models trained on the Boston housing prices data set. Each of the models use different loss functions, but are evaluated on the same performance metric, mean absolute error. For the original data set, the custom loss functions do not improve the performance of the model, but on a modified data set, the results are more promising.</p>
+<div class="figure" style="text-align: center"><span id="fig:10-1"></span>
+<img src="images/10-1.png" alt="Performance of the 4 loss functions on the original housing prices data set. All models used MAE for the performance metric." width="100%" />
+<p class="caption">
+Figure 10.1: Performance of the 4 loss functions on the original housing prices data set. All models used MAE for the performance metric.
+</p>
+</div>
+<div id="improving-shallow-problems" class="section level2">
+<h2><span class="header-section-number">10.1</span> Improving Shallow Problems</h2>
+<p>One of the great features of deep learning is that it can be applied to both deep problems with perceptual data, such as audio and video, and shallow problems with structured data. For shallow learning (classical ML) problems, you can often see improvements over shallow approaches, such as XGBoost, by using a custom loss function that provides a useful singal.</p>
+<p>However, not all shallow problems can benefit from deep learning. I’ve found custom loss functions to be useful when building regression models that need to create predictions for data with different orders of magnitude. For example, predicting housing prices in an area where the values can range significantly. To show how this works in practice, we’ll use the Boston housing data set provided by Keras<a href="#fn28" class="footnoteRef" id="fnref28"><sup>28</sup></a>.</p>
+<p>This data set includes housing prices for a suburb in Boston during the 1970s. Each record has 13 attributes that describe properties of the home, and there are 404 records in the training data set and 102 records in the test data set. In R, the dataset can be loaded as follows: dataset_boston_housing(). The labels in the data set represent the prices of the homes, in thousands of dollars. The prices range from $5k to $50k, and the distribution of prices is shown in the histograming on the left. The original data set has values with similar orders of magnitude, so custom loss functions may not be useful for fitting this data. The histogram on the right shows a transformation of the labels which may benefit from using a custom loss.</p>
+<div class="figure" style="text-align: center"><span id="fig:10-2"></span>
+<img src="images/10-2.png" alt="The Boston data set with original prices and the transformed prices." width="100%" />
+<p class="caption">
+Figure 10.2: The Boston data set with original prices and the transformed prices.
+</p>
+</div>
+<p>To transform the data, I converted the labels back into absolute prices, squared the result, and then divided by a large factor. This results in a data set where the difference between the highest and lowest prices is 100x instead of 10x. We now have a prediction problem that can benefit from the use of a custom loss function. The R code to generate these plots is shown below.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span>(train_targets<span class="op">*</span><span class="dv">1000</span>)<span class="op">^</span><span class="dv">2</span><span class="op">/</span><span class="dv">2500000</span>
+<span class="kw">hist</span>(train_targets, <span class="dt">main =</span> <span class="st">&quot;Original Prices&quot;</span>)
+<span class="kw">hist</span>(x, <span class="dt">main =</span> <span class="st">&quot;Transformed Prices&quot;</span>)</code></pre></div>
+</div>
+<div id="loss-functions-in-keras" class="section level2">
+<h2><span class="header-section-number">10.2</span> Loss Functions in Keras</h2>
+<p>Keras includes a number of useful loss function that be used to train deep learning models. Approaches such as mean_absolute_error() work well for data sets where values are somewhat equal orders of magnitude. There’s also functions such as mean_squared_logarithmic_error() which may be a better fit for the transformed housing data. Here are some of the loss functions provided by the R interface to Keras:</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">keras<span class="op">::</span><span class="kw">loss_mean_absolute_error</span>()
+keras<span class="op">::</span><span class="kw">loss_mean_absolute_percentage_error</span>()
+keras<span class="op">::</span><span class="kw">loss_mean_squared_error</span>()
+keras<span class="op">::</span><span class="kw">loss_mean_squared_logarithmic_error</span>()</code></pre></div>
+<p>The functions in losses.R refer to Python functions, and to really understand how these work we’ll need to jump into the Python losses code. The first loss function we’ll explore is the mean squared error, defined below. This function computes the difference between predicted and actual values, squares the result (which makes all of the values positive), and then calculates the mean value. Note that the function uses backend operations that operate on tensor objects rather than Python primitives. This same approach will be used when defining custom loss function in R</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">def <span class="kw">mean_squared_error</span>(y_true, y_pred)<span class="op">:</span><span class="st">    </span>
+<span class="st">    </span>return <span class="kw">K.mean</span>(<span class="kw">K.square</span>(y_pred <span class="op">-</span><span class="st"> </span>y_true), <span class="dt">axis=</span><span class="op">-</span><span class="dv">1</span>)</code></pre></div>
+<p>The next built-in loss function we’ll explore calculates the error based on the difference between the natural log of the predicted and target values. It is defined here<a href="#fn29" class="footnoteRef" id="fnref29"><sup>29</sup></a> and shown below. The function uses the clip operation to make sure that negative values are not passed to the log function, and adding 1 to the clip result makes sure that all log transformed inputs will have non-negative results. This function is similar to the one we will define in R.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">def <span class="kw">mean_squared_logarithmic_error</span>(y_true, y_pred)<span class="op">:</span><span class="st">    </span>
+<span class="st">    </span>first =<span class="st"> </span><span class="kw">K.log</span>(<span class="kw">K.clip</span>(y_pred,<span class="kw">K.epsilon</span>(),None) <span class="op">+</span><span class="st"> </span><span class="dv">1</span>)
+    second =<span class="st"> </span><span class="kw">K.log</span>(<span class="kw">K.clip</span>(y_true,<span class="kw">K.epsilon</span>(),None) <span class="op">+</span><span class="st"> </span><span class="dv">1</span>)    
+    return <span class="kw">K.mean</span>(<span class="kw">K.square</span>(first <span class="op">-</span><span class="st"> </span>second), <span class="dt">axis=</span><span class="op">-</span><span class="dv">1</span>)</code></pre></div>
+<p>The two custom loss functions we’ll explore are defined in the R code segment below. The first function, mean log absolute error (MLAE), computes the difference between the log transform of the predicted and actual values, and then averages the result. Unlike the built-in function above, this approach does not square the errors. One other difference from the log function above is that this function is applying an explicit scaling factor to the data, to transform the housing prices back to their original values (5,000 to 50,0000) rather than (5, 50). This is useful, because it reduces the impact of adding +1 to the predicted and actual values.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Mean Log Absolute Error</span>
+MLAE &lt;-<span class="st"> </span><span class="cf">function</span>( y_true, y_pred ) {
+  K &lt;-<span class="st"> </span><span class="kw">backend</span>()
+  K<span class="op">$</span><span class="kw">mean</span>( K<span class="op">$</span><span class="kw">abs</span>( K<span class="op">$</span><span class="kw">log</span>( K<span class="op">$</span><span class="kw">relu</span>(y_true <span class="op">*</span><span class="dv">1000</span> ) <span class="op">+</span><span class="st"> </span><span class="dv">1</span> ) <span class="op">-</span><span class="st"> </span>
+<span class="st">      </span>K<span class="op">$</span><span class="kw">log</span>( K<span class="op">$</span><span class="kw">relu</span>(y_pred<span class="op">*</span><span class="dv">1000</span> ) <span class="op">+</span><span class="st"> </span><span class="dv">1</span>)))
+}
+<span class="co"># Mean Squared Log Absolute Error</span>
+MSLAE &lt;-<span class="st"> </span><span class="cf">function</span>( y_true, y_pred ) {
+  K &lt;-<span class="st"> </span><span class="kw">backend</span>()
+  K<span class="op">$</span><span class="kw">mean</span>(K<span class="op">$</span><span class="kw">pow</span>(K<span class="op">$</span><span class="kw">abs</span>(K<span class="op">$</span><span class="kw">log</span>(K<span class="op">$</span><span class="kw">relu</span>(y_true<span class="op">*</span><span class="dv">1000</span>) <span class="op">+</span><span class="st"> </span><span class="dv">1</span> ) <span class="op">-</span><span class="st"> </span>
+<span class="st">    </span>K<span class="op">$</span><span class="kw">log</span>( K<span class="op">$</span><span class="kw">relu</span>(y_pred<span class="op">*</span><span class="dv">1000</span> ) <span class="op">+</span><span class="st"> </span><span class="dv">1</span>)), <span class="dv">2</span>))
+}</code></pre></div>
+<p>Like the Python functions, the custom loss functions for R need to operate on tensor objects rather than R primitives. In order to perform these operations, you need to get a reference to the backend using backend(). In my system configuration, this returns a reference to tensorflow.</p>
+<p>The second function computes the square of the log error, and is similar to the built in function. The main difference is that I’m using the relu operation rather than the clip operation, and I’m scaling the values, which is specific to the housing data set.</p>
+</div>
+<div id="evaluating-loss-functions" class="section level2">
+<h2><span class="header-section-number">10.3</span> Evaluating Loss Functions</h2>
+<p>We now have four different loss functions that we want to evaluate the performance of on the original and transformed housing data sets. This section will walk through setting up Keras, loading the data, compiling a model, fitting the model, and evaluating performance. The complete code listing for this section is available on github<a href="#fn30" class="footnoteRef" id="fnref30"><sup>30</sup></a>.</p>
+<p>First we need to set up our environment for deep learning. This can be done with the Keras package and the install_keras function.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Installation</span>
+devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;rstudio/keras&quot;</span>)
+<span class="kw">library</span>(keras)
+<span class="kw">install_keras</span>(<span class="dt">method =</span> <span class="st">&quot;conda&quot;</span>)</code></pre></div>
+<p>Once installed, we’ll load the data set and apply our transformation to skew housing prices. The last two operations can be commented out to use the original housing prices.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># load the data set</span>
+<span class="kw">library</span>(keras)
+data &lt;-<span class="st"> </span><span class="kw">dataset_boston_housing</span>()
+<span class="kw">c</span>(<span class="kw">c</span>(train_data,train_targets), 
+     <span class="kw">c</span>(test_data,test_targets)) <span class="op">%&lt;-%</span><span class="st"> </span>data
+
+<span class="co"># transform the training and test labels</span>
+train_targets &lt;-<span class="st"> </span>(train_targets<span class="op">*</span><span class="dv">1000</span>)<span class="op">^</span><span class="dv">2</span><span class="op">/</span><span class="dv">2500000</span>
+test_targets &lt;-<span class="st"> </span>(test_targets<span class="op">*</span><span class="dv">1000</span>)<span class="op">^</span><span class="dv">2</span><span class="op">/</span><span class="dv">2500000</span></code></pre></div>
+<p>Next, we’ll create a Keras model for predicting housing prices. I’ve used the network structure from the sample problem in “Deep Learning with R”. The network includes two layers of fully-connected relu activated neurons, and an output layer with no transformation.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># The model as specified in &quot;Deep Learning with R&quot;</span>
+model &lt;-<span class="st"> </span><span class="kw">keras_model_sequential</span>() <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">64</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>,
+              <span class="dt">input_shape =</span> <span class="kw">dim</span>(train_data)[[<span class="dv">2</span>]]) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">64</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">1</span>)</code></pre></div>
+<p>To compile the model, we’ll need to specify an optimizer, loss function, and a metric. We’ll use the same metric and optimizer for all of the different loss functions. The code below defines a list of loss functions, and for the first iteration the model uses mean squared error.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Compile the model, and select a loss function</span>
+losses &lt;-<span class="st"> </span><span class="kw">c</span>(keras<span class="op">::</span>loss_mean_squared_error,  
+    loss_mean_squared_logarithmic_error, MLAE, MSLAE)
+model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">compile</span>(
+  <span class="dt">optimizer =</span> <span class="st">&quot;rmsprop&quot;</span>,
+  <span class="dt">loss =</span> losses[<span class="dv">1</span>],
+  <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;mae&quot;</span>)
+)</code></pre></div>
+<p>The last step is to fit the model and then evaluate the performance. I used 100 epochs with a batch size of 5, and a 20% validation split. After training the model on the training data set, the performance of the model is evaluated on the mean absolute error on the test data set.</p>
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Train the model with validation</span>
+model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">fit</span>(
+  train_data,
+  train_targets,
+  <span class="dt">epochs =</span> <span class="dv">100</span>,
+  <span class="dt">batch_size =</span> <span class="dv">5</span>,
+  <span class="dt">verbose =</span> <span class="dv">1</span>,
+  <span class="dt">validation_split =</span> <span class="fl">0.2</span>
+)
+
+<span class="co"># Calculate the mean absolute error </span>
+results &lt;-<span class="st"> </span>model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">evaluate</span>(test_data, 
+                     test_targets, <span class="dt">verbose =</span> <span class="dv">0</span>)
+results<span class="op">$</span>mean_absolute_error</code></pre></div>
+<p>I trained four different models with the different loss functions, and applied this approach to both the original housing prices and the transformed housing prices. The results for all of these different combinations are shown above.</p>
+<div class="figure" style="text-align: center"><span id="fig:10-3"></span>
+<img src="images/10-3.png" alt="Performance of the Loss Functions on the Housing Price Data Sets." width="100%" />
+<p class="caption">
+Figure 10.3: Performance of the Loss Functions on the Housing Price Data Sets.
+</p>
+</div>
+<p>On the original data set, applying a log transformation in the loss function actually increased the error of the model. This isn’t really surprising given that the data is somewhat normally distributed and within a single order of magnitude. For the transformed data set, the squared log error approach outperformed the mean squared error loss function. This indicates that custom loss functions may be worth exploring if your data set doesn’t work well with the built-in loss functions.</p>
+<p>The model training histories for the four different loss functions on the transformed data set are shown below. Each model used the same error metric (MAE), but a different loss function. One surprising result was that the validation error was much higher for all of the loss functions that applied a log transformation.</p>
+<div class="figure" style="text-align: center"><span id="fig:10-4"></span>
+<img src="images/10-4.png" alt="Performance of the 4 loss functions on the transformed housing prices data set. All models used MAE for the performance metric." width="100%" />
+<p class="caption">
+Figure 10.4: Performance of the 4 loss functions on the transformed housing prices data set. All models used MAE for the performance metric.
+</p>
+</div>
+</div>
+<div id="conclusion-8" class="section level2">
+<h2><span class="header-section-number">10.4</span> Conclusion</h2>
+<p>Deep learning can be a useful tool for shallow learning problems, because you can define custom loss functions that may substantially improve the performance of your model. This won’t work for all problems, but may be useful if you have a prediction problem that doesn’t map well to the standard loss functions.</p>
+<p>For most data science problems faced by a startup, deep learning is likely overkill, unless you are working with perceptual data. It’s useful to evaluate deep learning in addition to other methods, because it may perform better than classic approaches. However, scaling deep learning is usually more work than scaling classific approaches such as XGBoost, and there’s also a loss of transparency in understanding how the model works.</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Deep">
+<p>Chollet, Francois, and J. J. Allaire. 2018. <em>Deep Learning with R</em>. Greenwich, CT, USA: Manning Publications Co.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="28">
+<li id="fn28"><p><a href="https://keras.io/datasets/#boston-housing-price-regression-dataset" class="uri">https://keras.io/datasets/#boston-housing-price-regression-dataset</a><a href="deep-learning.html#fnref28">↩</a></p></li>
+<li id="fn29"><p><a href="https://github.com/keras-team/keras/blob/master/keras/losses.py#L28" class="uri">https://github.com/keras-team/keras/blob/master/keras/losses.py#L28</a><a href="deep-learning.html#fnref29">↩</a></p></li>
+<li id="fn30"><p><a href="https://github.com/bgweber/StartupDataScience/blob/master/DeepLearning/LossFunctions.R" class="uri">https://github.com/bgweber/StartupDataScience/blob/master/DeepLearning/LossFunctions.R</a><a href="deep-learning.html#fnref30">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="recommendation-systems.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/10-deep.Rmd",
+"text": "Edit"
+},
+"download": ["startup-data-science.pdf", "startup-data-science.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
